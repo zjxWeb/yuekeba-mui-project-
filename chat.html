@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+	    <script src = "https://cdn.wilddog.com/js/client/current/wilddog.js" ></script>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav register-nav" style="background-color: #54bbfe;">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left register-nav-text"></a>
+		    <a class="mui-icon mui-icon-person public-nav-text mui-pull-right register-nav-text"></a>
+		    <h1 class="mui-title  public-nav-text  register-nav-text">聊天窗口</h1>
+		</header>
+		<div class="mui-content">
+		    <div class="public-margin-top" style="padding: 10px;">
+		    	<div class="public-chat-box chat-right-box">
+	    		<div class="public-chat-img right-chat-img">
+	    			<img src="images/chat1.webp" / style="width: 55px;height: 55px;">
+	    		</div>
+	    		<div class="public-chat-text right-chat-text">
+	    			<a>你好</a>
+	    			<span class="iconfont icon-xiangyou"></span>
+	    		</div>
+	    		<p class="public-clear-both"></p>
+	    	</div>
+	    	
+	    	<p class="public-clear-both"></p>
+		    	<div class="public-chat-box" id="chat_left">
+		    		<!--<div class="message">
+		    		<!--左侧聊天窗口-->
+	    		<!--<div class="public-chat-img left-chat-img">
+	    			<img src="images/qier.webp" />
+	    		</div>
+	    		<div class="public-chat-text left-chat-text">
+	    			<a>你好,的地方地方反对反对法大幅度，故人故人故人咯额</a>
+	    			<span class="iconfont icon-sanjiaoxing-copy"></span>
+	    		</div>
+	    		<p class="public-clear-both"></p>
+		    	</div>-->
+		    	</div>
+		    	<!--<p class="chat-box-time"><span>21:41</span></p>-->
+		    	<!--右侧聊天窗口-->
+	    	<div class="public-chat-box chat-right-box" id="chat_right">
+	    		<!--<div>
+	    		<div class="public-chat-img right-chat-img">
+	    			<img src="images/360.webp" />
+	    		</div>
+	    		<div class="public-chat-text right-chat-text">
+	    			<a>你好,的地方地方反对反对法大幅度，故人故人故人咯额</a>
+	    			<span class="iconfont icon-xiangyou"></span>
+	    		</div>
+	    		<p class="public-clear-both"></p>
+	    		</div>-->
+	    	</div>
+	    	
+	    	
+	    
+	    <!--<div class="public-chat-box">
+	    		<div class="public-chat-img left-chat-img">
+	    			<img src="images/qier.webp" />
+	    		</div>
+	    		<div class="public-chat-text left-chat-text">
+	    			<a>你好,的地方地方反对反对法大幅度，故人故人故人咯额</a>
+	    			<span class="iconfont icon-sanjiaoxing-copy"></span>
+	    		</div>
+	    		<p class="public-clear-both"></p>
+	    	</div>
+	    	<div class="public-chat-box">
+	    		<div class="public-chat-img left-chat-img">
+	    			<img src="images/qier.webp" />
+	    		</div>
+	    		<div class="public-chat-text left-chat-text">
+	    			<a>方地方反对反对</a>
+	    			<span class="iconfont icon-sanjiaoxing-copy"></span>
+	    		</div>
+	    		<p class="public-clear-both"></p>
+	    	</div>
+		    	<p class="chat-box-time"><span>21:41</span></p>
+		    	
+		    </div>-->
+		    <div style="height: 30px;"></div>
+	    
+	    <div class="chat-bottom-input">
+	    	<input type="text" id="text"/>
+	    	<button id="btn">发送</button>
+	    </div>
+		</div>
+		<script src="js/castapp.js"></script>
+		<script>
+			ca.init();
+			var chat_left=ca.id('chat_left');
+			//var chat_right=ca.id('chat_right');
+			var text=ca.id('text');
+			var btn=ca.id('btn');
+			var iid=localStorage.getItem('iid');
+			var request_url=localStorage.getItem('request_url');
+			var login_phone=localStorage.getItem('phone');
+			var phone='';
+			ca.get({
+				url:request_url+'User/chat',
+				data:{
+					iid:iid
+				},
+				succFn:function(data){
+					var json=JSON.parse(data);
+					phone=json.phone;
+					//alert(login_phone);
+					
+			//写入数据
+		var message_name=login_phone+'to'+phone;
+		btn.addEventListener('tap',function(){
+			var content=text.value;
+			if(content==''){
+				ca.prompt('内容不能为空');
+				return;
+			}
+			
+			var time=new Date().getTime();
+			
+			//自己定义的一个空间，存放聊天记录
+			var wd=new Wilddog('https://qihang.wilddogio.com/message');
+			
+			
+			//第一个参数为一个单独的空间
+			wd.child(message_name).child(time).set({
+				'name':phone,
+				'content':content,
+				'time':time
+			});
+			
+//			var tmpl='<div class="message">'
+//				    	+'<p>'+my_phone+' '+getLocalTime(time)+'</p>'
+//				    	+'<p>'+content+'</p>'
+//				    +'</div>';
+//				    
+//				div_list.innerHTML+=tmpl;
+				text.value='';
+				document.body.scrollTop=document.body.offsetHeight;
+		});
+		
+		function getLocalTime(nS){
+			var mydate=new Date(nS);
+			var today='';
+			today+=mydate.getFullYear()+'年';
+			today+=mydate.getMonth()+1+'月';
+			today+=mydate.getDate()+'日';
+			today+=mydate.getHours()+':';
+			if(mydate.getMinutes()<10){
+				var min='0'+mydate.getMinutes();
+			}else{
+				var min=mydate.getMinutes();
+			}
+			today+=min+':';
+			today+=mydate.getSeconds();
+			
+			return today;
+		}
+		
+		//查询数据
+		//监听聊天内容变化
+		var listen="https://qihang.wilddogio.com/message/"+message_name;
+		var listen_wd=new Wilddog(listen);
+		listen_wd.on('child_added',function(data){
+//			var tmpl='<div time="'+data.val().time+'" class="message">'
+//				    	+'<p>'+data.val().name+' '+getLocalTime(data.val().time)+'</p>'
+//				    	+'<p>'+data.val().content+'</p>'
+//				    +'</div>';
+			
+				var tmpl='<div class="message">'
+				    +'	<div class="public-chat-img left-chat-img">'
+			    	+'		<img src="images/qier.webp" />'
+			    	+'	</div>'
+			    	+'	<div class="public-chat-text left-chat-text">'
+			    	+'		<a>'+data.val().content+'</a>'
+			    	+'		<span class="iconfont icon-sanjiaoxing-copy"></span>'
+			    	+'	</div>'
+			    	+'	<p class="public-clear-both"></p>'
+				    +'	</div>';
+//				    +'<p class="chat-box-time"><span>'+getLocalTime(data.val().time)+'</span></p>';
+				    chat_left.innerHTML+=tmpl;
+			 
+				
+				document.body.scrollTop=document.body.offsetHeight;
+				
+				click_event();
+		});
+		
+		//删除聊天数据
+		function click_event(){
+			var del=ca.className('message');
+			for(var a=0;a<del.length;a++){
+				del[a].addEventListener('tap',function(){
+					var time=this.getAttribute('time');
+					
+					var _this=this;
+					var btnArray=['是','否'];
+					mui.confirm('是否删除本条信息？','提示',btnArray,function(e){
+						if(e.index==0){
+							var listen="https://qihang.wilddogio.com/message/"+message_name+'/'+time;
+							var wd=new Wilddog(listen);
+							wd.remove();
+							chat_left.removeChild(_this);
+						}
+					});
+					
+					
+					
+				});
+			}
+		}
+					
+				}
+			});
+			
+			
+		</script>
+	</body>
+
+</html>

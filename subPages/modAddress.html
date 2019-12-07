@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../js/mui.min.js"></script>
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/sub.style.css"/>
+	</head>
+
+	<body style="background: #EFEFF4;">
+		<header class="mui-bar mui-bar-nav public-dark-nav" style="background-color: #54bbfe;">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left public-white-text"></a>
+		    <h1 class="mui-title public-white-text">修改收货地址</h1>
+		</header>
+		   <div class="mui-content">
+		       <div class="public-back-title">
+				联系人
+			   </div>
+			  <form class="mui-input-group">
+			      <div class="mui-input-row">
+			          <label>姓名：</label>
+			          <input type="text" placeholder="请填写收货人的姓名">
+			      </div>
+			      <div class="mui-input-row">
+			          <label>手机：</label>
+			          <input type="text" placeholder="请填写收货手机号码">
+			      </div>
+			  </form>
+			   <div class="public-back-title">
+				收货地址
+			   </div>
+			   <div>
+			   <input type="text" class="mui-input-clear" placeholder="请填写收货地址">
+		      </div>
+		      <button class="submit-btn" id="btn">提交</button>
+		 </div>
+		 
+		 <script src="../js/castapp.js"></script>
+		 <script>
+		 	ca.init();
+		 	var input=ca.tagName('input');
+		 	var btn=ca.id('btn');
+		 	btn.addEventListener('tap',function(){
+		 		var name=input['0'].value;
+		 		var phone=input['1'].value;
+		 		var maddress=input['2'].value;
+		 		
+		 		var request_url=localStorage.getItem('request_url');
+		 		var login_phone=localStorage.getItem('phone');
+		 		
+		 		ca.get({
+		 			url:request_url+'Info/mod_address',
+		 			data:{
+		 				login_phone_data:login_phone,
+		 				name_data:name,
+		 				phone_data:phone,
+		 				maddress_data:maddress
+		 			},
+		 			succFn:function(data){
+		 				if(data==1){
+		 					ca.prompt('修改成功');
+		 					var arr=['makeOrder'];
+		 					ca.sendNotice(arr,'mod',{});
+		 					ca.closeCurrentInterface();
+		 				}else{
+		 					ca.prompt('修改失败，请重试');
+		 				}
+		 			}
+		 		})
+		 	});
+		 </script>
+	</body>
+
+</html>

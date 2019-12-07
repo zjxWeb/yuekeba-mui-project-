@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../js/mui.min.js"></script>
+    <script type="text/javascript" src="../js/common.js" ></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/icon.style.css" />
+    <link rel="stylesheet" href="../css/sub.style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script type="text/javascript" charset="utf-8">
+      	mui.init({ 
+    	pullRefresh : { 
+	        container:"#refreshDiv",//下拉刷新容器标识，querySelector能定位的css选择器均可，比如：id、.class等    
+	        down : {
+	            contentdown : "下拉刷新",//可选，在下拉可刷新状态时，下拉刷新控件上显示的标题内容 
+	            contentover : "释放立即刷新",//可选，在释放可刷新状态时，下拉刷新控件上显示的标题内容 
+	            contentrefresh : "正在刷新...",//可选，正在刷新状态时，下拉刷新控件上显示的标题内容 
+	            callback : pullDown //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+	        },
+	        up : { 
+            contentrefresh : "正在加载...",//可选，正在加载状态时，上拉加载控件上显示的标题内容 
+            contentnomore:'没有更多数据了',//可选，请求完毕若没有更多数据时显示的提醒内容； 
+            callback : pullUp //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据； 
+        	} }
+		});
+		function pullDown(){
+			//以下代码保留
+			/*mui.get('list.html',{ //请求接口地址
+			    state:'list'   // 参数  键 ：值
+			    },function(data){ // data为服务器端返回数据
+			    //获得服务器响应 ... 
+			    	console.log(data);
+			    	alert('12');
+			    },'json' 
+			);*/
+			//mui.alert('下拉刷新');
+			//隐藏下拉刷新字样。。
+			mui('#pullrefreshContainer').pullRefresh().endPulldownToRefresh();
+
+		}
+		function pullUp(){
+			/*mui.get('list.html',{ //请求接口地址
+			    state:'list'   // 参数  键 ：值
+			    },function(data){ // data为服务器端返回数据
+			    //获得服务器响应 ... 
+			    },'json' 
+			);*/
+			//mui.alert('上拉加载');
+			//为true不加载重复数据，为false则无限加载
+			this.endPullupToRefresh(false); 
+		}
+    </script>
+</head>
+<body>
+	<div id="refreshDiv" class="mui-content mui-scroll-wrapper"> 
+		<div class="mui-content">
+	    <div id="index-list" class="list">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell mui-media list-cell">
+							<a href="javascript:;">
+								<div class="list-img-box">
+									<img class="mui-media-object mui-pull-left list-img" src="../images/jiaoshi1.webp">
+									<span class="list-img-desc">第三期 No.1</span>
+								</div>
+								<div class="mui-media-body">
+									<div class="mui-ellipsis list-title">初级会计职称考试</div>
+									<div class="mui-pull-right list-attention">
+										<img src="../images/heart-full.webp" />
+										<span>322</span>
+									</div>
+									<div class="list-box">
+										<p class='mui-ellipsis list-text list-text-top-space'>刘艳霞老师 | 温江区光华公园</p>
+										<p class='mui-ellipsis list-text '>2018.6.30 已结束</p>
+										<div class="mui-pull-right list-price">
+											<span>¥</span>1600.00<span>元/人</span>
+										</div>
+										
+									</div>
+									<div class="list-progress">
+										<div style="width:100%;"></div>
+									</div>
+									<span class="list-progress-count">100/100</span>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media list-cell">
+							<a href="javascript:;">
+								<div class="list-img-box">
+									<img class="mui-media-object mui-pull-left list-img" src="../images/jiaoshi5.webp">
+									<span class="list-img-desc">第三期 No.2</span>
+								</div>
+								<div class="mui-media-body">
+									<div class="mui-ellipsis list-title">教师资格证考试</div>
+									<div class="mui-pull-right list-attention">
+										<img src="../images/heart-full.webp" />
+										<span>180</span>
+									</div>
+									<div class="list-box">
+										<p class='mui-ellipsis list-text list-text-top-space'>李梦娇老师 | 双流区王府花园</p>
+										<p class='mui-ellipsis list-text '>2018.6.18 已结束</p>
+										<div class="mui-pull-right list-price">
+											<span>¥</span>1100.00<span>元/人</span>
+										</div>
+										
+									</div>
+									<div class="list-progress">
+										<div style="width:97.5%;"></div>
+									</div>
+									<span class="list-progress-count">78/80</span>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media list-cell">
+							<a href="javascript:;">
+								<div class="list-img-box">
+									<img class="mui-media-object mui-pull-left list-img" src="../images/liweiming.webp">
+									<span class="list-img-desc">第四期 No.1</span>
+								</div>
+								<div class="mui-media-body">
+									<div class="mui-ellipsis list-title">国家公务员考试</div>
+									<div class="mui-pull-right list-attention">
+										<img src="../images/heart-full.webp" />
+										<span>520</span>
+									</div>
+									<div class="list-box">
+										<p class='mui-ellipsis list-text list-text-top-space'>李委明 | 郫都区锦欣苑</p>
+										<p class='mui-ellipsis list-text '>2018.5.22 已结束</p>
+										<div class="mui-pull-right list-price">
+											<span>¥</span>1480.00<span>元/人</span>
+										</div>
+										
+									</div>
+									<div class="list-progress">
+										<div style="width:100%;"></div>
+									</div>
+									<span class="list-progress-count">150/150</span>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media list-cell">
+							<a href="javascript:;">
+								<div class="list-img-box">
+									<img class="mui-media-object mui-pull-left list-img" src="../images/jiaoshi7.webp">
+									<span class="list-img-desc">第四期 No.2</span>
+								</div>
+								<div class="mui-media-body">
+									<div class="mui-ellipsis list-title">四六级考试</div>
+									<div class="mui-pull-right list-attention">
+										<img src="../images/heart-full.webp" />
+										<span>344</span>
+									</div>
+									<div class="list-box">
+										<p class='mui-ellipsis list-text list-text-top-space'>蒙頔 | 武侯区瑞金广场</p>
+										<p class='mui-ellipsis list-text '>2018.5.10 已结束</p>
+										<div class="mui-pull-right list-price">
+											<span>¥</span>300.00<span>元/人</span>
+										</div>
+										
+									</div>
+									<div class="list-progress">
+										<div style="width:95%;"></div>
+									</div>
+									<span class="list-progress-count">95/100</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+	</div>
+    	<div id="like" class="mui-scroll">
+			<!--关注单元1开始-->
+			<!--<div class="public-thin-top"></div>
+			<div class="order-box">
+				<div class="order-box-header">
+					<span class="icon-user order-author-icon"></span><span class="order-author">圆桌上的舞<span class="order-arrow">〉</span></span><span class="order-status">距失效还有：129:33:44</span>
+				</div>
+				<div class="concern-detail-cover" style="background: url(../images/cbd.webp) no-repeat center;background-size: cover;">
+					<div class="detail-cover-musk">
+						<div class="detail-title mui-ellipsis2">兰州大学生校外社会实践活动兰州大学生校外社会实践</div>
+						<div class="detail-act-brief">
+							<div class="detail-act-location mui-ellipsis"><span class="public-icon icon-location3"></span>活动地点：甘肃省兰州市七里河区体育场体育场</div>
+							<div class="detail-act-duration"><span class="public-icon icon-clock"></span>活动时间：2015-10-30 09:00:00</div>
+							<div class="detail-act-duration mui-ellipsis"><span class="public-icon icon-user2"></span>人数进度：<div class="detail-progress-box"><div class="detail-progress" style="width:50%;"></div></div><label>500/1000</label></div>
+							<div class="detail-data">
+								<div class="detail-data-cell">
+									<span>目前筹集</span>
+									<div>2321<span>元</span></div>
+								</div>
+								<div class="detail-data-cell">
+									<span>关注人数</span>
+									<div>23311<span>人</span></div>
+								</div>
+								<div class="detail-data-cell">
+									<span>排名第<label>1</label></span>
+									<span>评论<label>2035</label>条</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>   
+				<div class="order-option">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell"><label class="mui-pull-right concern-list-btn"><button type="button" class="mui-btn icon-star">&nbsp;取消关注</button><button type="button" class="mui-btn icon-share2">&nbsp;分享</button><button type="button" class="mui-btn order-btn-3">立即参加</button></label></li>
+					</ul>
+				</div>
+			</div>-->
+			<!--关注单元1结束-->
+			<!--<div class="public-thin-top"></div>
+			<div class="order-box">
+				<div class="order-box-header">
+					<span class="icon-user order-author-icon"></span><span class="order-author">圆桌上的舞<span class="order-arrow">〉</span></span><span class="order-status">距失效还有：129:33:44</span>
+				</div>
+				<div class="concern-detail-cover" style="background: url(../images/cbd.webp) no-repeat center;background-size: cover;">
+					<div class="detail-cover-musk">
+						<div class="detail-title mui-ellipsis2">兰州大学生校外社会实践活动兰州大学生校外社会实践</div>
+						<div class="detail-act-brief">
+							<div class="detail-act-location mui-ellipsis"><span class="public-icon icon-location3"></span>活动地点：甘肃省兰州市七里河区体育场体育场</div>
+							<div class="detail-act-duration"><span class="public-icon icon-clock"></span>活动时间：2015-10-30 09:00:00</div>
+							<div class="detail-act-duration mui-ellipsis"><span class="public-icon icon-user2"></span>人数进度：<div class="detail-progress-box"><div class="detail-progress" style="width:50%;"></div></div><label>500/1000</label></div>
+							<div class="detail-data">
+								<div class="detail-data-cell">
+									<span>目前筹集</span>
+									<div>2321<span>元</span></div>
+								</div>
+								<div class="detail-data-cell">
+									<span>关注人数</span>
+									<div>23311<span>人</span></div>
+								</div>
+								<div class="detail-data-cell">
+									<span>排名第<label>1</label></span>
+									<span>评论<label>2035</label>条</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>   
+				<div class="order-option">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell"><label class="mui-pull-right concern-list-btn"><button type="button" class="mui-btn icon-star">&nbsp;取消关注</button><button type="button" class="mui-btn icon-share2">&nbsp;分享</button><button type="button" class="mui-btn order-btn-3">立即参加</button></label></li>
+					</ul>
+				</div>
+			</div>-->
+			<div class="public-thin-top"></div>
+		</div>
+	</div>
+	<script src="../js/castapp.js"></script>
+	<script>
+		ca.init();
+		var like=ca.id('like');
+		var request_url=localStorage.getItem('request_url');
+		var login_phone=localStorage.getItem('phone');
+		
+		get_like();
+		function get_like(){
+			ca.get({
+				url:request_url+'User/get_linfo',
+				data:{
+					phone_data:login_phone
+				},
+				succFn:function(data){
+					//alert(data); 
+					var json=JSON.parse(data); 
+					for(var a in json){ 
+//						if(json[a].reply_data.content.length){
+//							var re=json[a].reply_data.content.length;
+//						}else{
+//							var re=0;
+//						} 
+						
+						var tmpl='<div class="public-thin-top"></div>' 
+								+'<div class="order-box">'
+								+'	<div class="order-box-header">' 
+								+'		<span class="icon-user order-author-icon"></span><span class="order-author">'+json[a].user_data.nickname+'<span class="order-arrow">〉</span></span><span class="order-status">距失效还有：129:33:44</span>'
+								+'	</div>'
+								+'	<div class="concern-detail-cover" style="background: url(../images/cbd.webp) no-repeat center;background-size: cover;">'
+								+'		<div class="detail-cover-musk">'
+								+'			<div class="detail-title mui-ellipsis2">'+json[a].info_data.theme+'</div>'
+								+'			<div class="detail-act-brief">'
+								+'				<div class="detail-act-location mui-ellipsis"><span class="public-icon icon-location3"></span>活动地点：'+json[a].info_data.place+'</div>'
+								+'				<div class="detail-act-duration"><span class="public-icon icon-clock"></span>活动时间：'+json[a].info_data.act_time+'</div>'
+								+'				<div class="detail-act-duration mui-ellipsis"><span class="public-icon icon-user2"></span>人数进度：<div class="detail-progress-box"><div class="detail-progress" style="width:'+(json[a].info_data.sign_in/json[a].info_data.number)*100+'%;"></div></div><label>'+json[a].info_data.sign_in+'/'+json[a].info_data.number+'</label></div>'
+								+'				<div class="detail-data">'
+								+'					<div class="detail-data-cell">'
+								+'						<span>目前筹集</span>'
+								+'						<div>'+json[a].info_data.sign_in*json[a].info_data.fee+'<span>元</span></div>'
+								+'					</div>'
+								+'					<div class="detail-data-cell">'
+								+'						<span>关注人数</span>'
+								+'						<div>'+json[a].info_data.like+'<span>人</span></div>'
+								+'					</div>'
+								+'					<div class="detail-data-cell">'
+								+'						<span>排名第<label>1</label></span>'
+								+'						<span>评论<label>2</label>条</span>'
+								+'					</div>'
+								+'				</div>'
+								+'			</div>'
+								+'		</div>'
+								+'	</div>'   
+								+'	<div lid="'+json[a].info_data.id+'" class="order-option">'
+								+'		<ul class="mui-table-view">'
+								+'			<li class="mui-table-view-cell"><label class="mui-pull-right concern-list-btn"><button type="button" class="mui-btn icon-star">&nbsp;取消关注</button><button type="button" class="mui-btn icon-share2">&nbsp;分享</button><button type="button" class="mui-btn order-btn-3">立即参加</button></label></li>'
+								+'		</ul>'
+								+'	</div>'
+								+'</div>';
+							like.innerHTML+=tmpl;
+					}
+					click_event();
+				}
+			})
+		}
+		
+		function click_event(){
+			var cell=ca.className('mui-btn');
+			for(var a=0;a<cell.length;a++){
+				ca.click(cell[a],function(_this){
+					var iid=_this.getAttribute('lid');
+				//alert(iid);
+					localStorage.setItem('iid',iid);
+					ca.newInterface({
+						url:'makeOrder.html',
+						id:'makeOrder'
+					})
+				})
+			}
+		}
+	</script>
+</body>
+</html>

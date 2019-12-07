@@ -1,0 +1,41 @@
+#dongyi_nav{
+	position: relative;
+	top:0px;
+	width: 100%;
+	overflow: hidden;
+	border-bottom: 1px solid #e2e2e2;
+	background: #FFFFFF;
+ }
+ #dongyi_nav ul{
+ 	position: relative;
+ 	padding: 0px;
+ 	margin: 0px;
+ 	height:40px;
+ 	padding-left: 14px;
+ 	overflow: hidden;
+ 	left:0;
+ 	z-index: 888;
+ }
+ #dongyi_nav ul li{
+	list-style-type: none;
+	float:left;
+	height:40px;
+	line-height:40px;
+	font-size: 14px;
+	display: inline-block;
+	padding: 0 14px;
+	width: 23%;
+	text-align: center;
+}
+#dongyi_nav ul .default {
+	color:#0C3F77;
+}
+#down_line{
+	position: relative;
+	top:38px;
+	left:0px;
+	height:2px;
+	width: 30px;;
+	background: #0C3F77;
+	z-index: 999;
+}

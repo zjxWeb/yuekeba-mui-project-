@@ -1,0 +1,227 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/style.css" />
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			.mui-slider{
+				width: 96vw;;
+				height: 150px; 
+				margin-top:2vh;
+				margin-left: 2vw;
+			}
+			.mui-slider{border-radius: 10px;}
+			.mui-slider img{
+				border-radius: 10px;
+			}
+			.mui-table-view.mui-grid-view{
+				height: 16vh;
+			}
+			.mui-table-view-cell .mui-media .mui-col-xs-6 a img{
+				height:16px;
+			}
+			.float p{ 
+				float: left;
+			}
+			.float p:nth-of-type(2){
+				margin-left: 6vw;
+			}
+			.mui-table-view-cell a img{
+				border-radius: 10px;
+			}
+			.mui-table-view.mui-grid-view .mui-table-view-cell{
+				text-align:left
+			}
+		</style>
+	</head>
+ 
+	<body>  
+		
+		<header class="mui-bar mui-bar-nav index-header">
+		    <h1 class="mui-title">资讯</h1>
+		</header>
+		<div class="mui-content">
+		    <div id="slider" class="mui-slider" >
+		      <div class="mui-slider-group mui-slider-loop">
+		        <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+		        <div class="mui-slider-item mui-slider-item-duplicate">
+		          <a href="#">
+		            <img src="images/zixun-lbt-3.webp">
+		          </a>
+		        </div>
+		        <!-- 第一张 -->
+		        <div class="mui-slider-item">
+		          <a href="#">
+		            <img src="images/zixun-lbt-1.webp">
+		          </a>
+		        </div>
+		        <!-- 第二张 -->
+		        <div class="mui-slider-item">
+		          <a href="#">
+		            <img src="images/zixun-lbt-2.webp">
+		          </a>
+		        </div>
+		        <!-- 第三张 -->
+		        <div class="mui-slider-item">
+		          <a href="#">
+		            <img src="images/zixun-lbt-3.webp">
+		          </a>
+		        </div>
+		       
+		        <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+		        <div class="mui-slider-item mui-slider-item-duplicate">
+		          <a href="#">
+		            <img src="images/zixun-lbt-1.webp">
+		          </a>
+		        </div>
+		      </div>
+		      <div class="mui-slider-indicator">
+		        <div class="mui-indicator mui-active"></div>
+		        <div class="mui-indicator"></div>
+		        <div class="mui-indicator"></div>
+		        <div class="mui-indicator"></div>
+		      </div>
+		    </div>
+		</div>
+		<div class="mui-content" style="margin-top: -6vh;">
+		    <ul class="mui-table-view mui-grid-view" id='dul'>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		        	 <p style="color: #000000;">2019高考最后冲刺。如何提口难开</p>
+		        	<div style="height: 3vh;"></div>
+					<div class="float">
+			         	 <p id="dat0">日期</p>
+			         	 <p>浏览量:100</p>
+					</div>
+		        </li> 
+		        <li class="mui-table-view-cell mui-media mui-col-xs-5" style="margin-left: 30px;">
+		            <a href="#">
+		                <img class="mui-media-object" src="images/zixun-content-1.webp" style="">
+		            </a>
+		        </li>
+		    </ul>
+		    </div>  
+		    <div class="mui-content" style="margin-top: -7vh;">
+		         <ul class="mui-table-view mui-grid-view" id='dul'>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		        	 <p style="color: #000000;">2019高考最后冲刺。如何提口难开</p>
+		        	<div style="height: 3vh;"></div>
+					<div class="float">
+			         	 <p id="dat1">日期</p>
+			         	 <p>浏览量:100</p>
+					</div>
+		        </li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-5" style="margin-left: 30px;" >
+		            <a href="#">
+		                <img class="mui-media-object" src="images/zixun-content-2.webp" >
+		            </a>
+		        </li>    
+		    </ul>  
+		    </ul>
+		 </div>   
+		    <div class="mui-content" style="margin-top: -7vh;">
+		         <ul class="mui-table-view mui-grid-view" id='dul'>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		        	 <p style="color: #000000;">2019高考最后冲刺。如何提口难开</p>
+		        	<div style="height: 3vh;"></div>
+					<div class="float">
+			         	 <p id="dat2">日期</p>
+			         	 <p>浏览量:100</p>
+					</div>
+		        </li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-5" style="margin-left: 30px;" >
+		            <a href="#">
+		                <img class="mui-media-object" src="images/zixun-content-3.webp" >
+		            </a>
+		        </li>
+		    </ul>
+		    </ul>
+		 </div>   
+			   <div class="mui-content" style="margin-top: -7vh;">
+			         <ul class="mui-table-view mui-grid-view" id='dul'>
+			        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+			        	 <p style="color: #000000;">2019高考最后冲刺。如何提口难开</p>
+			        	<div style="height: 3vh;"></div>
+						<div class="float">
+				         	 <p id="dat3">日期</p>
+				         	 <p>浏览量:100</p>
+						</div>
+			        </li>
+			        <li class="mui-table-view-cell mui-media mui-col-xs-5" style="margin-left: 30px;" >
+			            <a href="#">
+			                <img class="mui-media-object" src="images/zixun-content-4.webp" >
+			            </a>
+			        </li>
+			    </ul>
+			    </ul>
+			 </div>  
+			   <div class="mui-content" style="margin-top: -7vh;">
+			         <ul class="mui-table-view mui-grid-view" id='dul'>
+			        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+			        	 <p style="color: #000000;">2019高考最后冲刺。如何提口难开</p>
+			        	<div style="height: 3vh;"></div>
+						<div class="float">
+				         	 <p id="dat4">日期</p>
+				         	 <p>浏览量:100</p>
+						</div>
+			        </li>
+			        <li class="mui-table-view-cell mui-media mui-col-xs-5" style="margin-left: 30px;" >
+			            <a href="#">
+			                <img class="mui-media-object" src="images/zixun-content-5.webp" >
+			            </a>
+			        </li>
+			    </ul>
+			    </ul>
+			 </div>  
+		        <div class="mui-content" style="margin-top: -7vh;">
+		         <ul class="mui-table-view mui-grid-view" id='dul'>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-6">
+		        	 <p style="color: #000000;">2019高考最后冲刺。如何提口难开</p>
+		        	<div style="height: 3vh;"></div>
+					<div class="float">
+			         	 <p id="dat5">日期</p>
+			         	 <p>浏览量:100</p>
+					</div>
+		        </li>
+		        <li class="mui-table-view-cell mui-media mui-col-xs-5" style="margin-left: 30px;" >
+		            <a href="#">
+		                <img class="mui-media-object" src="images/zixun-content-6.webp" >
+		            </a>
+		        </li> 
+		    </ul>
+		    </ul>
+		 </div>  
+		
+		</div>
+		
+		
+		
+		 
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			var date = new Date();
+			var y = date.getFullYear();
+			var m = date.getMonth()+1;
+			var d2 = date.getDay();
+			var dul = document.getElementById('dul');
+
+			var i =0;
+			for(var dat = 0;dat<= 10;dat++)
+			
+			{
+				var d ="dat"+ dat ;
+				d2 = d2 + 2;
+				var a = document.getElementById(d).innerHTML = y +'-'+ m+'-'+d2 ; 
+			}
+			
+			 
+		</script>
+	</body>
+
+</html> 

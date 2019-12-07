@@ -1,0 +1,303 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav register-nav" style="background-color: #54bbfe;">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left register-nav-text"></a>
+		    <h1 class="mui-title register-nav-text">发起课程</h1>
+		    <!--<button id='btn1' class="mui-pull-right nav-btn">发布</button>-->
+		</header>
+		 <div class="mui-content">
+		 	<div class="release-zt-div">
+		 		<span class="release-zt-span">* 活动主题</span>
+		 	</div>
+		 	<div class="">
+		 		<input type="text" class="info" placeholder="请在10个字以内说明活动主题" style="border: 0px; height: 45px;" />
+		 	</div>
+		 	<div class="release-zt-div">
+		 		<span class="release-zt-span">* 教师信息</span>
+		 	</div>
+		     <div class="">
+		     	<form class="mui-input-group">
+		     	    <div class="mui-input-row">
+		     	        <label>教师姓名</label>
+		     	        <input type="text" class="info" class="mui-input-clear" placeholder="请输入老师的姓名">
+		     	    </div>
+		     	    <div class="mui-input-row">
+		     	        <label>联系方式</label>
+		     	        <input type="text" class="info" class="mui-input-clear" placeholder="请输入老师的电话">
+		     	    </div>
+		     	    <div class="mui-input-row">
+		     	        <label>专业领域</label>
+		     	        <input type="text" class="info" class="mui-input-clear" placeholder="请输入活动的地点">
+		     	    </div>
+		     	</form>
+		     	<!--<ul class="mui-table-view">
+		     	        <li class="mui-table-view-cell">
+		     	            <a class="mui-navigate-right">
+		     	                <span style="font-size: 16px;">活动时间</span><span class="right-text mui-pull-right">选择时间</span>
+		     	            </a>
+		     	        </li>
+		     	        <li class="mui-table-view-cell">
+		     	            <a class="mui-navigate-right">
+		     	                 <span style="font-size: 16px;">下一轮时间</span><span class="right-text mui-pull-right">选择时间</span>
+		     	            </a>
+		     	        </li>
+		     	        
+		     	    </ul>-->
+		     </div>
+		     <div class="release-zt-div">
+		 		<span class="release-zt-span">附加信息</span>
+		 	</div>
+		 	<div class="release-textarea">
+		 		<textarea name="" class="info" rows="" cols="" placeholder="请介绍教师具体情况以及其他信息"></textarea>
+		 		<button><span class="mui-icon mui-icon-plusempty"></span></button>
+		 		<img src="" class="tupian-span" style="accelerator: 100%; display: none;" id="img1" />
+		 	</div>
+		 	<!--<div class="release-textarea" style="margin-top: 10px;">
+		 		<textarea name="" class="info" rows="" cols="" placeholder="请说明项目的亮点"></textarea>
+		 		<button><span class="mui-icon mui-icon-plusempty"></span></button>
+		 		<img src="" class="tupian-span" style="accelerator: 100%; display: none;" id="img2" />
+		 		
+		 	</div>-->
+		 	<div class="release-zt-div">
+		 		<span class="release-zt-span">用户须知</span>
+		 	</div>
+		 	<div class="user-instructions">
+		 		<p>1.以上内容，带*为必填项。</p>
+		 		<p>2.填写的相关信息应尽量保证正确无误，以免延误课程进度。</p>
+		 		<p>3.发布人的利益信息会在通知时一并告知，请随时关注您的短信</p>
+		 		<p>4.相关客服人员在收到该项目信息后，会尽快与教师联系和沟通，项目成功后会第一时间收到通知。</p>
+		 		<p>5.由于此类课程为众筹项目，所以存在一定失败几率，本平台不承担和担保任何情况的发生。</p>
+		 		<p>6.用户应保证不得以任何方式对教师的诽谤和攻击，以上情况应由用户承担法律责任。</p>
+		 		<p>7.本平台致力于服务一切有需求的学生团体，如有不足之处请及时与我们反馈。</p>
+		 	</div>
+		 	<!--<div class="release-textarea" style="margin-bottom: 20px;">
+		 		<textarea name="" class="info" rows="" cols="" placeholder="请说明项目带来的回报"></textarea>
+		 	</div>-->
+		 	<button class="release" id="btn">发布</button>
+		 </div>
+		 <script src="js/castapp.js"></script>
+		 <script>
+		 	ca.init();
+			var cell=ca.className('release');
+		cell['0'].addEventListener('tap',function(){
+			ca.newInterface({
+				url:'authstr.html',
+				id:'authstr',
+			})
+		});
+		 	var btn=ca.tagName('button');
+		 	//var btn=dj.id('btn');
+		 	var info=ca.className('info')
+		 	var cell=ca.className('mui-table-view-cell');
+		 	var select_input=ca.className('right-text');
+		 	
+		 	cell['0'].addEventListener('tap',function(){
+		 		var date=new Date();
+		 		var year=date.getFullYear();
+		 		var month=date.getMonth()+1;
+		 		var day=date.getDate();
+		 		var h=date.getHours();
+		 		var m=date.getMinutes();
+		 		
+		 		ca.dateSelect({
+		 			defaultTime:year +'-'+month +'-'+ day,
+		 			minTime:year +'-'+month +'-'+ day,
+		 			maxTime:(year+1) +'-'+ (month+1) +'-'+ day,
+		 			callback:function(data){
+		 				if(data){
+		 					ca.timeSelect({
+		 						defaultTime:h +':'+ m,
+		 						callback:function(time){
+		 							if(m<10){
+									m='0'+m;
+								}
+								var now_time=h+''+m;
+								var time_arr=time.replace(':','');
+								if(time_arr<now_time){
+									ca.prompt('时间选择有误');
+									return;
+		 						}
+								select_input['0'].innerHTML=data+''+time;
+								}
+		 						
+		 					})
+		 				}
+		 			}
+		 		})
+		 	});
+		 	cell['1'].addEventListener('tap',function(){
+		 		var date=new Date();
+		 		var year=date.getFullYear();
+		 		var month=date.getMonth()+1;
+		 		var day=date.getDate();
+		 		var h=date.getHours();
+		 		var m=date.getMinutes();
+		 		
+		 		ca.dateSelect({
+		 			defaultTime:year +'-'+month +'-'+ day,
+		 			minTime:year +'-'+month +'-'+ day,
+		 			maxTime:(year+1) +'-'+ (month+1) +'-'+ day,
+		 			callback:function(data){
+		 				if(data){
+		 					ca.timeSelect({
+		 						defaultTime:h +':'+ m,
+		 						callback:function(time){
+		 							if(m<10){
+									m='0'+m;
+								}
+								var now_time=h+''+m;
+								var time_arr=time.replace(':','');
+								if(time_arr<now_time){
+									ca.prompt('时间选择有误');
+									return;
+		 						}
+								select_input['1'].innerHTML=data+''+time;
+								}
+		 						
+		 					})
+		 				}
+		 			}
+		 		})
+		 	});
+		 	
+		 	var request_url=localStorage.getItem('request_url');
+		    var login_phone=localStorage.getItem('phone');
+		    var img_url=localStorage.getItem('img_url');
+		 	var oI=ca.id('img1');
+		 	var oI2=ca.id('img2');
+//		 	dj.click(btn['1'],function(){
+//		 		dj.album({
+//				    succFn:function(path){
+//                      oI.style.display="block";
+//                      oI.src=path;
+//						
+//						//alert(path);
+//				    },
+//				    errFn:function(error){
+//				        alert(error);
+//				    }
+//				});
+//		 	});
+//		 	dj.click(btn['2'],function(){
+//		 		dj.album({
+//				    succFn:function(path){
+//						oI2.style.display="block";
+//                      oI2.src=path;
+//						//alert(path);
+//				    },
+//				    errFn:function(error){
+//				        alert(error);
+//				    }
+//				});
+//		 	});
+            btn['0'].addEventListener('tap',function(){
+					var arr=[{title:'照相机'},{title:'相册'}];
+					ca.actionSheet(arr,{
+						succFn:function(path){
+							//alert(path);
+						 oI.style.display="block";
+							
+							oI.src=img_url+path;
+						},
+						isUpload:true,
+						uploadUrl:img_url+'upload_file.php',
+						
+					})
+				});
+				btn['1'].addEventListener('tap',function(){
+					var arr=[{title:'照相机'},{title:'相册'}];
+					ca.actionSheet(arr,{
+						succFn:function(path){
+							oI2.style.display="block";
+							//更改数据
+							oI2.src=img_url+path;
+						},
+						isUpload:true,
+						uploadUrl:img_url+'upload_file.php',
+						
+					})
+				});
+		 	
+		 	
+		    btn['2'].addEventListener('tap',function(){
+		    	var theme=info['0'].value;
+		    	var number=info['1'].value;
+		    	var fee=info['2'].value;
+		    	var place=info['3'].value;
+		    	var act_time=select_input['0'].innerHTML;
+		    	var next_time=select_input['1'].innerHTML;
+		    	var pro_content=info['4'].value;
+		    	var imgo=oI.src;
+		    	var pro_bright=info['5'].value;
+		    	var imgt=oI2.src;
+		    	var report=info['6'].value;
+//		    	alert(imgo);
+//		    	alert(imgt);
+		    	if(imgo==''){
+		    		ca.prompt('请务必上传图片');
+		    		return;
+		    	}
+		    	if(imgt==''){
+		    		ca.prompt('请务必上传图片');
+					return;
+		    	}
+		    	
+//		    	alert(request_url);
+//		    	alert(login_phone);
+				ca.get({
+					url:request_url+'Info/add_info',
+					data:{
+						theme_data:theme,
+						number_data:number,
+						fee_data:fee,
+						place_data:place,
+						act_time_data:act_time,
+						next_time_data:next_time,
+						pro_content_data:pro_content,
+						imgo_data:imgo,
+						pro_bright_data:pro_bright,
+						imgt_data:imgt,
+						report_data:report,
+						phone_data:login_phone
+					},
+					succFn:function(data){
+						//alert(data);
+						if(data==1){
+							ca.showWaiting();
+							
+							var arr=['index-content','index-nav'];
+								ca.sendNotice(arr,'update',{});
+							setTimeout(function(){
+								ca.prompt('发布成功');
+//								ca.closeCurrentInterface();
+//								ca.newInterface({
+//									url:'index-content.html',
+//									id:'index-content'
+//								})
+								ca.getStartInterface(function(obj){
+									obj.show();
+								});
+								ca.closeWaiting();
+								dj.closeCurrentInterface();
+							},2000);
+						}else{
+							ca.prompt('发布失败，请重试');
+						}
+					}
+				})
+		    })
+		 </script>
+	</body>
+
+</html>

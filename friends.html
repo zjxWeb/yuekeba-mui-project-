@@ -1,0 +1,248 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/sub.style.css"/>
+	</head>
+
+	<body class="public-fff-bgcolor">
+		<header class="mui-bar mui-bar-nav register-nav" style="background-color: #54bbfe;">
+			<!--<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left public-nav-text register-nav-text"></a>-->
+			<h3 class="mui-title register-nav-text">好友圈</h3>
+			<a class="mui-icon mui-icon-camera mui-pull-right register-nav-text" id="camera"></a>
+			<button class="mui-action-back mui-btn mui-btn-link mui-btn-nav mui-pull-left register-nav-text register-nav-btn">
+				<span class="mui-action-back mui-icon mui-icon-left-nav"></span> 返回
+			</button>   	
+		</header>
+			<div class="mui-content public-fff-bgcolor">
+			    <div class="pyq-bg">
+			    	<img class="info" src="images/dream.webp"/>
+			    	<div class="pyq-head-box">
+			    		<span class="info">Ｓingle °凉兮</span>
+			    		<img class="info" src="images/crop11.webp"friendsl">
+			    <!--<div class="pyq-user-box public-padding" style="padding: 10px;">
+			    	<div class="user-box-l">
+			    		<img src="images/360.webp"/>
+			    	</div>
+			    	<div class="user-box-r">
+			    		<span>胡先生</span>
+			    		<p>三分天注定，七分靠打拼，爱拼才会赢。</p>
+			    		<div class="user-box-img">
+			    			<img src="images/logo.webp"/>
+			    			<img src="images/logo.webp"/>
+			    			<img src="images/tengxxw.webp"/>
+			    			<img src="images/tengxxw.webp"/>
+			    			<img src="images/tengxxw.webp"/>
+			    			<img src="images/tengxxw.webp"/>
+			    			<img src="images/tengxxw.webp"/>
+			    			<img src="images/tengxxw.webp"/>
+			    			<img src="images/tengxxw.webp"/>
+			    		</div>
+			    		<p class="pyq-time"><span>4小时前</span><span class="mui-icon mui-icon-chat time-icon"></span></p>
+			    		<p class="pyq-pl"><span style="color: #7585A7;">浮动</span>:111111111</p>
+			    	</div>
+			    	<div class="public-clear"></div>
+			    	
+			    </div>-->
+			    </div>
+			    
+			    <div id="reply_input" class="reply-bottom-input" style="display: none">
+			    	<input id="text" type="text" />
+			    	<button id="send">发送</button>
+			    </div>
+			</div>
+			<script src="js/castapp.js"></script>
+			<script>
+				ca.init();
+				var info=ca.className('info');
+				var request_url=localStorage.getItem('request_url');
+				var login_phone=localStorage.getItem('phone');
+				var img_url=localStorage.getItem('img_url');
+				
+				get_user();
+				function get_user(){
+					ca.get({
+						url:request_url+'User/get_user',
+						data:{
+							phone_data:login_phone
+						},
+						succFn:function(data){
+							var all_json=JSON.parse(data);
+							var json=all_json['0'];
+							if(json.bg){
+								info['0'].src=img_url+json.bg;
+							}else{
+								info['0'].src='images/dream.webp';
+							}
+		
+							info['1'].innerHTML=json.nickname;
+							info['2'].src=img_url+json.touxiang;
+							
+						}
+					});
+				}
+				
+				//设置好友圈背景
+				info['0'].addEventListener('tap',function(){
+					var arr=[{title:'照相机'},{title:'相册'}];
+					ca.actionSheet(arr,{
+						succFn:function(path){
+							//更改数据
+							ca.get({
+								url:request_url+'User/mod_bg',
+								data:{
+									phone_data:login_phone,
+									path_data:path
+								},
+								succFn:function(data){
+									if(data==1){
+										info['0'].src=img_url+path;
+									}else{
+										ca.prompt('更新失败，请重试');
+									}
+								}
+							})
+							info['0'].src=img_url+path;
+						},
+						isUpload:true,
+						uploadUrl:img_url+'upload_file.php',
+						
+					})
+				});
+				
+				//点击发布好友圈
+				var camera=ca.id('camera');
+				camera.addEventListener('tap',function(){
+					ca.newInterface({
+						url:'fabuhaoyouquan.html',
+						id:'fabuhaoyouquan'
+					})
+				});
+				
+				var friendsl=ca.id('friendsl');
+				var cid='';
+				
+				
+				ca.receiveNotice('update_topic',function(){
+					friendsl.innerHTML='';
+					get_finfo();
+				});
+				
+				get_finfo();
+				function get_finfo(){
+				ca.get({
+					url:request_url+'Info/get_finfo',
+					data:{},
+					succFn:function(data){
+						
+						var json=JSON.parse(data);
+						for(var a in json){
+							var img_list=json[a].img;
+							if(img_list){
+								var img_arr=img_list.split('-');
+								var com_tmpl='';
+								for(var i=0;i<img_arr.length;i++){
+									com_tmpl+='<img src="'+img_arr[i]+'"/>';
+									//alert(img_arr[i].img);
+								}
+								//info['4'].innerHTML=tmpl;
+								//alert(img_arr);
+							}
+						    var tmpl='<div class="pyq-user-box public-padding" style="padding: 10px;">'
+							    	+'<div class="user-box-l">'
+							    	+'	<img src="'+img_url+json[a].user_data.touxiang+'"/>'
+							    	+'</div>'
+							    	+'<div class="user-box-r">'
+							    	+'	<span>'+json[a].user_data.nickname+'</span>'
+							    	+'	<p>'+json[a].content+'</p>'
+							    	+'	<div class="user-box-img">'
+							    	+com_tmpl
+							    	+'	</div>'
+							    	+'	<p class="pyq-time"><span>'+json[a].time+'</span><span class="mui-icon mui-icon-chat time-icon" cid="'+json[a].id+'"></span></p>'
+							    	+'	<p class="pyq-pl"><span style="color: #7585A7;">浮动</span>:哈哈哈</p>'
+							    	+'</div>'
+							    	+'<div class="public-clear"></div>'
+							    +'</div>';
+						    	friendsl.innerHTML+=tmpl;
+						}
+						click_chat();
+						
+					}
+				})
+			}
+				//评论
+				var reply_input=ca.id('reply_input');
+				var text=ca.id('text');
+    	        var send=ca.id('send');
+    	        //var pyq_pl=ca.className('pyq-pl');
+    	        
+    	        
+    	    function click_chat(){
+				var chat=ca.className('time-icon');
+				for(var a=0;a<chat.length;a++){
+					chat[a].addEventListener('tap',function(){
+						cid=this.getAttribute('cid');
+						reply_input.style.display="block";
+						//pyq_pl.setAttribute('cid',cid);
+						
+					
+						send.addEventListener('tap',function(){
+							var content=text.value;
+							if(content==''){
+								ca.prompt('请写出您的评论');
+								return;
+							}
+							ca.get({
+								url:request_url+'Info/add_freply',
+								data:{
+									phone_data:login_phone,
+									cid_data:cid,
+									content_data:content
+								},
+								succFn:function(data){
+									if(data==1){
+										text.value='';
+										friendsl.innerHTML='';
+										get_finfo();
+										//alert(cid);
+//										localStorage.setItem('cid',cid);
+										//get_pl();
+									
+									}else{
+										ca.prompt('网络延迟');
+									}
+								}
+							})
+						});
+						//alert(cid);
+						
+					});
+
+					
+				   }
+				
+			}
+//  	    var d=localStorage.getItem('cid');
+//  	    alert(d);
+//					function get_pl(){
+//						dj.get({
+//							url:request_url+'Info/get_pl',
+//							data:{
+//								cid_data:cid
+//							},
+//							succFn:function(data){
+//								alert(data);
+//							}
+//						})
+//					}
+//  	  
+			</script>
+	</body>
+
+</html>

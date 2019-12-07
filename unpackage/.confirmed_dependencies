@@ -1,0 +1,1383 @@
+{
+  "my.html": {
+    "resources": [
+      "css/icon.style.css",
+      "fonts/icon.ttf",
+      "images/avatar_default.webp",
+      "images/2.webp",
+      "js/common.js",
+      "js/mui.min.js",
+      "images/1.webp",
+      "css/mui.min.css",
+      "css/style.css",
+      "fonts/mui.ttf",
+      "js/dongyi.js",
+      "images/5.webp",
+      "images/1.webp",
+      "js/castapp.js",
+      "images/light.webp",
+      "images/crop11.webp"
+    ],
+    "refer": [
+      "login.html",
+      "subPages/orderListNav.html",
+      "subPages/myWallet.html",
+      "subPages/concernListNav.html",
+      "setting.html",
+      "chat.html",
+      "subPages/myActListNav.html",
+      "message.html",
+      "tongxunlu.html",
+      "add_friends.html",
+      "meirituijian.html",
+      "zuijinliulan.html",
+      "give_notice.html",
+      "feedback.html",
+      "personal_center.html",
+      "subPages/orderSheet.html",
+      "subPages/mypost.html"
+    ]
+  },
+  "index-nav.html": {
+    "resources": [
+      "index-content.html",
+      "fonts/mui.ttf",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/style.css",
+      "js/dongyi.js",
+      "js/castapp.js"
+    ],
+    "refer": [
+      "index-content.html",
+      "release.html",
+      "map.html",
+      "login.html",
+      "cehuawode.html",
+      "cehuadaohang.html",
+      "my.html",
+      "subPages/actDetailNav.html",
+      "subPages/actDetailNav3.html",
+      "civil_servant.html",
+      "subPages/actDetailNav2.html",
+      "pubmeb.html"
+    ]
+  },
+  "my-nav.html": {
+    "resources": [
+      "my.html",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/style.css",
+      "fonts/mui.ttf",
+      "js/dongyi.js"
+    ],
+    "refer": [
+      "my.html"
+    ]
+  },
+  "navigator.html": {
+    "resources": [
+      "js/common.js",
+      "index-nav.html",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css",
+      "js/dongyi.js",
+      "index-content.html",
+      "js/castapp.js",
+      "list-nav.html",
+      "css/iconfont.css",
+      "fonts/iconfont.ttf",
+      "index-nev+cehuadaohang.html",
+      "index-nav1111.html",
+      "index-nav2222.html",
+      "discover.html"
+    ],
+    "refer": [
+      "index-nav.html",
+      "my-nav.html",
+      "discover.html",
+      "list-nav.html",
+      "my.html",
+      "index-content.html",
+      "index-nav1111.html",
+      "index-nev+cehuadaohang.html",
+      "index-nav2222.html",
+      "zixun.html"
+    ]
+  },
+  "list-index.html": {
+    "resources": [
+      "images/song.webp",
+      "images/gy.webp",
+      "images/qixing.webp",
+      "images/shousi.webp",
+      "images/mianbao.webp",
+      "images/zhipian.webp",
+      "css/style.css",
+      "js/common.js",
+      "images/heart-full.webp",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "images/mingxinpian.webp",
+      "images/shu.webp",
+      "js/castapp.js",
+      "fonts/mui.ttf"
+    ],
+    "refer": [
+      "subPages/actDetailNav.html"
+    ]
+  },
+  "list-nav.html": {
+    "resources": [
+      "images/s_arr.webp",
+      "list-index.html",
+      "js/common.js",
+      "fonts/mui.ttf",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/style.css",
+      "js/castapp.js"
+    ],
+    "refer": [
+      "list-pg-index.html",
+      "list-index.html"
+    ]
+  },
+  "discover.html": {
+    "resources": [
+      "images/2.webp",
+      "images/1.webp",
+      "images/haoyouquan1.webp",
+      "images/3.webp",
+      "images/4.webp",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/style.css",
+      "friends.html",
+      "fonts/mui.ttf",
+      "js/dongyi.js",
+      "images/pengyouquan1.webp",
+      "css/iconfont.css",
+      "fonts/iconfont.ttf",
+      "js/castapp.js"
+    ],
+    "refer": [
+      "friends.html",
+      "funny_photo.html",
+      "leaderboard.html",
+      "star_gazing.html",
+      "sign_in.html",
+      "shopping.html",
+      "game.html",
+      "fujinderen.html",
+      "near_teacher.html",
+      "over.html",
+      "forum.html",
+      "sousuo.html"
+    ]
+  },
+  "index-content.html": {
+    "resources": [
+      "images/cbd.webp",
+      "images/dream.webp",
+      "images/heart-full.webp",
+      "images/yuantiao.webp",
+      "images/chuangxin.webp",
+      "images/mingxinpian.webp",
+      "images/huanbao.webp",
+      "images/gongyilvxing.jpeg",
+      "images/shu.webp",
+      "images/2.webp",
+      "images/muwu.webp",
+      "css/style.css",
+      "images/3.webp",
+      "images/4.webp",
+      "js/common.js",
+      "js/mui.min.js",
+      "images/1.webp",
+      "css/mui.min.css",
+      "images/2.webp",
+      "images/3.webp",
+      "images/1.webp",
+      "images/4.webp",
+      "js/dongyi.js",
+      "css/iconfont.css",
+      "release.html",
+      "fonts/mui.ttf",
+      "js/castapp.js",
+      "images/re.webp",
+      "images/ae.webp",
+      "images/lx.webp",
+      "images/i.webp",
+      "css/slide.nav.css",
+      "images/wumai.webp",
+      "images/lsjy.webp",
+      "images/taoqi.webp",
+      "images/minzu.webp",
+      "images/jianzhi.webp",
+      "images/mudiao.webp",
+      "images/shoubiao.webp",
+      "images/puti.webp",
+      "images/ae.webp",
+      "images/tu9.webp",
+      "images/tu8.webp",
+      "images/tu3.webp",
+      "images/tu5.webp",
+      "images/tu2.webp",
+      "images/tu1.webp",
+      "images/tu7.webp",
+      "images/tu6.webp",
+      "images/tu4.webp",
+      "js/mui.zoom.js",
+      "js/mui.previewimage.js",
+      "images/lijuan.webp",
+      "images/limengjiao.webp",
+      "images/liuyanxia.webp",
+      "images/wangjiantao.webp",
+      "images/liweiming.webp",
+      "images/slideshow2.webp",
+      "images/slideshow1.webp",
+      "images/lbt3.webp",
+      "images/lbt4.webp",
+      "images/lbt1.webp",
+      "images/lbt2.webp",
+      "images/jiaoshi1.webp",
+      "images/jiaoshi6.webp",
+      "images/jiaoshi5.webp",
+      "images/jiaoshi7.webp",
+      "images/jiaoshi8.webp",
+      "images/jiaoshi4.webp",
+      "images/jiaoshi13.webp",
+      "images/jiaoshi11.webp"
+    ],
+    "refer": [
+      "subPages/actDetailNav.html",
+      "release.html",
+      "login.html",
+      "actDetailNav.html",
+      "actDetail.html",
+      "over.html",
+      "public.html",
+      "dream.html",
+      "pubmeb.html",
+      "cet.html",
+      "civil_servant.html",
+      "vocational_skills.html",
+      "subPages/actDetailNav3.html",
+      "subPages/actDetailNav2.html",
+      "subPages/actDetailNav1.html"
+    ]
+  },
+  "login.html": {
+    "resources": [
+      "images/username.webp",
+      "images/logo.webp",
+      "fonts/mui.ttf",
+      "images/password.webp",
+      "js/common.js",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/style.css",
+      "js/dongyi.js",
+      "js/castapp.js"
+    ],
+    "refer": [
+      "register.html",
+      "findPswStep1.html"
+    ]
+  },
+  "subPages/orderListNav.html": {
+    "resources": [
+      "css/sub.style.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "subPages/orderList.html",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "subPages/orderList.html"
+    ]
+  },
+  "subPages/orderList.html": {
+    "resources": [
+      "css/icon.style.css",
+      "js/common.js",
+      "images/yuantiao.webp",
+      "images/song.webp",
+      "fonts/icon.ttf",
+      "images/shousi.webp",
+      "images/mingxinpian.webp",
+      "images/mianbao.webp",
+      "js/castapp.js",
+      "css/sub.style.css",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "images/jiaoshi12.webp",
+      "images/jiaoshi13.webp"
+    ],
+    "refer": [
+      "subPages/publicNav.html"
+    ]
+  },
+  "subPages/myWallet.html": {
+    "resources": [
+      "css/icon.style.css",
+      "css/sub.style.css",
+      "js/common.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "fonts/icon.ttf"
+    ],
+    "refer": [
+      "subPages/topup.html"
+    ]
+  },
+  "subPages/concernListNav.html": {
+    "resources": [
+      "css/sub.style.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "subPages/concernList.html",
+      "css/style.css",
+      "images/jiaoshi1.webp",
+      "images/heart-full.webp",
+      "images/jiaoshi5.webp",
+      "images/liweiming.webp",
+      "images/jiaoshi7.webp"
+    ],
+    "refer": [
+      "subPages/concernList.html"
+    ]
+  },
+  "subPages/concernList.html": {
+    "resources": [
+      "css/icon.style.css",
+      "images/cbd.webp",
+      "js/common.js",
+      "fonts/icon.ttf",
+      "js/castapp.js",
+      "release.html",
+      "css/sub.style.css",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "images/jiaoshi1.webp",
+      "images/jiaoshi5.webp",
+      "images/jiaoshi7.webp",
+      "images/heart-full.webp",
+      "images/liweiming.webp",
+      "css/style.css"
+    ],
+    "refer": [
+      "subPages/makeOrder.html"
+    ]
+  },
+  "subPages/actDetailNav.html": {
+    "resources": [
+      "css/icon.style.css",
+      "css/sub.style.css",
+      "js/common.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "fonts/icon.ttf",
+      "subPages/actDetail.html",
+      "js/dongyi.js",
+      "js/castapp.js"
+    ],
+    "refer": [
+      "subPages/actDetail.html",
+      "subPages/makeOrder.html"
+    ]
+  },
+  "subPages/actDetail.html": {
+    "resources": [
+      "images/bike.webp",
+      "images/shuba.webp",
+      "images/logo.webp",
+      "images/shuba1.webp",
+      "images/light.webp",
+      "images/shu.webp",
+      "js/dongyi.js",
+      "css/icon.style.css",
+      "css/sub.style.css",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "fonts/icon.ttf",
+      "fonts/mui.ttf",
+      "release.html",
+      "js/castapp.js",
+      "images/lj.webp",
+      "images/lijuan.webp",
+      "images/ljsk.webp",
+      "images/crop1.webp",
+      "images/crop10.webp",
+      "images/crop11.webp",
+      "images/crop13.webp",
+      "images/crop12.webp",
+      "images/jiaoshi13.webp",
+      "images/ljsk1.webp"
+    ],
+    "refer": []
+  },
+  "list-pg-index.html": {
+    "resources": [
+      "images/gy.webp",
+      "images/qixing.webp",
+      "images/yuantiao.webp",
+      "images/huanbao.webp",
+      "images/heart-full.webp",
+      "js/common.js",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/style.css",
+      "js/castapp.js"
+    ],
+    "refer": []
+  },
+  "friends.html": {
+    "resources": [
+      "images/dream.webp",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/style.css",
+      "images/qier.webp",
+      "images/logo.webp",
+      "images/shuijiao.webp",
+      "images/mingxinpian.webp",
+      "images/mianbao.webp",
+      "fonts/mui.ttf",
+      "images/bike.webp",
+      "images/cbd.webp",
+      "images/360.webp",
+      "images/shuba.webp",
+      "images/shuba1.webp",
+      "images/shousi.webp",
+      "images/yuantiao.webp",
+      "images/gy.webp",
+      "images/huanbao.webp",
+      "js/dongyi.js",
+      "css/sub.style.css",
+      "js/castapp.js",
+      "images/logo.webp",
+      "images/crop11.webp"
+    ],
+    "refer": [
+      "fabuhaoyouquan.html"
+    ]
+  },
+  "findPswStep1.html": {
+    "resources": [
+      "images/validate.webp",
+      "js/common.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css",
+      "js/dongyi.js",
+      "js/castapp.js"
+    ],
+    "refer": [
+      "findPswStep2.html"
+    ]
+  },
+  "findPswStep2.html": {
+    "refer": [
+      "findPswStep3.html"
+    ],
+    "resources": [
+      "js/common.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css",
+      "js/dongyi.js",
+      "js/castapp.js"
+    ]
+  },
+  "register.html": {
+    "resources": [
+      "js/common.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css",
+      "js/dongyi.js",
+      "images/avatar_default.webp",
+      "js/castapp.js"
+    ],
+    "refer": []
+  },
+  "findPswStep3.html": {
+    "resources": [
+      "js/dongyi.js",
+      "js/common.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css",
+      "js/castapp.js"
+    ],
+    "refer": []
+  },
+  "setting.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "css/style.css",
+      "fonts/iconfont.ttf",
+      "js/dongyi.js",
+      "js/castapp.js"
+    ],
+    "refer": [
+      "account-security.html",
+      "feedback.html"
+    ]
+  },
+  "feedback.html": {
+    "resources": [
+      "js/dongyi.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css",
+      "js/castapp.js"
+    ],
+    "refer": []
+  },
+  "chat.html": {
+    "resources": [
+      "images/360.webp",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "images/qier.webp",
+      "css/style.css",
+      "fonts/iconfont.ttf",
+      "js/castapp.js",
+      "images/logo.webp"
+    ],
+    "refer": []
+  },
+  "subPages/topup.html": {
+    "resources": [
+      "images/alipay.webp",
+      "images/weipay.webp",
+      "css/sub.style.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "subPages/myActListNav.html": {
+    "resources": [
+      "subPages/myActList.html",
+      "css/sub.style.css",
+      "css/icon.style.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "fonts/icon.ttf",
+      "js/dongyi.js",
+      "js/castapp.js"
+    ],
+    "refer": [
+      "subPages/myActList.html"
+    ]
+  },
+  "qidonglunbotu.html": {
+    "resources": [
+      "js/dongyi.js",
+      "images/cbd.webp",
+      "images/yuantiao.webp",
+      "images/muwu.webp",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "images/shuijiao.webp",
+      "css/dongyi.css"
+    ],
+    "refer": [
+      "navigator.html"
+    ]
+  },
+  "release.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/style.css",
+      "js/dongyi.js",
+      "js/castapp.js"
+    ],
+    "refer": [
+      "index-content.html",
+      "authstr.html"
+    ]
+  },
+  "subPages/makeOrder.html": {
+    "resources": [
+      "images/alipay.webp",
+      "images/small-icon.webp",
+      "images/weipay.webp",
+      "css/sub.style.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/dongyi.js",
+      "js/castapp.js"
+    ],
+    "refer": [
+      "subPages/modAddress.html",
+      "subPages/orderListNav.html"
+    ]
+  },
+  "subPages/myActList.html": {
+    "resources": [
+      "js/common.js",
+      "images/qixing.webp",
+      "images/shu.webp",
+      "js/dongyi.js",
+      "css/icon.style.css",
+      "css/sub.style.css",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "fonts/icon.ttf",
+      "fonts/mui.ttf",
+      "js/castapp.js"
+    ],
+    "refer": []
+  },
+  "fabuhaoyouquan.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css",
+      "js/dongyi.js",
+      "js/castapp.js"
+    ],
+    "refer": []
+  },
+  "subPages/modAddress.html": {
+    "resources": [
+      "css/sub.style.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/dongyi.js",
+      "js/castapp.js"
+    ],
+    "refer": []
+  },
+  "over.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "images/song.webp",
+      "images/gy.webp",
+      "images/qixing.webp",
+      "images/shousi.webp",
+      "images/mingxinpian.webp",
+      "images/mianbao.webp",
+      "images/zhipian.webp",
+      "images/shu.webp",
+      "css/style.css",
+      "images/heart-full.webp",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/castapp.js",
+      "images/shuba.webp",
+      "images/light.webp",
+      "images/ly2.webp",
+      "images/jiaoshi1.webp",
+      "images/jiaoshi5.webp",
+      "images/jiaoshi7.webp",
+      "images/jiaoshi8.webp",
+      "images/jiaoshi4.webp",
+      "images/liweiming.webp",
+      "images/jiaoshi10.webp",
+      "images/jiaoshi2.webp",
+      "images/jiaoshi3.webp"
+    ],
+    "refer": []
+  },
+  "public.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css",
+      "images/heart-full.webp",
+      "images/yuantiao.webp",
+      "images/qixing.webp",
+      "images/huanbao.webp",
+      "images/light.webp"
+    ],
+    "refer": []
+  },
+  "dream.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css",
+      "images/123.webp",
+      "images/logo.webp",
+      "js/castapp.js"
+    ],
+    "refer": [
+      "fabuxuyuan.html"
+    ]
+  },
+  "account-security.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css",
+      "images/bangdingsj.webp"
+    ],
+    "refer": []
+  },
+  "message.html": {
+    "resources": [
+      "images/logo.webp",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "css/style.css",
+      "fonts/iconfont.ttf",
+      "images/i.webp"
+    ],
+    "refer": []
+  },
+  "leaderboard.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css",
+      "images/qier.webp",
+      "images/360.webp",
+      "images/logo.webp",
+      "images/logo.webp",
+      "images/re.webp",
+      "images/lv.webp",
+      "images/ly0.webp",
+      "images/shuba.webp",
+      "images/mianbao.webp",
+      "images/shu.webp",
+      "images/jiaoshi12.webp",
+      "images/jiaoshi1.webp",
+      "images/jiaoshi2.webp",
+      "images/jiaoshi16.webp",
+      "images/jiaoshi6.webp",
+      "images/jiaoshi15.webp",
+      "images/jiaoshi3.webp",
+      "images/jiaoshi14.webp",
+      "images/jiaoshi13.webp",
+      "images/jiaoshi11.webp"
+    ],
+    "refer": []
+  },
+  "sign_in.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css"
+    ],
+    "refer": []
+  },
+  "true_hearts.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css"
+    ],
+    "refer": []
+  },
+  "tongxunlu.html": {
+    "resources": [
+      "images/360.webp",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css",
+      "js/castapp.js"
+    ],
+    "refer": [
+      "add_person.html",
+      "chat.html"
+    ]
+  },
+  "add_person.html": {
+    "resources": [
+      "js/castapp.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css",
+      "images/avatar_default.webp"
+    ],
+    "refer": []
+  },
+  "funny_photo.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css"
+    ],
+    "refer": []
+  },
+  "star_gazing.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css",
+      "js/castapp.js"
+    ],
+    "refer": []
+  },
+  "add_friends.html": {
+    "resources": [
+      "images/logo.webp",
+      "images/qier.webp",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css"
+    ],
+    "refer": []
+  },
+  "fabuxuyuan.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css"
+    ],
+    "refer": []
+  },
+  "shopping.html": {
+    "resources": [
+      "js/castapp.js",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/style.css",
+      "fonts/mui.ttf"
+    ],
+    "refer": []
+  },
+  "game.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css",
+      "images/youxi1.webp",
+      "images/youxi3.webp",
+      "images/youxi6.webp",
+      "images/youxi4..webp",
+      "images/youxi5.webp",
+      "images/youxi2.webp"
+    ],
+    "refer": []
+  },
+  "meirituijian.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css",
+      "images/dream.webp",
+      "images/bike.webp",
+      "images/light.webp",
+      "images/tz3.webp",
+      "images/dy2.webp",
+      "images/lv1.webp",
+      "images/tz1.webp",
+      "images/ly1.webp",
+      "images/ly0.webp",
+      "images/dy.webp",
+      "images/tz2.webp",
+      "images/ly2.webp",
+      "images/aoyun0.webp",
+      "images/aoyun.webp",
+      "images/aoyun1.webp",
+      "images/lv.webp"
+    ],
+    "refer": []
+  },
+  "fujinderen.html": {
+    "resources": [
+      "images/asd.webp",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css",
+      "images/dream.webp",
+      "images/cbd.webp",
+      "images/logo.webp",
+      "images/bike.webp",
+      "images/qier.webp",
+      "images/mingxinpian.webp",
+      "images/light.webp"
+    ],
+    "refer": []
+  },
+  "zuijinliulan.html": {
+    "resources": [
+      "images/shuba.webp",
+      "images/qixing.webp",
+      "images/light.webp",
+      "images/mingxinpian.webp",
+      "images/ly2.webp",
+      "images/shu.webp",
+      "images/heart-full.webp",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css",
+      "images/jiaoshi12.webp",
+      "images/jiaoshi4.webp",
+      "images/jiaoshi16.webp",
+      "images/liweiming.webp",
+      "images/jiaoshi9.webp",
+      "images/jiaoshi1.webp",
+      "images/jiaoshi8.webp",
+      "images/jiaoshi10.webp",
+      "images/jiaoshi15.webp",
+      "images/jiaoshi14.webp"
+    ],
+    "refer": []
+  },
+  "map.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/style.css"
+    ],
+    "refer": []
+  },
+  "cet.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "images/heart-full.webp",
+      "images/yuantiao.webp",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/style.css",
+      "images/mingxinpian.webp",
+      "images/huanbao.webp",
+      "images/shu.webp",
+      "js/castapp.js",
+      "images/jiaoshi7.webp",
+      "images/jiaoshi13.webp",
+      "images/jiaoshi9.webp",
+      "images/jiaoshi2.webp",
+      "images/jiaoshi6.webp",
+      "images/jiaoshi1.webp",
+      "images/jiaoshi11.webp",
+      "images/jiaoshi16.webp",
+      "images/jiaoshi3.webp",
+      "images/jiaoshi1.webp"
+    ],
+    "refer": [
+      "vocational_skills.html",
+      "actDetailNav.html",
+      "subPages/actDetailNav.html"
+    ]
+  },
+  "pubmeb.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/castapp.js",
+      "images/heart-full.webp",
+      "images/yuantiao.webp",
+      "fonts/mui.ttf",
+      "css/style.css",
+      "images/mingxinpian.webp",
+      "images/huanbao.webp",
+      "images/shu.webp",
+      "images/jiaoshi12.webp",
+      "images/jiaoshi8.webp",
+      "images/jiaoshi15.webp",
+      "images/jiaoshi14.webp",
+      "images/jiaoshi4.webp",
+      "images/liweiming.webp",
+      "images/jiaoshi1.webp",
+      "images/jiaoshi9.webp",
+      "images/jiaoshi10.webp",
+      "images/jiaoshi16.webp"
+    ],
+    "refer": [
+      "subPages/actDetailNav.html"
+    ]
+  },
+  "civil_servant.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/castapp.js",
+      "images/heart-full.webp",
+      "images/yuantiao.webp",
+      "fonts/mui.ttf",
+      "css/style.css",
+      "images/mingxinpian.webp",
+      "images/huanbao.webp",
+      "images/shu.webp",
+      "images/jiaoshi12.webp",
+      "images/jiaoshi4.webp",
+      "images/liweiming.webp",
+      "images/jiaoshi9.webp",
+      "images/jiaoshi1.webp",
+      "images/jiaoshi5.webp",
+      "images/jiaoshi8.webp",
+      "images/jiaoshi10.webp",
+      "images/jiaoshi15.webp",
+      "images/jiaoshi14.webp"
+    ],
+    "refer": [
+      "subPages/actDetailNav.html"
+    ]
+  },
+  "vocational_skills.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "js/castapp.js",
+      "images/heart-full.webp",
+      "images/yuantiao.webp",
+      "fonts/mui.ttf",
+      "css/style.css",
+      "images/mingxinpian.webp",
+      "images/huanbao.webp",
+      "images/shu.webp",
+      "images/jiaoshi13.webp",
+      "images/jiaoshi12.webp",
+      "images/jiaoshi7.webp",
+      "images/jiaoshi3.webp",
+      "images/jiaoshi1.webp",
+      "images/jiaoshi5.webp",
+      "images/jiaoshi2.webp",
+      "images/jiaoshi11.webp",
+      "images/jiaoshi6.webp",
+      "images/jiaoshi14.webp"
+    ],
+    "refer": [
+      "subPages/actDetailNav.html"
+    ]
+  },
+  "actDetailNav.html": {
+    "resources": [
+      "css/icon.style.css",
+      "css/sub.style.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "fonts/icon.ttf",
+      "js/castapp.js",
+      "actDetail.html"
+    ],
+    "refer": [
+      "actDetail.html"
+    ]
+  },
+  "actDetail.html": {
+    "resources": [
+      "css/icon.style.css",
+      "css/sub.style.css",
+      "js/mui.min.js",
+      "images/shuba.webp",
+      "css/mui.min.css",
+      "fonts/icon.ttf",
+      "images/shuba1.webp",
+      "images/shu.webp",
+      "images/logo.webp"
+    ],
+    "refer": []
+  },
+  "near_teacher.html": {
+    "resources": [
+      "images/crop18.webp",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/build -dream.css",
+      "css/mui.min.css",
+      "images/jiaoshi11.webp",
+      "images/jiaoshi6.webp",
+      "images/jiaoshi12.webp",
+      "images/jiaoshi16.webp",
+      "images/liweiming.webp",
+      "images/jiaoshi1.webp",
+      "images/jiaoshi8.webp",
+      "images/jiaoshi2.webp",
+      "images/jiaoshi10.webp",
+      "images/jiaoshi15.webp",
+      "images/jiaoshi14.webp"
+    ],
+    "refer": []
+  },
+  "authstr.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/build -dream.css",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "personal_center.html": {
+    "resources": [
+      "images/crop11.webp",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/build -dream.css",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "give_notice.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "images/xttz.webp",
+      "css/build -dream.css"
+    ],
+    "refer": []
+  },
+  "forum.html": {
+    "resources": [
+      "css/build -dream.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "images/alipay.webp",
+      "images/crop11.webp",
+      "images/crop15.webp",
+      "images/ti1.webp/",
+      "images/ti2.webp/",
+      "images/ti3.webp/",
+      "images/crop1.webp",
+      "images/crop10.webp",
+      "images/crop13.webp",
+      "js/common.js",
+      "images/ti2.webp/",
+      "images/ti1.webp/",
+      "images/ti3.webp",
+      "images/ti2.webp",
+      "images/ti1.webp",
+      "images/zhongchou.webp"
+    ],
+    "refer": [
+      "fatie.html"
+    ]
+  },
+  "fatie.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/build -dream.css",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "subPages/actDetailNav1.html": {
+    "resources": [
+      "js/castapp.js",
+      "css/icon.style.css",
+      "css/sub.style.css",
+      "js/common.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "fonts/icon.ttf",
+      "subPages/actDetail1.html"
+    ],
+    "refer": [
+      "subPages/actDetail1.html"
+    ]
+  },
+  "subPages/actDetail1.html": {
+    "resources": [
+      "images/crop11.webp",
+      "images/crop13.webp",
+      "images/crop10.webp",
+      "images/crop1.webp",
+      "images/ljsk.webp",
+      "images/shu.webp",
+      "images/crop12.webp",
+      "images/ljsk3.webp",
+      "images/jiaoshi7.webp",
+      "fonts/icon.ttf",
+      "css/icon.style.css",
+      "js/castapp.js",
+      "css/sub.style.css",
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "subPages/actDetailNav3.html": {
+    "resources": [
+      "js/castapp.js",
+      "css/icon.style.css",
+      "js/common.js",
+      "css/sub.style.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "fonts/icon.ttf",
+      "subPages/actDetail.html",
+      "subPages/actDetail3.html"
+    ],
+    "refer": [
+      "subPages/actDetail.html",
+      "subPages/actDetail3.html"
+    ]
+  },
+  "subPages/actDetail2.html": {
+    "resources": [
+      "images/crop11.webp",
+      "images/crop13.webp",
+      "images/crop10.webp",
+      "images/crop1.webp",
+      "images/ljsk.webp",
+      "images/shu.webp",
+      "images/crop12.webp",
+      "js/castapp.js",
+      "css/icon.style.css",
+      "css/sub.style.css",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "fonts/icon.ttf",
+      "images/liweiming.webp",
+      "images/ljsk1.webp"
+    ],
+    "refer": []
+  },
+  "subPages/actDetailNav2.html": {
+    "resources": [
+      "js/castapp.js",
+      "css/icon.style.css",
+      "subPages/actDetail2.html",
+      "css/sub.style.css",
+      "js/common.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "fonts/icon.ttf"
+    ],
+    "refer": [
+      "subPages/actDetail2.html"
+    ]
+  },
+  "subPages/actDetail3.html": {
+    "resources": [
+      "images/crop11.webp",
+      "images/crop13.webp",
+      "images/ljsk2.webp",
+      "images/crop10.webp",
+      "images/crop1.webp",
+      "images/jiaoshi11.webp",
+      "images/shu.webp",
+      "images/crop12.webp"
+    ],
+    "refer": []
+  },
+  "sousuo.html": {
+    "resources": [
+      "css/build -dream.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "subPages/orderSheet.html": {
+    "resources": [
+      "images/mingxinpian.webp",
+      "css/icon.style.css",
+      "js/common.js",
+      "fonts/icon.ttf",
+      "css/sub.style.css",
+      "css/build -dream.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "images/jiaoshi11.webp"
+    ],
+    "refer": []
+  },
+  "subPages/publicNav.html": {
+    "resources": [
+      "subPages/orderSheet.html",
+      "fonts/mui.ttf",
+      "css/sub.style.css",
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "subPages/orderSheet.html"
+    ]
+  },
+  "subPages/mypost.html": {
+    "resources": [
+      "css/build -dream.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "guid.html": {
+    "refer": [
+      "navigator.html"
+    ],
+    "resources": []
+  },
+  "cehuadaohang.html": {
+    "refer": [
+      "personal_center.html"
+    ],
+    "resources": []
+  },
+  "index-nav1111.html": {
+    "refer": [
+      "my.html",
+      "subPages/actDetailNav3.html",
+      "pubmeb.html",
+      "vocational_skills.html",
+      "subPages/actDetailNav.html",
+      "cet.html"
+    ],
+    "resources": []
+  },
+  "index-nav2222.html": {
+    "refer": [
+      "my.html",
+      "subPages/actDetailNav3.html",
+      "vocational_skills.html",
+      "pubmeb.html",
+      "civil_servant.html",
+      "cet.html"
+    ]
+  }
+}

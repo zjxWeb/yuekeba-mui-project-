@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <script type="text/javascript" src="js/common.js" ></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/icon.style.css" />
+    <style>
+    #login{
+	text-align: center;
+	margin-top: 100px; 
+	} 
+	</style> 
+   
+      	
+    
+</head>
+<body>
+	<header id="header" class="mui-bar mui-bar-nav index-header" style="-webkit-box-shadow: 0 0px 0px #ccc;">
+		<h1 class="mui-title public-white-text">我的</h1>
+		<span class="mui-icon mui-icon-email mui-pull-right my-nav-icon public-white-text" id="email"><span class="mui-badge my-nav-icon-badge public-badge">2</span></span>
+	</header>
+	<div id="pullrefresh" class="mui-content">
+		<!--<div id="login" style="display: none;">
+			<p>登录后,查看更多...</p>
+			<button id="btn" class="my-btn">请登录</button>
+		</div>-->
+		<div id="content" style="display: block;">
+			<ul style="background-image: url(images/my_nackkground.webp); width: 100%;height: 100%;">
+			<li id="userlogin" class="mui-table-view-cell my-home-profile">
+				<div class="my-home-avatar"><img id="img" class="info" src="images/crop11.webp" /></div>
+				<div class="my-home-pro-text">
+					<p class="my-home-pro-pickname">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="info">Ｓingle °凉兮</span><label class="mui-icon mui-icon-arrowright my-home-pro-arrow"></label></p>
+					<p class="my-home-pro-scores">我的成长值：<span class="info">70</span>&nbsp;&nbsp;|&nbsp;&nbsp;我的积分：<span class="info">50</span></p>
+				</div>
+				
+			</li>
+		</ul>
+		<ul class="mui-table-view mui-grid-view my-pro-btn-view">
+			<li id="my-act" class="mui-table-view-cell mui-col-xs-6 my-pro-btn">
+				<div class="my-home-btn-center">
+					<span class="my-home-btn-img"><img src="images/888.webp"/ style="width:28px; height: 28px; padding: 1px; margin-top: 0px;" ></span>
+					<span class="my-home-btn-title" style="padding-top: 10px;">
+						<span >我的发起</span>
+						<div class="my-home-btn-num info">1</div>
+					</span>
+				</div>
+			</li>
+			<li id="my-concern" class="mui-table-view-cell mui-col-xs-6 my-pro-btn">
+				<div class="my-home-btn-center my-pro-btn-line">
+					<span class="my-home-btn-img"><img src="images/999.webp"/  style="width:35px; height: 35px; margin-bottom: -6px;"></span>
+					<span class="my-home-btn-title" style="padding-top: 10px;">
+						<span>我的关注</span>
+						<div class="my-home-btn-num">4</div>
+					</span>
+				</div>
+			</li>
+		</ul>
+		<div class="public-empty-row"></div>
+		<ul class="mui-table-view">
+			<li id="order" class="mui-table-view-cell">
+				<a href="javascript:;" class="mui-navigate-right my-list-cell">
+					<div class="public-icon  my-list-icon"  style="padding: 3px;">
+						<img src="images/glass.webp" / style="width: 20px; height: 20px; ">
+						
+					</div>
+					<div class="my-list-text-small">
+						<span class="my-list-title">我的课程</span>
+					</div>
+					<span class="my-list-desc"><span class="mui-badge mui-badge-danger public-badge-text">待开课程×1</span></span>
+				</a>
+			</li>
+		</ul>
+		<ul class="mui-table-view">
+			<li id="my-wallet" class="mui-table-view-cell">
+				<a href="javascript:;" class="mui-navigate-right my-list-cell">
+					<div class="public-icon  my-list-icon" style="display: flex; padding:3px;">
+						<img src="images/grass.webp" / style="width: 20px; height: 20px; ">
+					</div>
+					<div class="my-list-text-small">
+						<span class="my-list-title">我的钱包</span>
+					</div>
+					<span class="my-list-desc"> </span>
+				</a>
+			</li>
+		</ul>
+		<div class="public-empty-row"></div>
+		<!--<ul class="mui-table-view">
+			<li id="my-chat" class="mui-table-view-cell">
+				<a href="javascript:;" class="mui-navigate-right my-list-cell">
+					<div class="public-icon icon-bubble my-list-icon"></div>
+					<div class="my-list-text-small">
+						<span class="my-list-title">聊天</span>
+					</div>
+					<span class="my-list-desc"></span>
+				</a>
+			</li>
+		</ul>-->
+		<!--<div class="public-empty-row"></div>-->
+		<ul class="mui-table-view">
+			<li id="find_friends" class="mui-table-view-cell">
+				<a href="javascript:;" class="mui-navigate-right my-list-cell">
+					<div class="public-icon  my-list-icon" style="padding: 3px;">
+						<img src="images/advice.webp" / style="width: 20px; height: 20px; ">
+					</div>
+					<div class="my-list-text-small">
+						<span class="my-list-title">我的帖子</span>
+					</div>
+					<span class="my-list-desc"></span>
+				</a>
+			</li>
+		</ul>
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell" id="tuijian">
+				<a href="javascript:;" class="mui-navigate-right my-list-cell">
+					<div class="public-icon  my-list-icon" style="padding: 3px;">
+						<img src="images/123.webp" / style="width: 20px; height: 20px; margin-top:-5px;">
+					</div>
+					<div class="my-list-text-small" style="line-height:3px">
+						<span class="my-list-title" style="padding-top:10px;">每日推荐</span>
+					</div>
+					<span class="my-list-desc">NEW<label class="public-dot-red">●</label></span>
+				</a>
+			</li>
+		</ul>
+		<ul class="mui-table-view" style="line-height:7px">
+			<li id="zuijin" class="mui-table-view-cell" >
+				<a href="javascript:;" class="mui-navigate-right my-list-cell" >
+					<div class="public-icon  my-list-icon" style="padding:3px;">
+						<img src="images/watch.webp" / style="width: 18px; height: 21px; ">
+					</div>
+					<div class="my-list-text-small">
+						<span class="my-list-title" style="padding-top:8px;">最近浏览</span>
+					</div>
+					<span class="my-list-desc"></span>
+				</a>
+			</li>
+		</ul>
+		<ul class="mui-table-view">
+			<li id="yijian" class="mui-table-view-cell">
+				<a href="javascript:;" class="mui-navigate-right my-list-cell">
+					<div class="my-list-icon "style="padding: 3px;" >
+						<img src="images/555.webp" / style="width: 20px; height: 20px; ">
+					</div>
+					<div class="my-list-text-small">
+						<span class="my-list-title">意见反馈</span>
+					</div>
+					<span class="my-list-desc"></span>
+				</a>
+			</li>
+		</ul>
+		<div class="public-empty-row"></div>
+		<ul class="mui-table-view">
+			<li id="my-setting" class="mui-table-view-cell">
+				<a href="javascript:;" class="mui-navigate-right my-list-cell">
+					<div class="mui-icon my-list-icon" style="padding: 3px;">
+						<img src="images/777.webp" / style="width: 20px; height: 20px; ">
+					</div>
+					<div class="my-list-text-small">
+						<span class="my-list-title">设置</span>
+					</div>
+					<span class="my-list-desc"></span>
+				</a>
+			</li>
+		</ul>
+		</div>
+	</div>
+	  <script type="text/javascript" src="js/my.js" ></script>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+      	mui.plusReady(function(){
+        	var oUserLogin = document.getElementById('userlogin');
+			var oemail = document.getElementById('email');
+      		var oMyAct = document.getElementById('my-act');
+      		var oConcern = document.getElementById('my-concern');
+      		var oOrder = document.getElementById('order');
+      		var oWallet = document.getElementById('my-wallet');
+//    		var oChat=document.getElementById('my-chat');
+      		var oFinds=document.getElementById('find_friends');
+      		var oTuijian=document.getElementById('tuijian');
+      		var oZuijin=document.getElementById('zuijin');
+      		var oYijian=document.getElementById('yijian');
+      		var oSetting=document.getElementById('my-setting');
+      		
+      		
+      			
+      			 
+      			
+      			
+      			
+      		
+	      		oUserLogin.addEventListener("tap",function(){
+					mui.openWindow({
+							id:'personal_center',
+							url:'personal_center.html',
+							waiting:{
+								 	 	options:{
+								 		loading:{interval: "0ms",height: "0px",}
+							   			}
+											
+							}
+						
+						});
+	      		});
+				
+				
+				     
+				//通知
+			 	  
+
+	      		oemail.addEventListener("tap",function(){
+//	      			openPage('give_notice.html','give_notice');
+					mui.openWindow({
+							id:'give_notice',
+							url:'give_notice.html', 
+							waiting:{
+								 	 	options:{
+								 		loading:{interval: "0ms",height: "0px",}
+							   			}
+											
+							}
+						
+						});
+	      		});  
+	      		//我发起的
+	      		oMyAct.addEventListener('tap',function(){
+//	      			openPage('subPages/orderSheet.html','subPages/orderSheet');
+					mui.openWindow({
+							id:'subPages/orderSheet',
+							url:'subPages/orderSheet.html', 
+							waiting:{
+								 	 	options:{
+								 		loading:{interval: "0ms",height: "0px",}
+							   			}
+											
+							}
+						
+						});
+	      		});
+	      		 
+	      		
+	      		//我关注的
+	      		oConcern.addEventListener('tap',function(){
+//	      			openPage('subPages/concernListNav.html','concernList');
+					mui.openWindow({
+							id:'concernList',
+							url:'subPages/concernListNav.html', 
+							waiting:{
+								 	 	options:{
+								 		loading:{interval: "0ms",height: "0px",}
+							   			}
+											
+							}
+						
+						});
+	      		});
+	      		//我的课程
+	      		oOrder.addEventListener('tap',function(){
+//	      			openPage('subPages/orderListNav.html','orderList');
+					mui.openWindow({
+							id:'orderList',
+							url:'subPages/orderListNav.html', 
+							waiting:{
+								 	 	options:{
+								 		loading:{interval: "0ms",height: "0px",}
+							   			}
+											
+							}
+						
+						});
+	      		});
+	      		//我的钱包
+	      		oWallet.addEventListener('tap',function(){
+//	      			openPage('subPages/myWallet.html','mywallet');
+					mui.openWindow({
+							id:'mywallet',
+							url:'subPages/myWallet.html', 
+							waiting:{
+								 	 	options:{
+								 		loading:{interval: "0ms",height: "0px",}
+							   			}
+											
+							}
+						
+						});
+	      		});
+	      		//
+	//    		oChat.addEventListener('tap',function(){
+	//    		   openPage('tongxunlu.html','tongxunlu');	
+	//    		});
+				//我的帖子
+				oFinds.addEventListener('tap',function(){
+//	      			openPage('subPages/mypost.html','setting');
+					mui.openWindow({
+							id:'setting',
+							url:'subPages/mypost.html', 
+							waiting:{
+								 	 	options:{
+								 		loading:{interval: "0ms",height: "0px",}
+							   			}
+											
+							} 
+						
+						});
+	      		});
+	      		//每日推荐
+				oTuijian.addEventListener('tap',function(){
+//	      			openPage('meirituijian.html','meirituijian');
+					mui.openWindow({
+							id:'meirituijian',
+							url:'meirituijian.html', 
+							waiting:{
+								 	 	options:{
+								 		loading:{interval: "0ms",height: "0px",}
+							   			}
+											
+							}
+						
+						});
+	      		});
+	      		//最近浏览
+				oZuijin.addEventListener('tap',function(){
+//	      			openPage('zuijinliulan.html','zuijinliulan');
+					mui.openWindow({
+							id:'zuijinliulan',
+							url:'zuijinliulan.html', 
+							waiting:{
+								 	 	options:{
+								 		loading:{interval: "0ms",height: "0px",}
+							   			}
+											
+							}
+						
+						});
+	      		});
+	      		//意见反馈
+				oYijian.addEventListener('tap',function(){
+//	      			openPage('feedback.html','feedback');
+					mui.openWindow({
+							id:'feedback',
+							url:'feedback.html', 
+							waiting:{
+								 	 	options:{
+								 		loading:{interval: "0ms",height: "0px",}
+							   			}
+											
+							}
+						
+						});
+	      		});
+	      		//设置
+	      		oSetting.addEventListener('tap',function(){
+//	      			openPage('setting.html','setting');
+					mui.openWindow({ 
+							id:'setting',
+							url:'setting.html', 
+							waiting:{  
+								 	 	options:{
+								 		loading:{interval: "0ms",height: "0px",}
+							   			}
+											
+							}
+						
+						});
+	      		});
+     });
+      	/*------------------------------------------------------------*/
+     
+		//关闭back、menu按键监听，这样侧滑主界面会自动获得back和memu的按键事件，仅在主界面处理按键逻辑即可；
+		mui.init({
+			keyEventBind: {
+				backbutton: false,
+				menubutton: false
+			}
+		});
+		var main = null;
+		mui.plusReady(function () {
+			main = plus.webview.currentWebview().opener();
+		})
+		
+		function closeMenu () {
+			mui.fire(main,"menu:swiperight");
+		}
+		
+		//左滑显示出来的菜单，只需监听右滑，然后将菜单关闭即可；在该菜单上左滑，不做任何操作；
+		window.addEventListener("swiperight",closeMenu);
+		
+//		document.getElementById("close-btn").addEventListener('tap',closeMenu);
+	</script>
+	               
+</body> 
+</html> 

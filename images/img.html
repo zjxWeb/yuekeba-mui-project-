@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>大图预览</title>
+<style type="text/css">body,img{margin:0;padding:0;}.bigimg{width:100%;margin:0 auto;text-align:center;}.none{display:none;}</style>
+</head>
+<body>
+<div class="bigimg">
+<script language="javascript"> 
+var g_url;
+function QueryList()
+ {
+   var url = window.location.href;
+   var pos = url.indexOf("?");
+   var suburl= url.substring(pos+1,url.length);
+   var pos1 = suburl.indexOf("=");
+   g_url = suburl.substring(pos1+1,url.length);
+ 
+ }
+ QueryList();
+ //document.location = g_url;
+ document.write("<a href=\""+g_url+"\"><img src=\""+g_url+"\"></a>");
+</script>
+<div class="none">
+<script type="text/javascript">var _bdhmProtocol =(("https:" ==document.location.protocol) ?" https://" :" http://");document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F4ab9334808e2dc23ba4d5ce24a8e4f35' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript" src="http://s48.cnzz.com/stat.php?id=323871&web_id=323871"></script>
+</div>
+</div>
+</body>
+</html>

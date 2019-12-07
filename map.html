@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	    <style>
+	    	.map{
+	    		top: 44px;
+	    		bottom: 0px;
+	    		height: 550px;
+	    		/*width: 100%;*/
+	    		background: #FFFFFF;
+	    	}
+	    </style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav register-nav" style="background-color: #54bbfe;"> 
+			<h3 class="mui-title register-nav-text">地图</h3>
+			<button class="mui-action-back mui-btn mui-btn-link mui-btn-nav mui-pull-left register-nav-text register-nav-btn">
+				<span class="mui-icon mui-icon-left-nav"></span> 返回
+			</button>
+		</header>
+		<div class="map" id="container"></div>
+		<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=4312572f08af33328abb9938bfabafbe"></script>
+		<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.3&key=4312572f08af33328abb9938bfabafbe"></script>
+		
+		<script src="http://webapi.amap.com/maps?v=1.3&key=您申请的key值&callback=init"></script>
+		<script>
+//		    function init(){
+//		        var map = new AMap.Map('container', {
+//		            center: [117.000923, 36.675807],
+//		            zoom: 6
+//		        });
+//		        map.plugin(["AMap.ToolBar"], function() {
+//		            map.addControl(new AMap.ToolBar());
+//		        });
+//		    }
+  var map = new AMap.Map('container', {
+        resizeEnable: true
+    });
+    //地图中添加地图操作ToolBar插件
+    map.plugin(['AMap.ToolBar'], function() {
+        //设置地位标记为自定义标记
+        var toolBar = new AMap.ToolBar();
+        map.addControl(toolBar);
+    });
+		</script>
+	</body>
+
+</html>

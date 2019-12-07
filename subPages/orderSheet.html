@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../js/mui.min.js"></script>
+    <script type="text/javascript" src="../js/common.js" ></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/icon.style.css" />
+    <link rel="stylesheet" href="../css/sub.style.css" />
+    <link rel="stylesheet" href="../css/build -dream.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <script type="text/javascript" charset="utf-8"> 
+      	mui.init({ 
+    	pullRefresh : {  
+	        container:"#refreshDiv",//下拉刷新容器标识，querySelector能定位的css选择器均可，比如：id、.class等    
+	        up : { 
+            contentrefresh : "正在加载...",//可选，正在加载状态时，上拉加载控件上显示的标题内容 
+            contentnomore:'没有更多数据了',//可选，请完毕若没有更多数据时显示的提醒内容； 
+            callback : pullUp //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据； 
+        	} },
+        	swipeBack:true
+		});
+		function pullUp(){
+			/*mui.get('list.html',{ //请接口地址
+			    state:'list'   // 参数  键 ：值
+			    },function(data){ // data为服务器端返回数据
+			    //获得服务器响应 ... 
+			    },'json' 
+			);*/
+			mui.alert('上拉加载');
+			//为true不加载重复数据，为false则无限加载
+			this.endPullupToRefresh(false); 
+		}
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav index-header">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title">我发起的</h1>
+	</header>
+	<div id="refreshDiv" class="mui-content mui-scroll-wrapper"> 
+    	<div class="mui-scroll">
+			<div class="os-status" style="background-color:#e2435e;">
+				<div class="os-status-text-box">
+					<div class="os-status-text">筑梦进行中</div>
+					<div class="os-status-countdown">剩18天10小时10分钟结束</div>
+				</div>
+				<div class="os-status-img">
+					
+				</div>
+			</div>
+			<!--订单单元1开始-->
+			<div class="order-box">
+				<div class="order-box-header">
+					<span class="icon-user order-author-icon"></span><span class="order-author">李梦娇老师<span class="order-arrow">〉</span></span><span class="order-status"style="color: #44cdff;">助梦进行中</span>
+				</div>
+				<div class="order-act-brief">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell mui-media order-brief-cell">
+							<a href="javascript:;">
+								<div class="order-brief-img-box">
+									<img class="mui-media-object mui-pull-left order-brief-img" src="../images/jiaoshi11.webp">
+								</div>
+								<div class="mui-media-body public-position-relative">
+									<div class="mui-ellipsis-2 order-brief-title">英语四级写作进阶</div>
+									<div class="order-brief-right"><div>￥500.00</div><label class="mui-pull-right">元/人</label></div>
+								</div>
+								<div class="order-brief-concern">关注度：511</div>
+							</a>
+						</li>
+					</ul>
+				</div>   
+				<div class="order-option">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell">目前进度：<span class="order-progress-box"><div class="order-progress" style="width:50%;"></div></span><label class="mui-pull-right order-right-text">50/100</label></li>
+						<li class="mui-table-view-cell">预期优惠：<label class="mui-pull-right order-right-text">课程收费的50%</label></li>
+						<li class="mui-table-view-cell">活动地址：<label class="mui-pull-right order-right-text">等待确定</label></li>
+						<!--<li class="mui-table-view-cell"><label>活动地址：</label><div class="order-address-box"><div class="order-address mui-ellipsis-2">等待确定</div></div></li>-->
+						<li class="mui-table-view-cell"><label class="mui-pull-right order-right-text order-count">共优惠<label>250元</label></label></li>
+						<li class="mui-table-view-cell"><label class="mui-pull-right order-btn"><button type="button" class="mui-btn order-btn-1">推广</button><button type="button" class="mui-btn order-btn-2">项目群</button><button type="button" class="mui-btn order-btn-3">确认完成</button></label></li>
+					</ul>
+				</div>
+			</div>
+			<!--订单单元1结束-->
+			<div class="public-thin-top"></div>
+		</div>
+	</div>
+</body>
+</html>

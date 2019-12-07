@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../js/mui.min.js"></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/sub.style.css" />
+    <script type="text/javascript" charset="utf-8">
+    	mui.plusReady(function(){
+    		var self = plus.webview.currentWebview();
+    		var oTitle = document.getElementById('title');
+    		oTitle.innerHTML = self.title;
+    		mui.init({
+		    subpages:[{ 
+			    url:self.page+'.html',//下拉刷新内容页面地址 
+			    id:self.page,//内容页面标志
+			     styles:{ top:'44px',
+			     		  bottom:'0px'//内容页面顶部位置,需根据实际页面布局计算，若使用标准mui导航，顶部默认为48px； .....//其它参数定义
+			     } 
+			    }] 
+			});
+    	});
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav public-dark-nav" style="background-color: #54bbfe;">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left public-white-text"></a>
+		<a class="mui-action-back mui-icon icon-share mui-pull-right public-white-text"></a>
+		<h1 id="title" class="mui-title public-white-text">活动详情</h1>
+	</header>
+</body>
+</html>

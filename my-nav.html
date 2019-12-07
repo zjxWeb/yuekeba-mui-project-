@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" charset="utf-8">
+      	mui.init({ 
+		    subpages:[{ 
+		    url:'my.html',//下拉刷新内容页面地址 
+		    id:'myHome',//内容页面标志
+		     styles:{ top:'40px',
+		     		  bottom:'0px'//内容页面顶部位置,需根据实际页面布局计算，若使用标准mui导航，顶部默认为48px； .....//其它参数定义
+		     }, extras:{}
+		    }] 
+		});
+    </script>
+</head>
+<body>
+	<header id="header" class="mui-bar mui-bar-nav my-nav" style="background-color: #54bbfe;">
+		<h1 class="mui-title" style="color: #fff;">我的</h1>
+		<span class="mui-icon mui-icon-email mui-pull-right my-nav-icon" style="color: #fff;"><span class="mui-badge my-nav-icon-badge public-badge">9</span></span>
+	</header>
+	<script src="js/dongyi.js"></script>
+	<!--<script>
+		dj.init();
+		 dj.createChildInterface({
+				url:'my.html',
+				id:'my',
+				styles:{
+					top:'44px',
+					bottom:'0px',
+					
+				}
+			})
+	</script>-->
+</body>
+</html>

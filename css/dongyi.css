@@ -1,0 +1,33 @@
+/*
+ * 东翌学院 -专注跨平台APP开发培训!  http://www.dongyixueyuan.com 
+ *
+ * QQ: 2195138852
+ * 
+ */			
+			
+*{
+	padding: 0px;
+	margin: 0px;;	
+}
+#slider img{
+	display: block;
+	height: 100%;
+}
+#slider  .mui-slider-indicator{
+	bottom: 20px;
+}
+.mui-slider-item{
+	position: relative;
+}
+.mui-slider-item button {
+	position: absolute;
+	z-index: 9999;
+	bottom:100px;
+	left:50%;
+	border:0px;
+	width: 120px;
+	height:33px;
+	line-height: 33px;;
+	padding: 0px;
+	margin-left: -60px;	
+}

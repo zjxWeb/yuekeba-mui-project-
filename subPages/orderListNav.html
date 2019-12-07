@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../js/mui.min.js"></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/sub.style.css" />
+    <script type="text/javascript" charset="utf-8">
+    	mui.init({
+		    subpages:[{ 
+			    url:'orderList.html',//下拉刷新内容页面地址 
+			    id:'orderList',//内容页面标志
+			     styles:{ top:'83px',
+			     		  bottom:'0px'//内容页面顶部位置,需根据实际页面布局计算，若使用标准mui导航，顶部默认为48px； .....//其它参数定义
+			     } 
+			    }] 
+			});
+    	mui.plusReady(function(){
+    		
+    	});
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav public-dark-nav" style="background-color: #54bbfe;">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left public-white-text"></a>
+		<h1 class="mui-title public-white-text">我的课程</h1>
+	</header>
+	<div class="list-2nd-nav">
+		<ul class="list-2nd-nav-ul">
+			<!--<li class="list-2nd-nav-cell"><span><label class="list-2nd-nav-selected">全部</label></span></li>-->
+			<li class="list-2nd-nav-cell" style="border-bottom: 2px solid #55CCFF;"><span><label>待开课</label></span></li>
+			<li class="list-2nd-nav-cell"><span><label>已结课</label></span></li>
+			<li class="list-2nd-nav-cell"><span><label>待评价</label></span></li>
+			<!--<li class="list-2nd-nav-cell"><span><label>待评价</label></span></li>-->
+		</ul>
+	</div>
+</body>
+</html>

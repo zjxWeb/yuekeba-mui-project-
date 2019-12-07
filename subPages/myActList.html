@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../js/mui.min.js"></script>
+    <script type="text/javascript" src="../js/common.js" ></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/icon.style.css" />
+    <link rel="stylesheet" href="../css/sub.style.css" />
+    <!--<script type="text/javascript" charset="utf-8">
+      	mui.init({ 
+    	pullRefresh : { 
+	        container:"#refreshDiv",//下拉刷新容器标识，querySelector能定位的css选择器均可，比如：id、.class等    
+	        up : { 
+            contentrefresh : "正在加载...",//可选，正在加载状态时，上拉加载控件上显示的标题内容 
+            contentnomore:'没有更多数据了',//可选，请完毕若没有更多数据时显示的提醒内容； 
+            callback : pullUp //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据； 
+        	} },
+        	swipeBack:true
+		});
+		function pullUp(){
+			/*mui.get('list.html',{ //请接口地址
+			    state:'list'   // 参数  键 ：值
+			    },function(data){ // data为服务器端返回数据
+			    //获得服务器响应 ... 
+			    },'json' 
+			);*/
+			mui.alert('上拉加载');
+			//为true不加载重复数据，为false则无限加载
+			this.endPullupToRefresh(false); 
+		}
+    </script>-->
+</head>
+<body>
+	<div id="pullrefresh" class="mui-content mui-scroll-wrapper"> 
+    	<div id="myact" class="mui-scroll">
+			<!--订单单元1开始-->
+			<!--<div class="public-thin-top"></div>
+			<div class="order-box">
+				<div class="order-box-header">
+					<span class="icon-clock3 myact-list-icon"></span><span class="myact-countdown">距结束：30天10小时10分43秒</span><span class="order-status">筑梦进行中</span>
+				</div>
+				<div class="order-act-brief">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell mui-media order-brief-cell">
+							<a href="javascript:;">
+								<div class="order-brief-img-box">
+									<img class="mui-media-object mui-pull-left order-brief-img" src="../images/shu.webp">
+								</div>
+								<div class="mui-media-body public-position-relative">
+									<div class="mui-ellipsis-2 order-brief-title">打造咖啡书吧</div>
+									<div class="order-brief-right"><div>￥500.00</div><label class="mui-pull-right">元/人</label></div>
+								</div>
+								<div class="order-brief-concern">关注度：30129</div>
+							</a>
+						</li>
+					</ul>
+				</div>   
+				<div class="order-option">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell">目前进度：<span class="order-progress-box"><div class="order-progress myact-progress" style="width:50%;"></div></span><label class="mui-pull-right order-right-text">5659/10000</label></li>
+						<li class="mui-table-view-cell mui-ellipsis">活动赞助：兰州康师傅公司<label class="mui-pull-right order-right-text"><button type="button" class="mui-btn myact-btn2">拉赞助</button></label></li>
+						<li class="mui-table-view-cell"><label class="mui-pull-right order-right-text order-count">已有<label>30</label>人参加，合计筹得<label>￥15000元</label></label></li>
+						<li class="mui-table-view-cell"><label class="mui-pull-right order-btn"><button type="button" class="mui-btn order-btn-1">推广</button><button type="button" class="mui-btn order-btn-1 myact-btn1">发公告</button>   <button type="button" class="mui-btn order-btn-2">项目群</button></label></li>
+					</ul>
+				</div>
+			</div>-->
+			<!--订单单元1结束-->
+			<!--<div class="public-thin-top"></div>
+			<div class="order-box">
+				<div class="order-box-header">
+					<span class="icon-clock3 myact-list-icon"></span><span class="myact-countdown">距结束：80天11小时23分43秒</span><span class="order-status">筑梦进行中</span>
+				</div>
+				<div class="order-act-brief">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell mui-media order-brief-cell">
+							<a href="javascript:;">
+								<div class="order-brief-img-box">
+									<img class="mui-media-object mui-pull-left order-brief-img" src="../images/qixing.webp">
+								</div>
+								<div class="mui-media-body public-position-relative">
+									<div class="mui-ellipsis-2 order-brief-title">无烟骑行</div>
+									<div class="order-brief-right"><div>￥1000.00</div><label class="mui-pull-right">元/人</label></div>
+								</div>
+								<div class="order-brief-concern">关注度：20129</div>
+							</a>
+						</li>
+					</ul>
+				</div>   
+				<div class="order-option">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell">目前进度：<span class="order-progress-box"><div class="order-progress myact-progress" style="width:50%;"></div></span><label class="mui-pull-right order-right-text">5699/10000</label></li>
+						<li class="mui-table-view-cell">活动赞助：兰州康师傅公司<label class="mui-pull-right order-right-text"><button type="button" class="mui-btn myact-btn2">拉赞助</button></label></li>
+						<li class="mui-table-view-cell"><label class="mui-pull-right order-right-text order-count">已有<label>20</label>人参加，合计筹得<label>￥20000元</label></label></li>
+						<li class="mui-table-view-cell"><label class="mui-pull-right order-btn"><button type="button" class="mui-btn order-btn-1">推广</button><button type="button" class="mui-btn order-btn-1 myact-btn1">发公告</button>   <button type="button" class="mui-btn order-btn-2">项目群</button></label></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	<div>	-->
+			<!--<div class="public-thin-top"></div>
+			<div class="order-box">
+				<div class="order-box-header">
+					<span class="icon-clock3 myact-list-icon"></span><span class="myact-countdown">距结束：0天23小时23分43秒</span><span class="order-status">筑梦进行中</span>
+				</div>
+				<div class="order-act-brief">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell mui-media order-brief-cell">
+							<a href="javascript:;">
+								<div class="order-brief-img-box">
+									<img class="mui-media-object mui-pull-left order-brief-img" src="../images/shuijiao.webp">
+								</div>
+								<div class="mui-media-body public-position-relative">
+									<div class="mui-ellipsis-2 order-brief-title">幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福</div>
+									<div class="order-brief-right"><div>￥3000.00</div><label class="mui-pull-right">元/人</label></div>
+								</div>
+								<div class="order-brief-concern">关注度：20231</div>
+							</a>
+						</li>
+					</ul>
+				</div>   
+				<div class="order-option">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell">目前进度：<span class="order-progress-box"><div class="order-progress myact-progress" style="width:50%;"></div></span><label class="mui-pull-right order-right-text">5000/10000</label></li>
+						<li class="mui-table-view-cell">活动赞助：兰州康师傅公司<label class="mui-pull-right order-right-text"><button type="button" class="mui-btn myact-btn2">拉赞助</button></label></li>
+						<li class="mui-table-view-cell"><label class="mui-pull-right order-right-text order-count">已有<label>23</label>人参加，合计筹得<label>￥69000元</label></label></li>
+						<li class="mui-table-view-cell"><label class="mui-pull-right order-btn"><button type="button" class="mui-btn order-btn-1">推广</button><button type="button" class="mui-btn order-btn-1 myact-btn1">发公告</button>   <button type="button" class="mui-btn order-btn-2">项目群</button></label></li>
+					</ul>
+				</div>
+			</div>
+			<div class="public-thin-top"></div>
+			<div class="order-box">
+				<div class="order-box-header">
+					<span class="icon-clock3 myact-list-icon"></span><span class="myact-countdown">距结束：0天23小时23分43秒</span><span class="order-status">筑梦进行中</span>
+				</div>
+				<div class="order-act-brief">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell mui-media order-brief-cell">
+							<a href="javascript:;">
+								<div class="order-brief-img-box">
+									<img class="mui-media-object mui-pull-left order-brief-img" src="../images/shuijiao.webp">
+								</div>
+								<div class="mui-media-body public-position-relative">
+									<div class="mui-ellipsis-2 order-brief-title">幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福</div>
+									<div class="order-brief-right"><div>￥3000.00</div><label class="mui-pull-right">元/人</label></div>
+								</div>
+								<div class="order-brief-concern">关注度：20231</div>
+							</a>
+						</li>
+					</ul>
+				</div>   
+				<div class="order-option">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell">目前进度：<span class="order-progress-box"><div class="order-progress myact-progress" style="width:50%;"></div></span><label class="mui-pull-right order-right-text">5000/10000</label></li>
+						<li class="mui-table-view-cell">活动赞助：兰州康师傅公司<label class="mui-pull-right order-right-text"><button type="button" class="mui-btn myact-btn2">拉赞助</button></label></li>
+						<li class="mui-table-view-cell"><label class="mui-pull-right order-right-text order-count">已有<label>23</label>人参加，合计筹得<label>￥69000元</label></label></li>
+						<li class="mui-table-view-cell"><label class="mui-pull-right order-btn"><button type="button" class="mui-btn order-btn-1">推广</button><button type="button" class="mui-btn order-btn-1 myact-btn1">发公告</button>   <button type="button" class="mui-btn order-btn-2">项目群</button></label></li>
+					</ul>
+				</div>
+			</div>
+			<div class="public-thin-top"></div>
+			<div class="order-box">
+				<div class="order-box-header">
+					<span class="icon-clock3 myact-list-icon"></span><span class="myact-countdown">距结束：1天23小时23分43秒</span><span class="order-status">筑梦进行中</span>
+				</div>
+				<div class="order-act-brief">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell mui-media order-brief-cell">
+							<a href="javascript:;">
+								<div class="order-brief-img-box">
+									<img class="mui-media-object mui-pull-left order-brief-img" src="../images/shuijiao.webp">
+								</div>
+								<div class="mui-media-body public-position-relative">
+									<div class="mui-ellipsis-2 order-brief-title">幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福幸福</div>
+									<div class="order-brief-right"><div>￥3000.00</div><label class="mui-pull-right">元/人</label></div>
+								</div>
+								<div class="order-brief-concern">关注度：20231</div>
+							</a>
+						</li>
+					</ul>
+				</div>   
+				<div class="order-option">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell">目前进度：<span class="order-progress-box"><div class="order-progress myact-progress" style="width:50%;"></div></span><label class="mui-pull-right order-right-text">5000/10000</label></li>
+						<li class="mui-table-view-cell mui-ellipsis">活动赞助：兰州康师傅公司<label class="mui-pull-right order-right-text"><button type="button" class="mui-btn myact-btn2">拉赞助</button></label></li>
+						<li class="mui-table-view-cell"><label class="mui-pull-right order-right-text order-count">已有<label>23</label>人参加，合计筹得<label>￥69000元</label></label></li>
+						<li class="mui-table-view-cell"><label class="mui-pull-right order-btn"><button type="button" class="mui-btn order-btn-1">推广</button><button type="button" class="mui-btn order-btn-1 myact-btn1">发公告</button>   <button type="button" class="mui-btn order-btn-2">项目群</button></label></li>
+					</ul>
+				</div>
+			</div>
+			<div class="public-thin-top"></div>-->
+		</div>
+	</div>
+	<script src="../js/castapp.js"></script>
+	<script>
+		ca.init();
+		ca.refreshLoad('pullrefresh',function(clearLoad){
+			      myact.innerHTML='';
+			      get_myact();
+			    //alert('下拉刷新了');
+			    clearLoad();
+			      
+			},function(dataState){
+			      
+			    //alert('上拉加载了');
+			    dataState(true);
+			      
+			});
+		var myact=ca.id('myact');
+		var request_url=localStorage.getItem('request_url');
+		var img_url=localStorage.getItem('img_url');
+		var login_phone=localStorage.getItem('phone');
+		
+		get_myact();
+		function get_myact(){
+			ca.get({
+				url:request_url+'Info/get_myact',
+			data:{
+				phone_data:login_phone
+			},
+			succFn:function(data){
+				var json=JSON.parse(data);
+				for(var a in json){
+					var tmpl='<div class="public-thin-top"></div>'
+							+'	<div class="order-box">'
+							+'		<div class="order-box-header">'
+							+'			<span class="icon-clock3 myact-list-icon"></span><span class="myact-countdown">距结束：30天10小时10分43秒</span><span class="order-status">筑梦进行中</span>'
+							+'		</div>'
+							+'		<div class="order-act-brief">'
+							+'			<ul class="mui-table-view">'
+							+'				<li class="mui-table-view-cell mui-media order-brief-cell">'
+							+'					<a href="javascript:;">'
+							+'						<div class="order-brief-img-box">'
+							+'							<img class="mui-media-object mui-pull-left order-brief-img" src="'+img_url+json[a].user_data.touxiang+'">'
+							+'						</div>'
+							+'						<div class="mui-media-body public-position-relative">'
+							+'							<div class="mui-ellipsis-2 order-brief-title">'+json[a].theme+'</div>'
+							+'							<div class="order-brief-right"><div>￥'+json[a].fee+'.00</div><label class="mui-pull-right">元/人</label></div>'
+							+'						</div>'
+							+'						<div class="order-brief-concern">关注度：'+json[a].like+'</div>'
+							+'					</a>'
+							+'				</li>'
+							+'			</ul>'
+							+'		</div>'   
+							+'		<div class="order-option">'
+							+'			<ul class="mui-table-view">'
+							+'				<li class="mui-table-view-cell">目前进度：<span class="order-progress-box"><div class="order-progress myact-progress" style="width:'+(json[a].sign_in/json[a].number)*100+'%;"></div></span><label class="mui-pull-right order-right-text">'+json[a].sign_in+'/'+json[a].number+'</label></li>'
+							+'				<li class="mui-table-view-cell mui-ellipsis">活动赞助：'+json[a].company+'<label class="mui-pull-right order-right-text"><button type="button" class="mui-btn myact-btn2">拉赞助</button></label></li>'
+							+'				<li class="mui-table-view-cell"><label class="mui-pull-right order-right-text order-count">已有<label>'+json[a].sign_in+'</label>人参加，合计筹得<label>￥'+json[a].fee*json[a].sign_in+'元</label></label></li>'
+							+'				<li class="mui-table-view-cell"><label class="mui-pull-right order-btn"><button type="button" class="mui-btn order-btn-1">推广</button><button type="button" class="mui-btn order-btn-1 myact-btn1">发公告</button>   <button type="button" class="mui-btn order-btn-2">项目群</button></label></li>'
+							+'			</ul>'
+							+'		</div>'
+							+'	</div>';
+						myact.innerHTML+=tmpl;
+				}
+			}
+			})
+			
+		}
+		
+	</script>
+</body>
+</html>

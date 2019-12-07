@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../js/mui.min.js"></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/sub.style.css" />
+    <script type="text/javascript" charset="utf-8">
+      	mui.init({
+        	swipeBack:true
+		});
+		mui.plusReady(function(){
+			var oBtn = document.getElementById('sum-btn');
+			var oInputRow = document.getElementById('topup-input-row');
+			var oInput = document.getElementById('topup-input');
+			oInput.addEventListener('keyup',function(){
+				oBtn.innerHTML = '共计' + oInput.value + '元，确认支付';
+			});
+		});
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav public-dark-nav" style="background-color: #54bbfe;">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left public-white-text"></a>
+		<a class="mui-action-back mui-icon icon-share mui-pull-right public-white-text"></a>
+		<h1 class="mui-title public-white-text">钱包充值</h1>
+	</header>
+	<div class="mui-content">
+		<div class="mui-scroll">
+			<ul class="mui-table-view">
+				<li id="topup-input-row" class="mui-table-view-cell topup-input-row">
+					<span>请输入充值金额</span><input id="topup-input" type="text" class="mui-input-row topup-input"><label>元</label>
+				</li>
+			</ul>
+			<div class="public-back-title">
+				选择支付方式
+			</div>
+			<ul class="mui-table-view mo-address">
+				<li class="mui-table-view-cell mui-input-row mui-radio mo-pay-select">
+					<span class="mo-pay-icon"><img src="../images/zhifubao.webp" /></span>
+					<span>支付宝</span>
+					<input name="radio1" type="radio" checked />
+				</li>
+				<li class="mui-table-view-cell mui-input-row mui-radio mo-pay-select">
+					<span class="mo-pay-icon"><img src="../images/weipay.webp" /></span>
+					<span>微信支付</span>
+					<input name="radio1" type="radio">
+				</li>
+			</ul>
+			<div id="sum-btn" class="mui-btn mo-btn">确认支付</div>
+		</div>
+	</div>
+</body>
+</html>

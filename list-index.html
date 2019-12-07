@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <script type="text/javascript" src="js/common.js" ></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" charset="utf-8">
+//    	mui.init({ 
+//  	pullRefresh : { 
+//	        container:"#refreshDiv",//下拉刷新容器标识，querySelector能定位的css选择器均可，比如：id、.class等    
+//	        down : {
+//	            contentdown : "下拉刷新",//可选，在下拉可刷新状态时，下拉刷新控件上显示的标题内容 
+//	            contentover : "释放立即刷新",//可选，在释放可刷新状态时，下拉刷新控件上显示的标题内容 
+//	            contentrefresh : "正在刷新...",//可选，正在刷新状态时，下拉刷新控件上显示的标题内容 
+//	            callback : pullDown //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+//	        },
+//	        up : { 
+//          contentrefresh : "正在加载...",//可选，正在加载状态时，上拉加载控件上显示的标题内容 
+//          contentnomore:'没有更多数据了',//可选，请求完毕若没有更多数据时显示的提醒内容； 
+//          callback : pullUp //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据； 
+//      	} }
+//		});
+//		function pullDown(){
+//			//以下代码保留
+//			/*mui.get('list.html',{ //请求接口地址
+//			    state:'list'   // 参数  键 ：值
+//			    },function(data){ // data为服务器端返回数据
+//			    //获得服务器响应 ... 
+//			    	console.log(data);
+//			    	alert('12');
+//			    },'json' 
+//			);*/
+//			mui.alert('下拉刷新');
+//			//隐藏下拉刷新字样。。
+//			mui('#pullrefreshContainer').pullRefresh().endPulldownToRefresh();
+//
+//		}
+//		function pullUp(){
+//			/*mui.get('list.html',{ //请求接口地址
+//			    state:'list'   // 参数  键 ：值
+//			    },function(data){ // data为服务器端返回数据
+//			    //获得服务器响应 ... 
+//			    },'json' 
+//			);*/
+//			mui.alert('上拉加载');
+//			//为true不加载重复数据，为false则无限加载
+//			this.endPullupToRefresh(false); 
+//		}
+//		mui.plusReady(function(){
+//			var oListBody = document.getElementById('list_body');
+//			var aList = oListBody.getElementsByTagName('li');
+//			for(var i=0;i<aList.length;i++){
+//				aList[i].addEventListener('tap',function(){
+//					openPage('subPages/actDetailNav.html','moNav');
+//				});
+//			}
+//			document.addEventListener('swipeleft',function(){
+//				plus.webview.show(plus.webview.getWebviewById('list-pg'),'slide-in-right');
+//			});
+//		});
+    </script>
+</head>
+<body>
+	<div id="pullrefresh" class="mui-content">
+		<div id="" class="mui-content mui-scroll-wrapper"> 
+    		<div class="mui-scroll">
+				<div class="list">
+					<ul id="list_body" class="mui-table-view">
+						<!--<li class="mui-table-view-cell mui-media list-cell">
+							<a href="javascript:;">
+								<div class="list-img-box">
+									<img class="mui-media-object mui-pull-left list-img" src="./images/shu.webp">
+									<span class="list-img-desc">第三期 No.1</span>
+								</div>
+								<div class="mui-media-body">
+									<div class="mui-ellipsis list-title">打造咖啡书吧</div>
+									<div class="mui-pull-right list-attention">
+										<img src="./images/heart-full.webp" />
+										<span>30129</span>
+									</div>
+									<div class="list-box">
+										<p class='mui-ellipsis list-text list-text-top-space'>胡先生 | 龚家湾</p>
+										<p class='mui-ellipsis list-text '>2018.5.30 即将开始</p>
+										<div class="mui-pull-right list-price">
+											<span>¥</span>500.00<span>元/人</span>
+										</div>
+										
+									</div>
+									<div class="list-progress">
+										<div style="width:60%;"></div>
+									</div>
+									<span class="list-progress-count">8659/10000</span>
+								</div>
+							</a>
+						</li>-->
+						<li class="mui-table-view-cell mui-media list-cell">
+							<a href="javascript:;">
+								<div class="list-img-box">
+									<img class="mui-media-object mui-pull-left list-img" src="./images/mingxinpian.webp">
+									<span class="list-img-desc">第四期 No.1</span>
+								</div>
+								<div class="mui-media-body">
+									<div class="mui-ellipsis list-title">制作摄影明信片</div>
+									<div class="mui-pull-right list-attention">
+										<img src="./images/heart-full.webp" />
+										<span>40111</span>
+									</div>
+									<div class="list-box">
+										<p class='mui-ellipsis list-text list-text-top-space'>幸福的味道 | 兰州西站</p>
+										<p class='mui-ellipsis list-text '>2018.6.30  即将开始</p>
+										<div class="mui-pull-right list-price">
+											<span>¥</span>100.00<span>元/人</span>
+										</div>
+										
+									</div>
+									<div class="list-progress">
+										<div style="width:60%;"></div>
+									</div>
+									<span class="list-progress-count">4650/10000</span>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media list-cell">
+							<a href="javascript:;">
+								<div class="list-img-box">
+									<img class="mui-media-object mui-pull-left list-img" src="./images/zhipian.webp">
+									<span class="list-img-desc">第四期 No.3</span>
+								</div>
+								<div class="mui-media-body">
+									<div class="mui-ellipsis list-title">“不纸这么简单”纸片工作室</div>
+									<div class="mui-pull-right list-attention">
+										<img src="./images/heart-full.webp" />
+										<span>20129</span>
+									</div>
+									<div class="list-box">
+										<p class='mui-ellipsis list-text list-text-top-space'>繁华 | 西站十字</p>
+										<p class='mui-ellipsis list-text '>2018.7.10 即将开始</p>
+										<div class="mui-pull-right list-price">
+											<span>¥</span>100.00<span>元/人</span>
+										</div>
+										
+									</div>
+									<div class="list-progress">
+										<div style="width:60%;"></div>
+									</div>
+									<span class="list-progress-count">5759/10000</span>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media list-cell">
+							<a href="javascript:;">
+								<div class="list-img-box">
+									<img class="mui-media-object mui-pull-left list-img" src="./images/mianbao.webp">
+									<span class="list-img-desc">第五期 No.1</span>
+								</div>
+								<div class="mui-media-body">
+									<div class="mui-ellipsis list-title">全新概念的设计面包店邀请您</div>
+									<div class="mui-pull-right list-attention">
+										<img src="./images/heart-full.webp" />
+										<span>50129</span>
+									</div>
+									<div class="list-box">
+										<p class='mui-ellipsis list-text list-text-top-space'>圆桌上的舞 | 城关区</p>
+										<p class='mui-ellipsis list-text '>2018.7.20 即将开始</p>
+										<div class="mui-pull-right list-price">
+											<span>¥</span>600.00<span>元/人</span>
+										</div>
+										
+									</div>
+									<div class="list-progress">
+										<div style="width:60%;"></div>
+									</div>
+									<span class="list-progress-count">8659/10000</span>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media list-cell">
+							<a href="javascript:;">
+								<div class="list-img-box">
+									<img class="mui-media-object mui-pull-left list-img" src="./images/qixing.webp">
+									<span class="list-img-desc">第五期 No.2</span>
+								</div>
+								<div class="mui-media-body">
+									<div class="mui-ellipsis list-title">无烟骑行</div>
+									<div class="mui-pull-right list-attention">
+										<img src="./images/heart-full.webp" />
+										<span>30000</span>
+									</div>
+									<div class="list-box">
+										<p class='mui-ellipsis list-text list-text-top-space'>开心阳光橙 | 西固区</p>
+										<p class='mui-ellipsis list-text '>2018.7.20 即将开始</p>
+										<div class="mui-pull-right list-price">
+											<span>¥</span>1000.00<span>元/人</span>
+										</div>
+										
+									</div>
+									<div class="list-progress">
+										<div style="width:60%;"></div>
+									</div>
+									<span class="list-progress-count">5699/10000</span>
+								</div>
+							</a>
+						</li>
+						
+						
+						<li class="mui-table-view-cell mui-media list-cell">
+							<a href="javascript:;">
+								<div class="list-img-box">
+									<img class="mui-media-object mui-pull-left list-img" src="./images/gy.webp">
+									<span class="list-img-desc">第五期 No.3</span>
+								</div>
+								<div class="mui-media-body">
+									<div class="mui-ellipsis list-title">无公益不人生</div>
+									<div class="mui-pull-right list-attention">
+										<img src="./images/heart-full.webp" />
+										<span>50220</span>
+									</div>
+									<div class="list-box">
+										<p class='mui-ellipsis list-text list-text-top-space'>阡陌行者 | 西站十字</p>
+										<p class='mui-ellipsis list-text '>2018.7.30 即将开始</p>
+										<div class="mui-pull-right list-price">
+											<span>¥</span>1000.00<span>元/人</span>
+										</div>
+										
+									</div>
+									<div class="list-progress">
+										<div style="width:60%;"></div>
+									</div>
+									<span class="list-progress-count">7659/10000</span>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media list-cell">
+							<a href="javascript:;">
+								<div class="list-img-box">
+									<img class="mui-media-object mui-pull-left list-img" src="./images/song.webp">
+									<span class="list-img-desc">第五期 No.4</span>
+								</div>
+								<div class="mui-media-body">
+									<div class="mui-ellipsis list-title">一针一线心连心</div>
+									<div class="mui-pull-right list-attention">
+										<img src="./images/heart-full.webp" />
+										<span>10129</span>
+									</div>
+									<div class="list-box">
+										<p class='mui-ellipsis list-text list-text-top-space'>napoleon | 西关十字</p>
+										<p class='mui-ellipsis list-text '>2018.7.30 即将开始</p>
+										<div class="mui-pull-right list-price">
+											<span>¥</span>100.00<span>元/人</span>
+										</div>
+										
+									</div>
+									<div class="list-progress">
+										<div style="width:60%;"></div>
+									</div>
+									<span class="list-progress-count">9659/10000</span>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media list-cell">
+							<a href="javascript:;">
+								<div class="list-img-box">
+									<img class="mui-media-object mui-pull-left list-img" src="./images/shousi.webp">
+									<span class="list-img-desc">第六期 No.1</span>
+								</div>
+								<div class="mui-media-body">
+									<div class="mui-ellipsis list-title">当寿司来敲门</div>
+									<div class="mui-pull-right list-attention">
+										<img src="./images/heart-full.webp" />
+										<span>20129</span>
+									</div>
+									<div class="list-box">
+										<p class='mui-ellipsis list-text list-text-top-space'>寿@司 | 七里河区</p>
+										<p class='mui-ellipsis list-text '>2015.8.1 即将开始</p>
+										<div class="mui-pull-right list-price">
+											<span>¥</span>500.00<span>元/人</span>
+										</div>
+										
+									</div>
+									<div class="list-progress">
+										<div style="width:60%;"></div>
+									</div>
+									<span class="list-progress-count">7750/10000</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/castapp.js"></script>
+	<script>
+		ca.init();
+		
+		ca.refreshLoad('pullrefresh',function(clearLoad){
+			     list_body.innerHTML='';
+			     get_act();
+			   // alert('下拉刷新了');
+			    clearLoad();
+			      
+			},function(dataState){
+			      
+			    //alert('上拉加载了');
+			    dataState(true);
+			      
+			});
+		
+		var list_body=ca.id('list_body');
+		var request_url=localStorage.getItem('request_url');
+		var img_url=localStorage.getItem('img_url');
+		
+		
+		get_act();
+		function get_act(){
+			ca.get({
+				url:request_url+'Info/get_ainfo',
+				data:{},
+				succFn:function(data){
+					//alert(data); 
+					var json=JSON.parse(data);
+					for(var a in json){
+						var tmpl='<li class="mui-table-view-cell mui-media list-cell">'
+								+'	<a href="javascript:;">'
+								+'		<div class="list-img-box">'
+								+'			<img class="mui-media-object mui-pull-left list-img" src="'+img_url+json[a].user_data.touxiang+'">'
+//								+'			<span class="list-img-desc">第三期 No.1</span>'
+								+'		</div>'
+								+'		<div class="mui-media-body">'
+								+'			<div class="mui-ellipsis list-title">'+json[a].theme+'</div>'
+								+'			<div class="mui-pull-right list-attention">'
+								+'				<img src="./images/heart-full.webp" />'
+								+'				<span>'+json[a].like+'</span>'
+								+'			</div>'
+								+'			<div class="list-box">'
+								+'				<p class="mui-ellipsis list-text list-text-top-space">'+json[a].user_data.nickname+' | '+json[a].place+'</p>'
+								+'				<p class="mui-ellipsis list-text ">'+json[a].act_time+' 即将开始</p>'
+								+'				<div class="mui-pull-right list-price">'
+								+'					<span>¥</span>'+json[a].fee+'.00<span>元/人</span>'
+								+'				</div>'
+								+'			</div>'
+								+'			<div class="list-progress">'
+								+'				<div style="width:'+(json[a].sign_in/json[a].number)*100+'%;"></div>'
+								+'			</div>'
+								+'			<span class="list-progress-count">'+json[a].sign_in+'/'+json[a].number+'</span>'
+								+'		</div>'
+								+'	</a>'
+								+'</li>';
+							list_body.innerHTML+=tmpl;
+					}
+					click_event();
+				}
+			})
+		}
+		function click_event(){
+			var cell=ca.className('list-cell');
+			for(var a=0;a<cell.length;a++){
+				ca.click(cell[a],function(_this){
+					//var iid=_this.getAttribute('iid');
+				//alert(iid);
+					//localStorage.setItem('iid',iid);
+					ca.newInterface({
+						url:'./subPages/actDetailNav.html',
+						id:'details'
+					})
+				})
+			}
+		}
+	</script>
+</body>
+</html>

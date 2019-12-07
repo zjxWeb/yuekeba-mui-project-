@@ -1,0 +1,390 @@
+/*阳光筑梦项目css*/
+
+/*公用颜色*/
+.pink{
+	background: #FBB6C9;
+}
+.red{
+	color: red;;
+}
+.black{
+	color: black;
+}
+.blue{
+	background: #81D7F3;
+}
+/*附近的老师*/
+.index-header{
+	background-color: #262A3B;;
+	overflow: hidden;
+}
+.index-header h1{
+	color: #fff;
+	font-size: 20px;
+}
+.near-teacher{
+	margin: 0;
+	padding: 0 0 50px 0;
+	/*border: 1px solid red;*/
+	background: #fff;
+}
+.near-teacher .teacher-one{
+	height: 80px;
+	list-style: none;
+	padding: 0;
+	margin: 0 2.5%;
+	background: #fff;
+	overflow: hidden;
+	/*border: 1px solid blue;*/
+	border-bottom: 1px solid #EFEFF4;
+	width: 95%;
+	
+}
+.near-teacher .teacher-one img{
+	width: 60px;
+	height: 60px;
+	border-radius: 45px;
+	float: left;
+	margin: 10px 0px 10px 10px;
+}
+.near-teacher .teacher-one .teacher-message{
+	float: left;
+	margin-left: 10px;
+	/*border: 1px solid black;*/
+	width: 70%;
+	height: 70px;
+	margin-top: 5px;
+}
+.teacher-message p{
+	margin: 0;
+	/*border: 1px solid red;*/
+}
+.teacher-one .teacher-message h6{
+	margin: 0;
+	height: 15px;
+	line-height: 15px;
+	color: #fff;
+}
+.teacher-one .teacher-message h6 span{
+	/*background: pink;*/
+	margin-right: 10px;
+	padding: 0 5px;
+}
+.teacher-name{
+	height: 30px;
+	line-height: 30px;
+	/*border: 1px solid black;*/
+}
+.name-teacher{
+	font-weight: bold;
+	font-size: 17px;
+	color: #333;
+}
+.teacher-infm{
+	height: 25px;
+	line-height: 25px;
+	color: #333;
+	font-size: 15px;
+}
+/*待审核页面*/
+.index-header a{
+	color: #fff;
+	font-size: 50px;
+}
+.authstr-box{
+	background: #fff;
+	/*border: 1px solid red;*/
+	width: 100%;
+	height: 400px;
+	text-align: center;
+}
+.authstr-box-o{
+	width: 90px;
+	height: 90px;
+	border-radius: 45px;
+	border: 1px solid #00BFFF;
+	position: relative;
+	left: 50%;
+	margin-left: -45px;
+	top: 50px;
+	background: #00BFFF;
+	text-align: center;
+}
+.authstr-box-o span{
+	font-size: 120px;
+	color: #fff;
+	position: relative;
+	top: -15px;
+	left: -14px;
+}
+.authstr-box .authstr-submit{
+	margin-top: 80px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #333;
+}
+.authstr-thanks{
+	color: #999;
+	margin: 20px 10%;
+	width: 80%;
+	/*border: 1px solid red;*/
+}
+/*通知消息*/
+.give-notice-box{
+	/*border: 1px solid #BEBEBE;*/
+	/*text-align: center;*/
+	padding: 0px 15px;
+}
+.give-notice-box .data{
+	width: 120px;
+	text-align: center;
+	border: 1px solid #BEBEBE;
+	font-size: 15px;
+	background: #BEBEBE;
+	border-radius: 5px;
+	color: #fff;
+	padding: 5px 0px;
+	margin-top: 20px;
+	position: relative;
+	left: 50%;
+	margin-left: -60px;
+}
+.give-notice-o{
+	margin-top: 15px;
+	background: #fff;
+	border-radius: 5px;
+	padding: 10px;
+	overflow: hidden;
+}
+.give-notice-o img{
+	/*border: 1px solid red;*/
+	width: 25%;
+	float: left;
+	margin-right: 5px;
+}
+.give-notice-o .give-notice-inf{
+	/*border: 1px solid red;*/
+	float: left;
+	width: 70%;
+}
+.give-notice-inf p{
+	color: #333;
+	font-size: 15px;
+}
+/*我的资料*/
+.mui-navigate-right span{
+	font-size: 18px
+}
+.personal-photo{
+	line-height: 61px;
+}
+.personal-photo span{
+	
+}
+.personal-photo img{
+	width: 60px;
+	height: 60px;
+	border-radius: 45px;
+	margin-right: 30px;
+}
+.personal-name{
+	float: right;
+	margin-right: 30px;
+	color: #999;
+}
+/*交流天地*/
+.index-headers{
+	background-color: #262A3B;
+	/*overflow: hidden;*/
+}
+.index-headers h1{
+	color: #fff;
+	font-size: 20px;
+}
+.index-headers a{
+	color: #fff;
+}
+.forum-header{
+	background: #fff;
+	overflow: hidden;
+	padding: 10px 15px;
+}
+.forum-header img{
+	width: 25%;
+	float: left;
+	border-radius: 15px;
+}
+.forum-information{
+	width: 70%;
+	margin-left: 15px;
+	float: left;
+	/*border: 1px solid #F08080;*/
+	padding-top: 4px;
+}
+.forum-information h4{
+	/*border: 1px solid #F08080;*/
+	/*margin-top: 8px;*/
+}
+.forum-information p{
+	/*border: 1px solid #F08080;*/
+	margin-bottom: 0;
+	font-size: 18px;
+}
+
+.forum-middle{
+	background: #fff;
+	margin-top: 8px;
+	border-bottom: 1px solid silver;
+	border-top: 1px solid silver;
+	box-sizing: border-box;
+}
+.forum-middle ul{
+	overflow: hidden;
+	padding: 0 15px;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+.forum-middle ul li{
+	list-style: none;
+	padding: 12px 0;
+	float: left;
+	width: 25%;
+	text-align: center;
+	font-size: 18px;
+}
+/*内容*/
+.forum-last{
+	background: #fff;
+	padding: 0 15px;
+}
+.forum-last-one{
+	border-bottom: 1px solid silver;
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+.forum-one-content p{
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 25px;
+}
+.forum-one-content p span{
+	border: 2px solid red;
+	font-size: 13px;
+	color: red;
+	position: relative;
+	top: -4px;
+}
+.forum-two-content{
+	overflow: hidden;
+}
+.forum-two-content p{
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 25px;
+	float: left;
+	width: 65%;
+}
+.forum-two-content p span{
+	border: 2px solid red;
+	font-size: 13px;
+	color: red;
+	position: relative;
+	top: -4px;
+}
+.forum-two-content img{
+	float: right;
+	width: 35%;
+	height: 80px;
+}
+
+
+.posts-brief{
+	margin-top: 15px;
+	margin-bottom:2px;
+	overflow: hidden;
+}
+.posts-brief-left{
+	float:left;
+	font-size:15px;
+}
+.posts-brief-right{
+	float:right;
+	font-size:12px;
+	color:silver;
+	line-height:30px;
+}
+.posts-brief img{
+	float: left;
+	width:30px;
+	border-radius: 30px;
+}
+.posts-brief-name{
+	float:left;
+	margin-left:5px;
+	line-height:30px;
+}
+.posts-brief-timestamp{
+	float:left;
+	color:silver;
+	margin-left:15px;
+	line-height:30px;
+}
+.posts-brief-icon1{
+	font-size:20px;
+	margin-right:2px;
+}
+.posts-brief-icon2{
+	font-size:19px;
+}
+/*发现页面搜索*/
+.sousuo-header{
+	width: 85%;
+	height: 40px;
+	border-bottom: 1.5px solid #5CC737;
+	padding: 0 3px;
+	line-height: 38px;
+	margin-right: 10px;
+}
+.sousuo-header span{
+	color: #fff;
+}
+.sousuo{
+	display: inline-block;
+	width: 75%;
+	height: 38px;
+}
+.sousuo span{
+	margin:0 5px;
+	color:white !important; 
+	font-size: 0.9em;
+	text-align: left !important;
+}
+.sousuo input:after{
+	margin:0 5px;
+	color:white !important;
+	font-size: 0.9em;
+	text-align: left !important;
+}
+.sousuo-box{
+	padding: 0 10px;
+	background: #fff;
+}
+.sousuo-box1{
+	background: #fff;
+	height: 80px;
+	text-align: center;
+	line-height: 110px;
+	color: #999999;
+}
+.sousuo-box2{
+	height: 50px;
+	background: #fff;
+	line-height: 50px;
+	text-align: center;
+}
+.sousuo-box2 span{
+	color: #5CC737;
+	width: 32%;
+	display: inline-block;
+	text-align: center;
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <script type="text/javascript" src="js/common.js" ></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" charset="utf-8">
+//    	mui.init({ 
+//		    subpages:[{ 
+//		    url:'list-index.html',//下拉刷新内容页面地址 
+//		    id:'list-index',//内容页面标志
+//		     styles:{ top:'44px',
+//		     		  bottom:'0px'//内容页面顶部位置,需根据实际页面布局计算，若使用标准mui导航，顶部默认为48px； .....//其它参数定义
+//		     }, extras: {}
+//		    }] 
+//		});
+//    	mui.plusReady(function() {
+//    		var oHeader = document.getElementById('header');
+//    		var aHBtn = oHeader.getElementsByTagName('span');
+//    		var aHBText = oHeader.getElementsByTagName('label');
+//			var handler = null;
+//			var w = plus.webview.create('list-pg-index.html','list-pg',{top:'44px',bottom:'50px'});
+//    		aHBtn[0].addEventListener('tap',function(){
+//    				plus.webview.hide(w,'slide-out-right');
+//    		});
+//    		aHBtn[1].addEventListener('tap',function(){
+// 					plus.webview.show(w,'slide-in-right');
+//    		});
+//    		w.addEventListener('show',function(){
+//    			if(aHBText[1].className!='list-nav-slider-cur'){
+//    				aHBText[1].className='list-nav-slider-cur';
+//    				aHBText[0].className='';
+//    			}
+//    		});
+//    		w.addEventListener('hide',function(){
+//    			if(aHBText[0].className!='list-nav-slider-cur'){
+//    				aHBText[0].className='list-nav-slider-cur';
+//    				aHBText[1].className='';
+//    			}
+//    		});
+//    	});
+    </script>
+    <style>
+    	.mui-pull-top-pocket{
+            top: 84px !important;
+        }
+    	.index-search span{
+    		margin:0 5px;
+    		color:#5EAAF6 !important; 
+    		font-size: 0.9em;
+    		text-align: left !important;
+    	}
+    	.index-search span[class="mui-icon mui-icon-search"]{
+    		color:white !important;
+    	}
+    </style>
+</head>
+<body>
+	<header id="header" class="mui-bar mui-bar-nav index-header">
+		<span class="mui-pull-left list-nav-slider"><label class="list-nav-slider-cur">起航精选</label></span>
+		<!--<span class="mui-pull-left list-nav-slider"><label>公益活动</label></span>-->
+		<span class="mui-icon mui-icon-search mui-pull-right list-nav-icon"></span>
+		<span class="mui-icon mui-icon-map mui-pull-right list-nav-icon"></span>
+	</header>
+	<!--<div class="list-2nd-nav">
+		<ul class="list-2nd-nav-ul">
+			<li class="list-2nd-nav-cell"><span><label>全部分类</label></span></li>
+			<li class="list-2nd-nav-cell"><span class="list-2nd-nav-border"><label>全城</label></span></li>
+			<li class="list-2nd-nav-cell"><span><label>智能排序</label></span></li>
+		</ul>
+	</div>-->
+	<script src="js/castapp.js"></script>
+	<script>
+		ca.init();
+		ca.createChildInterface({
+			url:'list-index.html',
+			id:'list-index',
+			styles:{
+				top:'44px'
+			}
+			
+		})
+//		var oHeader=ca.id('header');
+//		var oSpan=ca.tagName('span');
+//	    var act=ca.tagName('label');
+//	    var handler = null;
+//	    var w = ca.newInterface({
+//	    	url:'list-pg-index.html',
+//	    	id:'list-pg'
+//	    });
+//	    oSpan[0].addEventListener('tap',function(){
+//	    	ca.newInterface({
+//	    		url:'list-index.html',
+//				id:'list-index',
+//				styles:{
+//					top:'44px'
+//				}
+//	    	})
+//	    });
+//	    oSpan[1].addEventListener('tap',function(){
+//	    	ca.newInterface({
+//	    	url:'list-pg-index.html',
+//	    	id:'list-pg',
+//	    	styles:{
+//				top:'44px'
+//			}
+//	        });
+//	    });
+//			var oHeader = document.getElementById('header');
+//    		var aHBtn = oHeader.getElementsByTagName('span');
+//    		var aHBText = oHeader.getElementsByTagName('label');
+//			var handler = null;
+//			//var w = plus.webview.create('list-pg-index.html','list-pg',{top:'44px',bottom:'50px'});
+//			var arr=[{'url':'list-pg-index.html','id':'list-pg'}];
+//		   	var w=ca.preLoad(arr,function(data){
+//		   		//alert(data);
+//		   	});
+//    		aHBtn[1].addEventListener('tap',function(){
+//    				//ca.hide(w,'slide-out-right');
+//    				if(aHBText[1].className!='list-nav-slider-cur'){
+//    				aHBText[1].className='list-nav-slider-cur';
+//    				aHBText[0].className='';
+//    				ca.newInterface({
+//				    	url:'list-pg-index.html',
+//				    	id:'list-pg',
+//				    	styles:{
+//				    		top:'44px',
+//				    		bottom:'50px'
+//				    	}
+//				    });
+//    			}
+//    		});
+//    		aHBtn[0].addEventListener('tap',function(){
+// 					//ca.show(w,'slide-in-right');
+// 					if(aHBText[0].className!='list-nav-slider-cur'){
+//    				aHBText[0].className='list-nav-slider-cur';
+//    				aHBText[1].className='';
+//					ca.getTargetInterface();
+//				
+//    			}
+//    		});
+//    		w.addEventListener('show',function(){
+//    			if(aHBText[1].className!='list-nav-slider-cur'){
+//    				aHBText[1].className='list-nav-slider-cur';
+//    				aHBText[0].className='';
+//    			}
+//    		});
+//    		w.addEventListener('hide',function(){
+//    			if(aHBText[0].className!='list-nav-slider-cur'){
+//    				aHBText[0].className='list-nav-slider-cur';
+//    				aHBText[1].className='';
+//    			}
+//    		});
+	</script>
+</body>
+</html>

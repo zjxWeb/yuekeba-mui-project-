@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../js/mui.min.js"></script>
+    <script type="text/javascript" src="../js/common.js" ></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/icon.style.css" />
+    <link rel="stylesheet" href="../css/sub.style.css" />
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+      	mui.plusReady(function(){
+      		oTopup = document.getElementById('topup');
+      		oTopup.addEventListener('tap',function(){
+      			openPage('topup.html','topup');
+      		});
+      	});
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav public-dark-nav" style="background-color: #54bbfe;">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left public-white-text"></a>
+		<h1 class="mui-title public-white-text">我的钱包</h1>
+	</header>
+	<div class="mui-content">
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell">
+				<a href="javascript:;" class="mui-navigate-right wallet-list-cell">
+					<div class="public-icon icon-calendar wallet-list-icon"></div>
+					<div class="wallet-list-text-small">
+						<span class="wallet-list-title">成交记录</span>
+					</div>
+					<span class="wallet-list-desc"><span class="mui-badge mui-badge-danger public-badge-text">New</span></span>
+				</a>
+			</li>
+		</ul>
+		<ul class="mui-table-view">
+			<li id="topup" class="mui-table-view-cell">
+				<a href="javascript:;" class="mui-navigate-right wallet-list-cell">
+					<div class="public-icon icon-banknote wallet-list-icon"></div>
+					<div class="wallet-list-text-small">
+						<span class="wallet-list-title">钱包充值</span>
+					</div>
+					<span class="wallet-list-desc">￥380</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

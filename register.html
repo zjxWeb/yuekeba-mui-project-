@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<script src="js/common.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		      	mui.plusReady(function(){
+		      		mui('.mui-scroll-wrapper').scroll();
+					mui('body').on('shown', '.mui-popover', function(e) {
+						//console.log('shown', e.detail.id);//detail为当前popover元素
+					});
+					mui('body').on('hidden', '.mui-popover', function(e) {
+						//console.log('hidden', e.detail.id);//detail为当前popover元素
+					});
+		      	});
+		</script>
+		<style>
+			b{font-size:0.9em;}
+			.mui-popover {
+				width:70%;
+				height: 90%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav register-nav" style="background-color: #54bbfe;">
+			<h3 class="mui-title register-nav-text">注册</h3>
+			<button class="mui-action-back mui-btn mui-btn-link mui-btn-nav mui-pull-left register-nav-text register-nav-btn">
+				<span class="mui-icon mui-icon-left-nav"></span> 返回
+			</button>
+		</header>
+		<div class="mui-content">
+			<div class="public-empty-row"></div>
+			<div class="public-empty-row"></div>
+			<div class="register-list-box">
+				<div class="mui-input-row register-input-border">
+					<label>手机号</label>
+					<input type="text" class="register-input" placeholder="中国大陆手机号">
+				</div>
+				<div class="mui-input-row public-position-relative">
+					<label>验证码</label>
+					<button id="send_code" type="button" class="mui-btn register-validate-btn">
+						获取验证码
+					</button>
+					<input type="text" class="register-input register-validate-input" placeholder="请输入验证码">
+				</div>
+			</div>
+			<div class="public-empty-row"></div>
+			<div class="register-list-box">
+				<div class="mui-input-row register-input-border">
+					<label>昵称</label>
+					<input type="text" class="register-input" style="width: 70% !important;" placeholder='例如"贝贝"'>
+					
+				</div>
+				<!--<span class="touxiang"><img id="img" src="images/avatar_default.webp" style="accelerator: 100%;"/></span>-->
+				
+				<div class="mui-input-row public-position-relative">
+					<label>密码</label>
+					<input type="password" class="register-input register-password" placeholder="您账号的登陆密码">
+				</div>
+				<div class="mui-input-row public-position-relative">
+					<label>确认密码</label>
+					<input type="password" class="register-input register-password" placeholder="请再次输入密码">
+				</div>
+			</div>
+			<div class="public-empty-row"></div>
+
+			<div class="register-button-box">
+				<button id="btn" type="button" class="mui-input-clear mui-btn-block register-button register-button-available">注册</button>
+			</div>
+			<div class="register-cution">
+				<p>同意<a href="#middlePopover">起航用户注册协议</a></p>
+			</div>
+
+			<div id="middlePopover" class="mui-popover">
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<ul class="mui-table-view register-agreement">
+							<li>
+								<a href="javascript:;">
+									<h4><center>筑梦APP用户注册协议</center></h4>
+
+									<b><br/>1、筑梦APP服务条款确认</b>
+
+									<p> 筑梦APP的各项网络电子服务的所有权和运营权归山东筑梦APP集团，任何单位和个人非经本公司授权不得以本公司及其所有的网站名义进行商业或非商业活动。筑梦APP提供的服务将严格按照本公司及本网发布的服务条款和操作规则执行。用户必须确认所有服务条款并完成注册程序，才能成为筑梦APP的正式用户。</p>
+
+									<b><br/>2、筑梦APP版权声明</b>
+
+									<p>
+
+										筑梦APP旗下网站(www.sci99.com 、www.chem99.com及筑梦APP的其他网站)上刊载的所有内容，包括但不限于文字报导、图片、声音、录像、图表、标志、标识、广告、商标、商号、域名、软件、程序、版面设计、专栏目录与名称、内容分类标准以及为注册用户提供的任何或所有信息，均受《中华人民共和国著作权法》、《中华人民共和国商标法》、《中华人民共和国专利法》及适用之国际公约中有关著作权、商标权、专利权及其它财产所有权法律的保护，为山东筑梦APP集团及其相关权利人专属所有或持有。 使用者将筑梦APP提供的内容与服务用于非商业用途、非盈利、非广告目的而纯属个人使用时，应遵守著作权法以及其他相关法律的规定，不得侵犯筑梦APP及其相关权利人的合法权益。
+										使用者将筑梦APP提供的内容与服务用于商业、盈利、广告性目的时，需征得筑梦APP及其相关权利人的书面特别授权，注明作者及文章出处“筑梦APP”，并按有关国际公约和中华人民共和国法律的有关规定向相关权利人支付费用。否则权利有将追究有关人员的侵权责任。 未经筑梦APP的明确书面特别授权，任何人不得变更、发行、播送、转载、复制、重制、改动、散布、表演、展示或利用筑梦APP的局部或全部的内容或服务或在非筑梦APP所属的服务器上作镜像，否则以侵权论，依法追究法律责任。 筑梦APP所使用的所有软件归属山东筑梦APP集团其及软件提供商所有，
+										受《中华人民共和国著作权法》及国际版权公约法律保护。除经本网特别说明用作销售或免费下载、使用等目的外，任何其他用途包括但不限于复制、修改、经销、转储、发表、展示、演示以及反向工程均在严格禁止之列，任何单位和个人非法使用均构成对本公司及本网的侵权。
+
+									</p>
+
+									<b><br/>3、服务约定</b>
+
+									<p>
+
+										筑梦APP运用自己的电脑操作系统通过国际互联网络为用户提供网络服务。由于服务栏目和内容的不同，要求用户必须： (1)自行配备上网的所需设备， 包括个人电脑、调制解调器或其他必备上网装置。 (2)自行负担个人上网所支付的与此服务有关的电话费用、 网络费用。 (3)提供详尽、准确的个人资料。 (4)不断更新注册资料，符合及时、详尽、准确的要求。 如果用户提供的资料包含有不正确的信息，筑梦APP保留结束用户使用网络服务资格的权利。
+
+									</p>
+
+									<b><br/>4、服务修订
+
+</b>
+
+									<p>
+
+										筑梦APP根据自身的服务内容，以及与用户达成的协议提供服务。用户在享用本网提供的专项服务的同时，同意接受网站提供的各类信息服务。筑梦APP有权在必要时修改服务条款，筑梦APP服务条款一旦发生变动，将会在重要页面上提示修改内容。如果不同意所改动的内容，用户可以在与本网取得联系后取消获得的网络服务。如果用户继续享用网络服务，则视为接受服务条款的变动。筑梦APP保留随时修改或中断服务而不需提前告知用户的权利。筑梦APP行使修改或中断服务的权利，不需对用户或第三方负责。
+
+									</p>
+
+									<b><br/>5、注册用户隐私保护
+
+</b>
+
+									<p>
+
+										用户一旦注册成功，成为筑梦APP的合法用户，将得到一个密码和用户名。 由用户对用户名和密码安全负全部责任。另外，每个用户都要对以其用户名进行的所有活动和事件负全责。您可随时根据规则改变您的密码。用户若发现任何非法使用用户帐号或存在安全漏洞的情况，请立即通告筑梦APP。 筑梦APP尊重用户个人隐私，未经合法用户授权，本网不会在公开、编辑或透露其注册资料及保存在本网的非公开内容，除非有法律许可要求或未经合法用户授权在诚信的基础上认为透露这些信息是必要的： (1)用户授权本网或授权某人通过电子邮件服务透露这些信息。
+										(2)相应的法律及程序要求本网提供用户的个人资料。 (3)遵守有关法律规定，遵从本网合法服务程序。 (4)保持维护本网的商标所有权。 (5)在紧急情况下竭力维护用户个人和社会大众的隐私安全。 (6)符合其他相关的要求。
+
+									</p>
+
+									<b><br/>6、风险承担
+
+</b>
+
+									<p>
+
+										用户个人对网络服务的使用自行承担风险。筑梦APP所提供的所有资料权限于对用户参考，不对用户的商业运作做任何具体性指导，用户应自行承担使用或提供本网信息的商业活动及其风险。筑梦APP不保证服务一定能满足用户的要求，也不保证服务不会受中断。本网将尽力保证服务的及时性、准确性、安全性，但对及时性、准确性、安全性等都不作任何具体承诺。对用户在运用筑梦APP得到的任何商品购物服务或交易进程，均不作任何担保。
+
+									</p>
+
+									<b><br/>
+
+7、免责事由
+
+</b>
+
+									<p>
+
+										（1）筑梦APP对用户在接受服务过程中所受的任何直接、间接的损害不负责任，这些损害可能来自：不正当使用网络服务，在网上购买商品或进行同类型服务，在网上进行交易，非法使用网络服务或用户传送的信息有所变动等。 （2）筑梦APP不对用户所发布信息的删除或储存失败负责。筑梦APP有判定用户的行为是否符合本网服务条款的要求和精神的保留权利，如果用户违背了服务条款的规定，筑梦APP有中断对其提供网络服务的权利。 （3）对用户自行提供的信息，由用户依法自行承担全部责任。筑梦APP对此等信息的准确性、完整性、合法性或真实性均不承担任何责任。
+										（4）用户在本网论坛所发表的任何意见均属于个人意见，并不代表山东筑梦APP集团及筑梦APP也持同样的观点。
+
+									</p>
+
+									<b><br/>
+
+8、用户承诺
+
+</b>
+
+									<p>
+
+										用户自行承担发布内容的责任。用户对服务的使用是根据所有适用于筑梦APP的国家法律、地方法律和国际法律准则的规定的。 用户必须遵循： (1)用户必须提供真实的自我信息，对其在本网站上发布的信息负责全部责任。 (2)从中国境内向外传输资料信息时必须符合中国有关法规。 (3)使用网络服务不作非法用途。 (4)不干扰或攻击网络服务。 (5)遵守所有使用网络服务的网络协议、规定、程序和惯例。 用户须承诺不传输任何非法的、骚扰性的、中伤他人的、辱骂性的、恐吓性的、伤害性的、庸俗的，淫秽等信息资料。另外，用户也不能传输任何教唆他人构成犯罪行为的资料；不能传输涉及国家安全的资料；不能传输任何不符合当地法规、国家法律和国际法律的资料。禁止未经许可而非法进入其它电脑系统。用户需对自己在网上的行为承担法律责任。用户若在筑梦APP上散布和传播反动、色情或其他违反国家法律的信息，本网的系统记录有可能作为用户违反法律的证据。筑梦APP有权对违法行为作出独立判断并立即取消用户服务。
+										用户特别承诺：用户一旦在筑梦APP网站注册，即以明示或默示的方式同意并允许筑梦APP将用户的商号、商标等用于筑梦APP信息及开发的衍生产品中。但筑梦APP在使用过程中应保证其公正的立场，正确反应客观事实，不得恶意诋毁或损害用户的名誉。
+
+									</p>
+
+									<b><br/>
+
+9、服务终止或中止
+
+</b>
+
+									<p>
+
+										筑梦APP和用户可根据合同约定或实际情况终止、中止一项或多项网络服务。筑梦APP不需对任何个人或第三方负责而随时中止服务。用户对后来的条款修改有异议，或对本网的服务不满，可以行使如下权利： (1)停止使用本网的网络服务。 (2)通告本网停止对该用户的服务。 结束用户服务后，用户使用网络服务的权利立即终止或中止。从终止或中止之时，用户没有权利，本网也没有义务传送任何未处理的信息或未完成的服务给用户或第三方。
+
+									</p>
+
+									<b><br/>10、通告形式
+
+</b>
+
+									<p>
+
+										筑梦APP服务条款的修改、服务变更、或其它重要事件发生变动而需要通告时，可根据实际情况选择通过重要页面公告、电子邮件、常规信件等形式进行。
+
+									</p>
+
+									<b><br/>
+
+11、法律适用
+
+</b>
+
+									<p>
+
+										本网网络服务条款与中华人民共和国的法律解释相一致，用户和筑梦APP一致同意服从中华人民共和国法律的管辖。如发生筑梦APP服务条款与中华人民共和国法律相抵触时，则这些条款将完全按法律规定重新解释，而其它条款则依旧保持对用户产生法律效力和影响。</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<script src="js/castapp.js"></script>
+		<script>
+			ca.init();
+			var send_code=ca.id('send_code');
+			var btn=ca.id('btn');
+			var input=ca.tagName('input');
+			//var img=dj.id('img');
+			var onoff=true;
+			var code='';
+			
+			//发送验证码
+			send_code.addEventListener('tap',function(){
+				
+				if(!onoff){
+					return;
+				}
+				//关闭开关
+				onoff=false;
+				
+				//获得手机号
+				var phone=input['0'].value;
+				if(phone==''){
+					ca.prompt('手机号码不能为空');
+					return;
+				}
+				if(phone.length!=11){
+					ca.prompt('号码位数不正确');
+					return;
+				}
+				//生成验证码
+				code=ca.getIdCode(4);
+				//alert(code);
+				ca.showWaiting('发送中');
+		  		setTimeout(function(){
+		  			ca.closeWaiting();
+		  			ca.prompt('发送成功');
+		  			alert(code);
+		  			onoff=false;
+		  			
+		  			//倒计时
+		  			var number=10;
+		  			var timer=setInterval(function(){
+		  				number--;
+		  				//当倒计时正在进行的时候，不能继续发送
+		  				if(number==0){
+		  					send_code.innerHTML='获取验证码';
+		  					clearInterval(timer);
+		  					onoff=true;
+		  				}else{
+		  				    send_code.innerHTML=number+'S';	
+		  				}
+		  			},1000);
+		  		},3000);
+		  		
+		  	});
+				/**
+				 * 发送短信 集成服务版
+				 * 请先登录 http://www.castapp.cn 创建应用 获得appid,appkey
+				 * code           验证码
+				 * target_phone   对方手机号码
+				 * appid          在创建应用后得到的appid
+				 * appkey         在创建应用后得到的appkey
+				 * sms_templates  短信模版
+				 * package_name   App包名
+				 * 
+				 */
+				 
+//				ca.sendIdCode({
+//				    code:code,
+//				    target_phone:phone,
+//				    appid:'2018071400355420346',
+//				    appkey:'tz85yd4hmg36qow0ve2p',
+//				    sms_templates:'sms_tmpl_2',
+//				    callback:function(state){
+//				        if(state == true){
+//				                ca.prompt('发送成功');
+//				                //写倒计时
+//				                var num=10;
+//				                var timer=setInterval(function(){
+//				                	num--;
+//				                	if(num<1){
+//				                		send_code.innerHTML='获取验证码';
+//				                		clearInterval(timer);
+//				                	}else{
+//				                	    send_code.innerHTML=num+'S';	
+//				                	}
+//				                	
+//				                },1000);
+//				            }else{
+//				            	//可以点击
+//				            	onoff=true;
+//				                ca.prompt('发送失败');
+//				            }
+//				    }
+//				});
+//			});
+			
+			//头像
+//			var oI=dj.id('img1');
+//			dj.click(img,function(){
+//				dj.album({
+//				    succFn:function(path){
+//                      
+//                      oI.src=path;
+//						
+//						//alert(path);
+//				    },
+//				    errFn:function(error){
+//				        alert(error);
+//				    }
+//				});
+//			});
+//			var img=dj.id('img');
+//			var arr=[{title:'照相机'},{title:'相册'}];
+//			dj.actionSheet(arr,{
+//				succFn:function(path){
+//					//更改数据
+//					var request_url=localStorage.getItem('request_url');
+//					dj.get({
+//						url:request_url+'Login/add_img',
+//						data:{
+//							
+//						}
+//					})
+//				}
+//			})
+
+
+			
+			//注册
+			btn.addEventListener('tap',function(){
+				var phone =input['0'].value;
+				var input_code=input['1'].value;
+				var nickname=input['2'].value;
+				//var img=oI.src;
+				var password=input['3'].value;
+				var qrpassword=input['4'].value;
+				
+				if(phone==''){
+					ca.prompt('手机号码不能为空');
+					return;
+				}
+				if(phone.length!=11){
+					ca.prompt('号码位数不正确');
+					return;
+				}
+				if(input_code==''){
+					ca.prompt('验证码不能为空');
+					return;
+				}
+				if(code!=input_code){
+					ca.prompt('验证码错误');
+					return;
+					
+				}
+				
+				if(nickname==''){
+					ca.prompt('昵称不能为空');
+					return;
+				}
+//				if(img==''){
+//					dj.prompt('头像不能为空');
+//				}
+				if(password==''){
+					ca.prompt('密码不能为空');
+					return;
+				}
+				if(qrpassword==''){
+					ca.prompt('确认密码不能为空');
+					return;
+				}
+				if(qrpassword!=password){
+					ca.prompt('确认密码不正确');
+					return;
+				}
+				
+				var request_url=localStorage.getItem('request_url');
+				ca.get({
+					url:request_url+'Login/register',
+					data:{
+						phone_data:phone,
+						nickname_data:nickname,
+						//touxiang_data:img,
+						password_data:password
+					},
+					succFn:function(data){
+						if(data==2){
+							ca.prompt('手机号码已存在');
+						}else if(data==1){
+							ca.prompt('注册成功');
+							//通知我的界面，把个人中心展示出来
+							var arr=['my-nav','my'];
+							ca.sendNotice(arr,'login_do',{});
+							//显示首页
+							ca.getStartInterface(function(obj){
+								obj.show();
+							})
+						}else if(data==0){
+							ca.prompt('注册失败，请重试');
+						}
+					}
+				})
+			});
+			
+		</script>
+	</body>
+
+</html>

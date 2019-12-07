@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <script src="js/common.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/my.js" ></script>
+    <script type="text/javascript" charset="utf-8">
+ 
+      	mui.plusReady(function(){
+      		plus.navigator.closeSplashscreen();
+      		var oUl = document.getElementById('index-btns');
+      		var btns = oUl.getElementsByTagName('li');
+      		var oList = document.getElementById('index-list');
+      		var aListCell = oList.getElementsByTagName('a');
+//    		for(var i=0;i<btns.length;i++){
+//    			btns[i].index = i;
+//    			btns[i].addEventListener('tap',function(){
+//    				mui.toast('按钮'+(this.index+1)+'功能开发中，请稍后。。');
+//    			}); 
+//    		} 
+			for(var i=0;i<aListCell.length;i++){
+				aListCell[0].addEventListener('tap',function(){
+					openPage('./subPages/actDetailNav.html','details',0,0);
+				});
+				aListCell[1].addEventListener('tap',function(){
+					openPage('./subPages/actDetailNav3.html','details',0,0);
+				});
+				aListCell[2].addEventListener('tap',function(){
+					openPage('./subPages/actDetailNav2.html','details',0,0);
+				});
+				aListCell[3].addEventListener('tap',function(){     
+					openPage('./subPages/actDetailNav1.html','details',0,0);
+				});
+				aListCell[4].addEventListener('tap',function(){
+					openPage('./subPages/actDetailNav3.html','details',0,0);
+				});
+				aListCell[5].addEventListener('tap',function(){
+					openPage('./subPages/actDetailNav3.html','details',0,0);
+				});
+			}
+      		var gallery = mui('.mui-slider');
+			gallery.slider({
+			  interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
+			});
+			 
+			//document.querySelector('.mui-slider').addEventListener('slide', function(event) {
+			  //注意slideNumber是从0开始的；
+			  //切换一张图片后动作
+			//});
+			//注意:如果ajax获得图片后，需要在写入图片以后，需要从新调用一下
+			//gallery.slider();
+      	});
+      	
+    </script>
+
+</head>
+<body>
+	<div class="mui-content">
+		<!--<div id="refreshDiv" class="mui-content mui-scroll-wrapper">--> 
+    		<div class="mui-scroll">
+				<div id="slider" class="mui-slider">
+					<div class="mui-slider-group mui-slider-loop index-slider">
+						<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="images/new4.webp">
+								<!--<p class="mui-slider-title">放飞梦想心飞扬</p>-->
+							</a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="images/new1.webp"/>
+								<!--<p class="mui-slider-title">将爱心传递，践行公益</p>-->
+							</a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="images/new2.webp">
+								<!--<p class="mui-slider-title">Color of SIP CBD</p>-->
+							</a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="images/new3.webp">
+								<!--<p class="mui-slider-title">公益旅行，背包在路上</p>-->
+							</a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="images/new4.webp">
+								<!--<p class="mui-slider-title">公益旅行，背包在路上</p>-->
+							</a>
+						</div>
+						<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="images/new1.webp">
+								<!--<p class="mui-slider-title">放飞梦想心飞扬</p>-->
+							</a>
+						</div>
+					</div>
+					<div class="mui-slider-indicator mui-text-right">
+						<div class="mui-indicator mui-active"></div>
+						<div class="mui-indicator"></div>
+						<div class="mui-indicator"></div>
+						<div class="mui-indicator"></div>
+					</div>
+				</div>
+				<!--首页按钮-->
+				<div class="mui-table-view index-btn">
+					<ul id="index-btns" class="mui-table-view mui-grid-view index-btn-ul">
+				        <li class="mui-table-view-cell mui-col-xs-6 index-btn-li index-btn-left-border">
+				            <a href="#">
+				                <img src="./images/siliu.webp">
+				                <div class="index-btn-title index-btn-green">四六级</div>
+				            	<span class="index-btn-desc">大学英语必备</span></a></li>
+				        <li class="mui-table-view-cell mui-col-xs-6 index-btn-li">
+				            <a href="#">
+				                <img src="./images/kaoyan1.webp">
+				                <div class="index-btn-title index-btn-orange">考研</div>
+				            	<span class="index-btn-desc">人生中又一次进步</span></a></li>
+				        <li class="mui-table-view-cell mui-col-xs-6 index-btn-li index-btn-left-border">
+				            <a href="#"><img src="./images/zhi1.webp">
+				                <div class="index-btn-title index-btn-pink">职业技能</div>
+				            	<span class="index-btn-desc">专业型人才</span></a></li>
+				        <li class="mui-table-view-cell mui-col-xs-6 index-btn-li">
+				            <a href="#">
+				                <img src="./images/gong.webp">
+				                <div class="index-btn-title index-btn-blue">公务员</div>
+				            	<span class="index-btn-desc">人民的公仆</span></a></li>
+				    </ul>
+				</div>
+				<!--列表-->
+				<div id="index-list" class="list">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell mui-media list-cell">
+							<a href="javascript:;">
+								<div class="list-img-box">
+								 <div class="index-top">
+								 	<img src="./images/0111.webp" / >
+								 </div>
+									<img class="mui-media-object mui-pull-left list-img" src="images/jiaoshi13.webp">
+									 
+									<!--<span class="list-img-desc">第三期 No.1</span>-->
+								</div>
+								<div class="mui-media-body">
+									<div class="mui-ellipsis list-title">初级会计职称考试</div>
+									<div class="mui-pull-right list-attention">
+									  
+										<img src="./images/heart-full.webp" />
+									
+										<span>322</span>
+									</div>
+									<div class="list-box">
+										<p class='mui-ellipsis list-text list-text-top-space'>刘艳霞 | 温江区光华公园</p>
+										<p class='mui-ellipsis list-text '>2018.4.21 进行中</p>
+										<div class="mui-pull-right list-price">
+											<span>¥</span>1500.00<span>元/人</span>
+										</div>
+										
+									</div>
+									<div class="list-progress">
+										<div style="width:100%;"></div>
+									</div>
+									<span class="list-progress-count">105/100</span>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media list-cell">
+							<a href="javascript:;">
+								<div class="list-img-box">
+								<div class="index-top">
+								 	<img src="./images/0222.webp" / >
+								 </div>
+									<img class="mui-media-object mui-pull-left list-img" src="images/jiaoshi11.webp">
+									<!--<span class="list-img-desc">第三期 No.2</span>-->
+								</div>
+								<div class="mui-media-body">
+									<div class="mui-ellipsis list-title">教师资格证考试</div>
+									<div class="mui-pull-right list-attention">
+										<img src="./images/heart-full.webp" />
+										<span>180</span>
+									</div>
+									<div class="list-box">
+										<p class='mui-ellipsis list-text list-text-top-space'>李梦娇 | 双流区王府花园</p>
+										<p class='mui-ellipsis list-text '>2018.4.28 进行中</p>
+										<div class="mui-pull-right list-price">
+											<span>¥</span>1550.00<span>元/人</span>
+										</div>
+										
+									</div>
+									<div class="list-progress">
+										<div style="width:95%;"></div>
+									</div>
+									<span class="list-progress-count">76/80</span>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media list-cell">
+							<a href="javascript:;">
+								<div class="list-img-box">
+								<div class="index-top">
+								 	<img src="./images/0333.webp" />
+								 </div>
+									<img class="mui-media-object mui-pull-left list-img"width="100px" src="./images/liweiming.webp">
+									<!--<span class="list-img-desc">第四期 No.1</span>-->
+								</div>
+								<div class="mui-media-body">
+									<div class="mui-ellipsis list-title">国家公务员考试</div>
+									<div class="mui-pull-right list-attention">
+										<img src="./images/heart-full.webp" />
+										<span>520</span>
+									</div>
+									<div class="list-box">
+										<p class='mui-ellipsis list-text list-text-top-space'>李委明 | 郫都区锦欣苑</p>
+										<p class='mui-ellipsis list-text '>2018.4.29进行中</p>
+										<div class="mui-pull-right list-price">
+											<span>¥</span>1480.00<span>元/人</span>
+										</div>
+										
+									</div>
+									<div class="list-progress">
+										<div style="width:90%;"></div>
+									</div>
+									<span class="list-progress-count">135/150</span>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media list-cell">
+							<a href="javascript:;">
+								<div class="list-img-box">
+									<img class="mui-media-object mui-pull-left list-img" src="images/jiaoshi7.webp">
+									<!--<span class="list-img-desc">第四期 No.2</span>-->
+								</div>
+								<div class="mui-media-body">
+									<div class="mui-ellipsis list-title">四级听力辅导</div>
+									<div class="mui-pull-right list-attention">
+										<img src="./images/heart-full.webp" />
+										<span>344</span>
+									</div>
+									<div class="list-box">
+										<p class='mui-ellipsis list-text list-text-top-space'>蒙頔 | 武侯区瑞金广场</p>
+										<p class='mui-ellipsis list-text '>2018.5.3进行中</p>
+										<div class="mui-pull-right list-price">
+											<span>¥</span>300.00<span>元/人</span>
+										</div>
+										
+									</div>
+									<div class="list-progress">
+										<div style="width:80%;"></div>
+									</div>
+									<span class="list-progress-count">80/100</span>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media list-cell">
+							<a href="javascript:;">
+								<div class="list-img-box">
+									<img class="mui-media-object mui-pull-left list-img" src="images/jiaoshi8.webp">
+									<!--<span class="list-img-desc">第四期 No.2</span>-->
+								</div>
+								<div class="mui-media-body">
+									<div class="mui-ellipsis list-title">考研高等数学</div>
+									<div class="mui-pull-right list-attention">
+										<img src="./images/heart-full.webp" />
+										<span>344</span>
+									</div>
+									<div class="list-box">
+										<p class='mui-ellipsis list-text list-text-top-space'>唐迟 | 武侯区瑞金广场</p>
+										<p class='mui-ellipsis list-text '>2018.5.5 进行中</p>
+										<div class="mui-pull-right list-price">
+											<span>¥</span>300.00<span>元/人</span>
+										</div>
+										
+									</div>
+									<div class="list-progress">
+										<div style="width:72%;"></div>
+									</div>
+									<span class="list-progress-count">70/100</span>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media list-cell">
+							<a href="javascript:;">
+								<div class="list-img-box">
+									<img class="mui-media-object mui-pull-left list-img" src="images/jiaoshi4.webp">
+									<!--<span class="list-img-desc">第四期 No.2</span>-->
+								</div>
+								<div class="mui-media-body">
+									<div class="mui-ellipsis list-title">国家公务员面试</div>
+									<div class="mui-pull-right list-attention">
+										<img src="./images/heart-full.webp" />
+										<span>344</span>
+									</div>
+									<div class="list-box">
+										<p class='mui-ellipsis list-text list-text-top-space'>何微微 | 武侯区瑞金广场</p>
+										<p class='mui-ellipsis list-text '>2018.5.11进行中</p>
+										<div class="mui-pull-right list-price">
+											<span>¥</span>300.00<span>元/人</span>
+										</div>
+										
+									</div>
+									<div class="list-progress">
+										<div style="width:65%;"></div>
+									</div>
+									<span class="list-progress-count">65/100</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</body>
+	<script src="js/mui.min.js"></script>
+		<script src="js/mui.pullToRefresh.js"></script>
+		<script src="js/mui.pullToRefresh.material.js"></script>
+<script src="js/castapp.js"></script>
+<script>
+
+		
+	 
+//		mui.init();
+//			(function($) {
+//				//阻尼系数
+//				var deceleration = mui.os.ios?0.003:0.0009;
+//				$('.mui-scroll-wrapper').scroll({
+//					bounce: false,
+//					indicators: true, //是否显示滚动条
+//					deceleration:deceleration
+//				});
+//				$.ready(function() {
+//					//循环初始化所有下拉刷新，上拉加载。
+//					$.each(document.querySelectorAll('.mui-slider-group .mui-scroll'), function(index, pullRefreshEl) {
+//						$(pullRefreshEl).pullToRefresh({
+//							down: {
+//								callback: function() {
+//									var self = this;
+//									setTimeout(function() {
+//										var ul = self.element.querySelector('.mui-table-view');
+//										ul.insertBefore(createFragment(ul, index, 10, true), ul.firstChild);
+//										self.endPullDownToRefresh();
+//									}, 1000);
+//								}
+//							},
+//							up: {
+//								callback: function() {
+//									var self = this;
+//									setTimeout(function() {
+//										var ul = self.element.querySelector('.mui-table-view');
+//										ul.appendChild(createFragment(ul, index, 5));
+//										self.endPullUpToRefresh();
+//									}, 1000);
+//								}
+//							}
+//						});
+//					});
+//					var createFragment = function(ul, index, count, reverse) {
+//						var length = ul.querySelectorAll('li').length;
+//						var fragment = document.createDocumentFragment();
+//						var li;
+//						for (var i = 0; i < count; i++) {
+//							li = document.createElement('li');
+//							li.className = 'mui-table-view-cell';
+//							li.innerHTML = '第' + (index + 1) + '个选项卡子项-' + (length + (reverse ? (count - i) : (i + 1)));
+//							fragment.appendChild(li);
+//						}
+//						return fragment;
+//					};
+//				});
+//			})(mui);
+		ca.init();
+		var cell=ca.className('index-btn-li');
+//		var cell=ca.className('list-cell');
+		cell['0'].addEventListener('tap',function(){
+			ca.newInterface({
+				url:'cet.html',
+				id:'cet',
+			})
+		});
+		cell['1'].addEventListener('tap',function(){
+			ca.newInterface({
+				url:'pubmeb.html',
+				id:'pubmeb'
+			})
+		});
+		cell['2'].addEventListener('tap',function(){
+			ca.newInterface({
+				url:'vocational_skills.html',
+				id:'vocational_skills'
+			})
+			
+			
+		});
+		cell['3'].addEventListener('tap',function(){
+			ca.newInterface({
+				url:'civil_servant.html',
+				id:'civil_servant'
+			})
+		});
+	</script>
+</html>

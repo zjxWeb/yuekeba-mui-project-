@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav register-nav" style="background-color: #54bbfe;">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left register-nav-text"></a>
+		    <h1 class="mui-title register-nav-text">设置</h1>
+		</header>
+		<div class="mui-content setting-color">
+		    <ul class="mui-table-view">
+		            <li class="mui-table-view-cell">
+		                <a class="mui-navigate-right">
+		                    <span class="mui-icon mui-icon-navigate setting-icon" style="font-size: 18px;"></span><span>推荐给好友</span>
+		                </a>
+		            </li>
+		            <li class="mui-table-view-cell">
+		                <a class="mui-navigate-right">
+		                    <span class="iconfont icon-h-forget setting-icon"></span><span>账号安全</span>
+		                </a>
+		            </li>
+		            <li class="mui-table-view-cell">
+		                <a class="mui-navigate-right">
+		                   <span class="iconfont icon-yijianfankui setting-icon"></span><span>意见反馈</span>
+		                </a>
+		            </li>
+		            <li class="mui-table-view-cell">
+		                <a class="mui-navigate-right">
+		                    <span class="iconfont icon-jianchagengxin setting-icon"></span><span>检查更新</span>
+		                </a>
+		            </li>
+		        </ul>
+		        <ul class="mui-table-view  public-margin-top">
+		        	<li class="mui-table-view-cell">
+		                <a class="mui-navigate-right">
+		                    <span class="iconfont icon-tuichudenglu setting-icon"></span><span>退出登录</span>
+		                </a>
+		            </li>
+		        </ul>
+		</div>
+		<script src="js/castapp.js"></script>
+		<script>
+			ca.init();
+			var cell=ca.className('mui-table-view-cell');
+			//推荐给好友
+			cell['0'].addEventListener('tap',function(){
+				ca.newInterface({
+					url:'account-security.html',
+					id:'account-security'
+				})
+			});
+			//账号安全
+			cell['1'].addEventListener('tap',function(){
+				ca.newInterface({
+					url:'account-security.html',
+					id:'account-security'
+				})
+			});
+			//意见反馈
+			cell['2'].addEventListener('tap',function(){
+				ca.newInterface({
+					url:'feedback.html',
+					id:'feedback'
+				})
+			});
+			//检查更新
+			cell['3'].addEventListener('tap',function(){
+				mui.plusReady(function(){
+					var v=plus.runtime.version;
+//					alert(v);
+					var request_url=localStorage.getItem('request_url');
+					ca.get({
+						url:request_url+'User/get_version',
+						data:{},
+						succFn:function(data){
+							var json=JSON.parse(data);
+							if(json.v==v){
+								ca.prompt('没有新版本');
+							}else{
+								ca.confirm({
+									title:'提示',
+									content:'发现新版本，是否更新？',
+									callback:function(data){
+										if(data){
+											ca.openUrl(json.url);
+										}
+									}
+								})
+							}
+							
+						}
+					})
+				})
+			});
+			//退出登录
+		 cell['4'].addEventListener('tap',function(){
+		 	ca.confirm({
+		 		title:'提示',
+		 		content:'是否退出登录？',
+		 		callback:function(data){
+		 			
+		 			if(data){
+		 				ca.showWaiting();
+		 				setTimeout(function(){
+		 					
+		 				ca.prompt('退出成功');
+		 				 //删除本地存储的手机号
+		 				 localStorage.removeItem('phone');
+		 				 //通知各个页面
+		 				 var arr = ['my-nav','my'];
+		 				 ca.sendNotice(arr,'login_do',{});
+		 				 //初始化底部导航
+		 				 ca.tabBarInit(true,'');
+		 				 //显示首页
+		 				 ca.getStartInterface(function(obj){
+		 				 	obj.show();
+		 				 })
+		 
+	 
+		 				 ca.closeWaiting();
+		 				 },2000);
+		 			}
+		 		}
+		 	})
+		 })
+		</script>
+	</body>
+
+</html>

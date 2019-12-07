@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	    
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav register-nav" style="background-color: #54bbfe;">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left register-nav-text"></a>
+		    <button class="mui-btn mui-pull-right" style="background: #07ACFF; color: #fff; border: 0px;" id="submit">发送</button>
+		</header>
+		 <div class="mui-content">
+			    <div class="publish-topic">
+			    	<!--写内容-->
+			       <div class="write-comments-txt">
+		      		<textarea id="text" placeholder="请输入话题内容" name="" rows="5" cols=""></textarea>
+		      	   </div>
+		      	   <!--写内容end-->
+		      	   <!--添加图片-->
+			      	<div class="add-img">
+			      		<span class="zero-span mui-icon mui-icon-plusempty" id="add_img_btn"></span>
+			      		<div id="img_list">
+			      			<!--<div class="add_topic_img_div">
+			      				<b class="add_topic_img_div_del">-</b>
+			      				<img src="images/logo.webp"/>	
+			      			</div>-->
+			      			
+			      		</div>
+			      	</div>
+			       <!--添加图片end-->
+			    </div>
+			</div>
+		<script src="js/castapp.js"></script>
+		<script>
+			ca.init();
+			//发布按钮
+			var submit=ca.id('submit');
+			//输入框
+			var text=ca.id('text');
+			//添加图片按钮
+			var btn=ca.id('add_img_btn');
+			//把图片添加到这个元素内
+			var img_list=ca.id('img_list');
+			
+			//添加图片
+			var img_url=localStorage.getItem('img_url');
+			btn.addEventListener('tap',function(){
+				var arr=['照相机','相册'];
+				ca.actionSheet(arr,{
+					succFn:function(data){
+//						alert(data);
+						img_path=img_url+data;
+						//1.生成一个图片的模板，然后插入到img-list里面，显示
+						var tmpl='<div class="add_topic_img_div">'
+				      				+'<b class="add_topic_img_div_del">-</b>'
+				      				+'<img src="'+img_path+'"/>'
+				      			+'</div>';
+				      			img_list.innerHTML+=tmpl;
+				      			//删除
+				      			del();
+					},
+					isUpload:true,
+					uploadUrl:img_url+'upload_file.php',
+				});
+			});
+			//删除图片
+			function del(){
+				var del_icon=ca.className('add_topic_img_div_del');
+				for(var a=0;a<del_icon.length;a++){
+					del_icon[a].addEventListener('tap',function(){
+//						alert(1);///
+//						var parent=this.parentNode;
+//						img_list.removeChild(parent);
+						var _this=this;
+						//提示
+						ca.confirm({
+							title:'温馨提示',
+							content:'是否删除该图片？',
+							callback:function(data){
+								if(data){
+									//爷爷删除他爸
+									var parent=_this.parentNode;
+									img_list.removeChild(parent);
+								}
+							}
+						})
+					});
+				}
+			}
+			
+			//发布
+			submit.addEventListener('tap',function(){
+				var content=text.value;
+				if(content==''){
+					ca.prompt('话题内容不能为空');
+					return;
+				}
+				//图片
+				var img=img_list.getElementsByTagName('img');
+				var img_arr=[];
+				for(var a=0;a<img.length;a++){
+					img_arr.push(img[a].src);
+				}
+				//图片是个数组，数组不能通过url传递
+				var img_string=img_arr.join('-');
+//				alert(img_string);
+				//上传的地址
+				var request_utl=localStorage.getItem('request_url');
+				//谁发布这个信息
+				var login_phone=localStorage.getItem('phone');
+				ca.get({
+					url:request_utl+'Info/add',
+					data:{
+						phone:login_phone,
+						content:content,
+						img:img_string
+					},
+					succFn:function(data){
+						if(data>0){
+							ca.prompt('发布成功');
+							//1.先更新话题列表
+							var arr=['friends'];
+							ca.sendNotice(arr,'update_topic',{});
+							//2.关闭当前界面
+							ca.closeCurrentInterface();
+							
+							
+						}else{
+							ca.prompt('发布失败');
+						}
+					}
+				})
+				
+				
+			});
+			
+			
+		</script>
+	</body>
+
+</html>

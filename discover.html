@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+    <script type="text/javascript" charset="utf-8">
+//    	mui.init({
+//        /*  subpages:[{
+//            url:'test.html',//子页面HTML地址，支持本地地址和网络地址
+//            id:'test',//子页面标志
+//            styles:{
+//              top:'-44px',//子页面顶部位置
+//              bottom:'0',//子页面底部位置
+//              width:'100%',//子页面宽度，默认为100%
+//              height:'100%'//子页面高度，默认为100%
+//            },
+//            extras:{}//额外扩展参数
+//          }]*/
+//        });
+    </script>
+</head>
+<body>
+	<header id="header" class="mui-bar mui-bar-nav index-header">
+		<h1 class="mui-title public-white-text">发现</h1>
+		<span class="mui-icon mui-icon-search mui-pull-right dis-nav-icon"></span>
+	</header>
+	<div class="mui-content">
+		<ul class="mui-table-view public-thin-top">
+			<li class="mui-table-view-cell">
+				<a href="javascript:;" class="mui-navigate-right">
+					<div class="dis-list-icon dis-list-icon-big" style="margin-left:-2px;">
+						<span >
+							<img src="images/a.webp"/ style="width: 19px; height:19px;">
+							
+						</span><!--<img src="images/pengyouquan1.webp"/>--></div>
+					<div class="dis-list-text">
+						<span class="dis-list-title" style="margin-left: 0px;">交流天地</span><span class="dis-list-desc">与朋友答疑解惑</span>
+					</div>
+				</a>
+			</li>
+		</ul>
+		<div class="public-empty-row"></div>
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell" style="line-height: 40px;">
+				<a href="#" class="mui-navigate-right dis-list-cell">
+					<div class="dis-list-icon"><span>
+						<img src="images/b.webp" /style="width:13px; height:18px;">
+					</span><!--<img src="images/2.webp"/>--></div>
+					<div class="dis-list-text-small">
+						<span class="dis-list-small-title" style="margin-top: -3px;">排行榜</span>
+					</div>
+					<span class="dis-list-desc-inline" style="margin-top: 3px;">热门的老师</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell" style="line-height: 40px;">
+				<a href="#" class="mui-navigate-right dis-list-cell">
+					<div class="dis-list-icon">
+						<img src="images/c.webp"/  style="width: 13px; height: 22px;">
+					</div>
+					<div class="dis-list-text-small">
+						<span class="dis-list-small-title" style="margin-top: -5px;">往期活动</span>
+					</div>
+					<span class="dis-list-desc-inline" style="margin-top: 2px;">以往举办的活动</span>
+				</a>
+			</li>
+		</ul>
+		<div class="public-empty-row"></div>
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell" style="line-height: 40px;">
+				<a href="#" class="mui-navigate-right dis-list-cell">
+					<div class="dis-list-icon">
+						<span> 
+							<img src="images/d.webp" / style="width: 15px; height: 23px;">
+					    </span><!--<img src="images/4.webp"/>--> 
+					</div>
+					<div class="dis-list-text-small">
+						<span class="dis-list-small-title" style="margin-top: -7px;">附近的老师</span>
+					</div>
+					<span class="dis-list-desc-inline" style="margin-top: 1px;">寻找附近的老师</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell" style="line-height: 40px;">
+				<a href="#" class="mui-navigate-right dis-list-cell">
+					<div class="dis-list-icon"><span >
+						<img src="images/e.webp" /  style="width: 15px; height: 20px;">
+					</span></div>
+					<div class="dis-list-text-small">
+						<span class="dis-list-small-title" style="margin-top: -7px;" >购书</span>
+					</div>
+					<span class="dis-list-desc-inline"style="margin-top: 2px;">简单方便的购书</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell" style="line-height: 40px;">
+				<a href="#" class="mui-navigate-right dis-list-cell">
+					<div class="dis-list-icon">
+						<img src="images/f.webp" / style="width: 16px; height: 20px;" >
+					</span>
+						<!--<span class="dis-icons iconfont icon-guanzhuxuanzhong" style="font-size: 42px !important; width: 61px; height: 61px; text-align: center; line-height: 61px; color: #506A30; background: #DEE0D2;"></span>-->
+					</div>
+					<span class="dis-list-text-small" style="margin-top: 1px; padding-left: -2px;">
+						游戏
+					</span>
+					<span class="dis-list-desc-inline" style="margin-top: 1px;">快乐的游戏之旅</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<script src="js/castapp.js"></script>
+	<script>
+		ca.init();
+		var oSousuo=ca.className('dis-nav-icon');
+		var cell=ca.className('mui-table-view-cell');
+		oSousuo['0'].addEventListener('tap',function(){
+			ca.newInterface({
+				url:'sousuo.html',
+				id:'sousuo',
+			})
+		});
+		cell['0'].addEventListener('tap',function(){
+			ca.newInterface({
+				url:'forum.html',
+				id:'forum',
+			})
+		});
+		cell['1'].addEventListener('tap',function(){
+			ca.newInterface({
+				url:'leaderboard.html',
+				id:'leaderboard'
+			})
+		});
+		cell['2'].addEventListener('tap',function(){
+			ca.newInterface({
+				url:'over.html',
+				id:'over'
+			})
+			
+			
+		});
+		cell['3'].addEventListener('tap',function(){
+			ca.newInterface({
+				url:'near_teacher.html',
+				id:'near_teacher'
+			})
+		});
+		cell['4'].addEventListener('tap',function(){
+			ca.newInterface({
+				url:'shopping.html',
+				id:'shopping'
+			})
+		});
+		cell['5'].addEventListener('tap',function(){
+			ca.newInterface({
+				url:'game.html',
+				id:'game'
+			})
+		});
+	</script>
+</body>
+</html>

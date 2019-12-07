@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../js/mui.min.js"></script>
+    <script type="text/javascript" src="../js/common.js" ></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/sub.style.css" />
+    <link rel="stylesheet" href="../css/icon.style.css" />
+    <!--<script type="text/javascript" charset="utf-8">
+      	mui.init({
+		    subpages:[{ 
+		    url:'actDetail.html',//下拉刷新内容页面地址 
+		    id:'actDetail',//内容页面标志
+		     styles:{ top:'44px',
+		     		  bottom:'50px'//内容页面顶部位置,需根据实际页面布局计算，若使用标准mui导航，顶部默认为48px； .....//其它参数定义
+		     } 
+		    }] 
+		});
+		mui.plusReady(function(){
+			var oEnroll = document.getElementById('enroll');
+			oEnroll.addEventListener('tap',function(){
+				openPage('makeOrder.html','makeOrder');
+			});
+		});
+    </script>-->
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav public-dark-nav" style="background-color: #54bbfe;">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left public-white-text"></a>
+		<a class="mui-icon icon-share mui-pull-right public-white-text"></a>
+		<h1 class="mui-title public-white-text">教师详情</h1>
+	</header>
+	<nav id="main-nav" class="mui-bar mui-bar-tab detail-navi-bar">
+			<div class="detail-nav-price"><label>￥</label><span class="info">360.00</span><label>元/人</label></div>
+
+			<div class="mui-pull-right "><span class="mui-btn detail-nav-btn detail-add-btn"><label class="icon-heart"></label></span><span class="mui-btn detail-nav-btn detail-add-btn"><label class="icon-pen"></label></span><span id="enroll" class="mui-btn detail-nav-btn">立刻报名</span></div>
+		</nav>
+	<script src="../js/castapp.js"></script>
+	<script>
+		ca.init();
+		ca.createChildInterface({
+				url:'actDetail1.html',
+				id:'actDetail1',
+				styles:{
+					top:'44px',
+					bottom:'50px',
+					
+				}
+		});
+		
+		var enroll=ca.id('enroll');
+		enroll.addEventListener('tap',function(){
+			ca.newInterface({
+				url:'makeOrder.html',
+				id:'makeOrder'
+			})
+		})
+		
+		
+		var iid=localStorage.getItem('iid');
+		var request_url=localStorage.getItem('request_url');
+		var info=ca.className('info');
+		ca.get({
+			url:request_url+'Info/get_one',
+			data:{
+				id_data:iid
+			},
+			succFn:function(data){
+				//alert(data);
+				var all_json=JSON.parse(data);
+				var json=all_json['0'];
+				info['0'].innerHTML=json.fee;
+			}
+		});
+		
+
+		
+	</script>
+</body>
+</html>

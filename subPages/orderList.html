@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../js/mui.min.js"></script>
+    <script type="text/javascript" src="../js/common.js" ></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/icon.style.css" />
+    <link rel="stylesheet" href="../css/sub.style.css" />
+    <script type="text/javascript" charset="utf-8">
+      	mui.init({ 
+    	pullRefresh : { 
+	        container:"#refreshDiv",//下拉刷新容器标识，querySelector能定位的css选择器均可，比如：id、.class等    
+	        up : { 
+            contentrefresh : "正在加载...",//可选，正在加载状态时，上拉加载控件上显示的标题内容 
+            contentnomore:'没有更多数据了',//可选，请完毕若没有更多数据时显示的提醒内容； 
+            callback : pullUp //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据； 
+        	} },
+        	swipeBack:true
+		});
+		function pullUp(){
+			/*mui.get('list.html',{ //请接口地址
+			    state:'list'   // 参数  键 ：值
+			    },function(data){ // data为服务器端返回数据
+			    //获得服务器响应 ... 
+			    },'json' 
+			);*/
+//			mui.alert('上拉加载');
+			//为true不加载重复数据，为false则无限加载
+			this.endPullupToRefresh(false); 
+		}
+//		mui.plusReady(function(){
+//			var aOrderArea = document.getElementsByClassName('orderArea');
+//			for(var i=0;i<aOrderArea.length;i++){
+//				aOrderArea[i].addEventListener('tap',function(){
+//					openPage('publicNav.html','orderSheet',0,0,'',200,{'title':'订单详情','page':'orderSheet'});
+//				});
+//			}
+//		});
+    </script>
+</head>
+<body>
+	<div id="refreshDiv" class="mui-content mui-scroll-wrapper"> 
+    	<div id="menu" class="mui-scroll">
+			<!--订单单元1结束-->
+			<div class="public-thin-top"></div>
+			<div class="order-box">
+				<div class="orderArea">
+					<div class="order-box-header">
+						<span class="icon-user order-author-icon"></span><span class="order-author">刘艳霞老师<span class="order-arrow">〉</span></span><span class="order-status">即将开课</span>
+					</div>
+					<div class="order-act-brief">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell mui-media order-brief-cell">
+								<a href="javascript:;">
+									<div class="order-brief-img-box">
+										<img class="mui-media-object mui-pull-left order-brief-img" src="../images/jiaoshi13.webp">
+									</div>
+									<div class="mui-media-body public-position-relative">
+										<div class="mui-ellipsis-2 order-brief-title">初级会计职称考试</div>
+										<div class="order-brief-right"><div>￥2000.00</div><label class="mui-pull-right">元/人</label></div>
+									</div>
+									<div class="order-brief-concern">关注度：229</div>
+								</a>
+							</li>
+						</ul>
+					</div>   
+					<div class="order-option">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell">目前进度：<span class="order-progress-box"><div class="order-progress" style="width:100%;"></div></span><label class="mui-pull-right order-right-text">105/100</label></li>
+							<li class="mui-table-view-cell">预期优惠：<label class="mui-pull-right order-right-text">25%</label></li>
+							<li class="mui-table-view-cell">活动地址：<label class="mui-pull-right order-right-text">温江区光华公园</label></li>
+							<!--<li class="mui-table-view-cell"><label>活动地址：</label><div class="order-address-box"><div class="order-address mui-ellipsis-2">甘肃省兰州市城关区西关十字</div></div></li>-->
+							<li class="mui-table-view-cell"><label class="mui-pull-right order-right-text order-count">优惠价，合计<label>￥1500元</label></label></li>
+						</ul>
+					</div>
+				</div>
+				<div class="order-option">	
+					<ul class="mui-table-view">	
+						<li class="mui-table-view-cell"><label class="mui-pull-right order-btn"><button type="button" class="mui-btn order-btn-1">推广</button><button type="button" class="mui-btn order-btn-2">项目群</button><button type="button" class="mui-btn order-btn-3">确认完成</button></label></li>
+					</ul>
+				</div>
+			</div>
+			<div class="public-thin-top"></div>
+			<div class="order-box">
+				<div class="orderArea">
+					<div class="order-box-header">
+						<span class="icon-user order-author-icon"></span><span class="order-author">蒙頔老师<span class="order-arrow">〉</span></span><span class="order-status">正在进行中</span>
+					</div>
+					<div class="order-act-brief">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell mui-media order-brief-cell">
+								<a href="javascript:;">
+									<div class="order-brief-img-box">
+										<img class="mui-media-object mui-pull-left order-brief-img" src="../images/jiaoshi12.webp">
+									</div>
+									<div class="mui-media-body public-position-relative">
+										<div class="mui-ellipsis-2 order-brief-title">四级听力辅导</div>
+										<div class="order-brief-right"><div>￥400.00</div><label class="mui-pull-right">元/人</label></div>
+									</div>
+									<div class="order-brief-concern">关注度：322</div>
+								</a>
+							</li>
+						</ul>
+					</div>   
+					<div class="order-option">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell">目前进度：<span class="order-progress-box"><div class="order-progress" style="width:80%;"></div></span><label class="mui-pull-right order-right-text">80/100</label></li>
+							<li class="mui-table-view-cell">预期优惠：<label class="mui-pull-right order-right-text">10%</label></li>
+							<li class="mui-table-view-cell">活动地址：<label class="mui-pull-right order-right-text">武侯区瑞金广场</label></li>
+							<!--<li class="mui-table-view-cell"><label>活动地址：</label><div class="order-address-box"><div class="order-address mui-ellipsis-2">武侯区瑞金广场</div></div></li>-->
+							<li class="mui-table-view-cell"><label class="mui-pull-right order-right-text order-count">优惠价，合计<label>￥360元</label></label></li>
+						</ul>
+					</div>
+				</div>
+				<div class="order-option">	
+					<ul class="mui-table-view">	
+						<li class="mui-table-view-cell"><label class="mui-pull-right order-btn"><button type="button" class="mui-btn order-btn-1">推广</button><button type="button" class="mui-btn order-btn-2">项目群</button><button type="button" class="mui-btn order-btn-3">确认完成</button></label></li>
+					</ul>
+				</div>
+			</div>
+			<!--<div class="public-thin-top"></div>-->
+			<!--列表区结束-->
+		</div>
+	</div>
+	<script src="../js/castapp.js"></script>
+	<script>
+		ca.init();
+		var menu=ca.id('menu');
+		var request_url=localStorage.getItem('request_url');
+		var img_url=localStorage.getItem('img_url');
+		var iid=localStorage.getItem('iid');
+		var login_phone=localStorage.getItem('phone');
+		ca.receiveNotice('sign_in',function(){
+			menu.innerHTML='';
+			get_menu();
+		});
+		get_menu();
+		function get_menu(){
+			ca.get({
+				url:request_url+'Info/get_info',
+				data:{},
+				succFn:function(data){
+					var json=JSON.parse(data);
+					for(var a in json){
+						var tmpl='<div class="public-thin-top"></div>'
+								+'<div class="order-box">'
+								+'	<div class="orderArea">'
+								+'		<div class="order-box-header">'
+								+'			<span class="icon-user order-author-icon"></span><span class="order-author">'+json[a].user_data.nickname+'<span class="order-arrow">〉</span></span><span class="order-status">筑梦进行中</span>'
+								+'		</div>'
+								+'		<div class="order-act-brief">'
+								+'			<ul class="mui-table-view">'
+								+'				<li class="mui-table-view-cell mui-media order-brief-cell">'
+								+'					<a href="javascript:;">'
+								+'						<div class="order-brief-img-box">'
+								+'							<img class="mui-media-object mui-pull-left order-brief-img" src="'+img_url+json[a].user_data.touxiang+'">'
+								+'						</div>'
+								+'						<div class="mui-media-body public-position-relative">'
+								+'							<div class="mui-ellipsis-2 order-brief-title">'+json[a].theme+'</div>'
+								+'							<div class="order-brief-right"><div>￥'+json[a].fee+'.00</div><label class="mui-pull-right">元/人</label></div>'
+								+'						</div>'
+								+'						<div class="order-brief-concern">关注度：'+json[a].like+'</div>'
+								+'					</a>'
+								+'				</li>'
+								+'			</ul>'
+								+'		</div>  ' 
+								+'		<div class="order-option">'
+								+'			<ul class="mui-table-view">'
+								+'				<li class="mui-table-view-cell">目前进度：<span class="order-progress-box"><div class="order-progress" style="width:'+(json[a].sign_in/json[a].number)*100+'%;"></div></span><label class="mui-pull-right order-right-text">'+json[a].sign_in+'/'+json[a].number+'</label></li>'
+								+'				<li class="mui-table-view-cell">预期回报：摄影明信片一套<label class="mui-pull-right order-right-text">×1</label></li>'
+								+'				<li class="mui-table-view-cell"><label>活动地址：</label><div class="order-address-box"><div class="order-address mui-ellipsis-2">'+json[a].place+'</div></div></li>'
+								+'				<li class="mui-table-view-cell"><label class="mui-pull-right order-right-text order-count">共1项回报，合计<label>￥'+json[a].fee+'元</label></label></li>'
+								+'			</ul>'
+								+'		</div>'
+								+'	</div>'
+								+'	<div class="order-option">'	
+								+'		<ul class="mui-table-view">'	
+								+'			<li class="mui-table-view-cell"><label class="mui-pull-right order-btn"><button type="button" class="mui-btn order-btn-1">推广</button><button type="button" class="mui-btn order-btn-2">项目群</button><button type="button" class="mui-btn order-btn-3">确认完成</button></label></li>'
+								+'		</ul>'
+								+'	</div>'
+								+'</div>';
+						menu.innerHTML+=tmpl;
+					}
+					
+				}
+			})
+		}
+		
+		
+	</script>
+</body>
+</html>
